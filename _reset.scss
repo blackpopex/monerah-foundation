@@ -1,4 +1,7 @@
 /**************GLOBAL STYLES*****************/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700;800&display=swap");
+
 *,
 *::before,
 *::after {
@@ -14,6 +17,7 @@ body {
   overflow-x: hidden;
   min-height: 100%;
   width: 100%;
+  height: 100%;
 }
 h1,
 h2,
@@ -37,135 +41,140 @@ h6 {
 
 h1,
 h2,
-h3,
 h6,
 p {
-  font-family: ;
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
-  font-size: rem;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  font-size: 1.6rem;
 }
 
 h1,
 h2 {
-  font-size: rem;
-  font-weight: ;
-  margin-bottom: em;
+  font-weight: 800;
+  margin-bottom: 0.25em;
 }
 
 h3 {
-  font-size: ;
-  font-weight: ;
-  font-family: ;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
 }
 
 h3,
 h4 {
-  margin-bottom: ;
+  margin-bottom: 0.6em;
+  font-weight: 600;
 }
 h4,
 h5 {
-  font-family: ;
+  font-family: "Poppins", sans-serif;
 }
 h4 {
-  font-size: ;
-  font-weight: ;
+  font-size: 0.85rem;
 }
 h5 {
-  font-size: ;
-  font-family: ;
+  font-size: 0.75rem;
 }
 
 h5,
 h6 {
-  margin-bottom: ;
-  font-weight: ;
+  margin-bottom: 0.5em;
+  font-weight: 400;
 }
 h6 {
-  font-size: ;
+  font-size: 0.7rem;
 }
 
 p,
 a {
-  font-size: rem;
-  font-weight: ;
+  font-size: 0.65rem;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
 }
 
 p {
-  margin-bottom: rem;
-  line-height: ;
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+a {
+  text-decoration: none;
 }
 
-.form-container form label {
-  font-size: ;
-  font-family: ;
+ul {
+  list-style-type: none;
 }
 
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: ;
-    line-height: ;
+    font-size: 6rem;
+    line-height: 1.8;
   }
 
   h2 {
-    font-size: ;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: ;
+    font-size: 1.65rem;
   }
 
   h4 {
-    font-size: ;
+    font-size: 1.1rem;
   }
   h5 {
-    font-size: ;
+    font-size: 0.85rem;
   }
   h6 {
-    font-size: ;
+    font-size: 0.75rem;
   }
 
-  p {
-    margin-bottom: ;
-    line-height: ;
-  }
-
+  p,
   a {
-    font-size: rem;
-    font-weight: ;
+    font-size: 0.65rem;
   }
 }
 
 @media screen and (min-width: 992px) {
-  p {
-    font-size: ;
+  p,
+  a {
+    font-size: 0.75rem;
   }
 
   a {
-    font-weight: ;
+    font-weight: 400;
   }
 }
+
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: ;
+    font-size: 5rem;
   }
   h2 {
-    font-size: ;
+    font-size: 2.5rem;
+  }
+  h1,
+  h2 {
+    font-weight: 800;
+    margin-bottom: 1.25em;
   }
 
   h3 {
-    font-size: ;
+    font-size: 2rem;
   }
   h4 {
-    font-size: ;
+    font-size: 1.5rem;
   }
 
   h5 {
-    font-size: ;
+    font-size: 1.25rem;
   }
   h6 {
-    font-size: ;
+    font-size: 1rem;
   }
 }
 
@@ -201,6 +210,4 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.btn {
 }
