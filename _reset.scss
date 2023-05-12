@@ -15,9 +15,14 @@ body {
   line-height: 1.625;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
   min-height: 100%;
   width: 100%;
   height: 100%;
+  transition: background-color 0.5s;
+}
+.backgroundcolor {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 h1,
 h2,
@@ -210,4 +215,42 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.colum-23 {
+  width: 100%;
+}
+.colum-30 {
+  width: 100%;
+}
+.colum-40 {
+  width: 100%;
+}
+.colum-50 {
+  width: 100%;
+}
+.colum-60 {
+  width: 100%;
+}
+.colum-70 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .colum-23 {
+    width: 23.33%;
+  }
+  .colum-30 {
+    width: 30%;
+  }
+  .colum-40 {
+    width: 40%;
+  }
+  .colum-50 {
+    width: 50%;
+  }
+  .colum-60 {
+    width: 60%;
+  }
+  .colum-70 {
+    width: 70%;
+  }
 }

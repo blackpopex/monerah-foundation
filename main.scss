@@ -26,8 +26,15 @@
   background-color: $body-grey-color;
 }
 
+.text-secondary {
+  color: $secondary-color;
+}
+
 .bold-text {
   font-weight: 800;
+}
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .btn {
@@ -37,6 +44,43 @@
   font-weight: 400;
   letter-spacing: 2px;
   font-family: $inter;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 7px 14px;
+    font: {
+      size: 0.4em;
+      weight: 300;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .btn {
+    padding: 8px 16px;
+    font: {
+      size: 0.45em;
+      weight: 400;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .btn {
+    padding: 10px 20px;
+    font: {
+      size: 0.5em;
+      weight: 500;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .btn {
+    padding: 10px 28px;
+    font: {
+      size: 0.55em;
+      weight: 600;
+    }
+  }
 }
 .navy-blue-btn {
   @extend .btn;
@@ -67,14 +111,71 @@
   flex-direction: $direction;
   align-items: $align;
 }
+@mixin flex($direction, $align) {
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: $direction;
+  align-items: $align;
+}
 
 /***************OTHER STYLES**********/
 /*****Header****/
+.flex {
+  @include flex(column, center);
+}
+.flex-space-between {
+  @include flex(row, center);
+}
+#footer .colum-reverse {
+  @include flex(column-reverse, center);
+}
+@media (min-width: 768px) {
+  .flex {
+    @include flex(row, flex-start);
+  }
+}
+.header-hero-wrapper {
+  position: relative;
+  background-image: url("/assets/hero-image/ngo-hero-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 500px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .header-hero-wrapper {
+    background-position: 0 0;
+    background-size: contain;
+    min-height: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .header-hero-wrapper {
+    background-size: contain;
+    background-position: 0 0;
+  }
+}
+@media (min-width: 1200px) {
+  .header-hero-wrapper {
+    background-size: contain;
+  }
+}
+@media (min-width: 1600px) {
+  .header-hero-wrapper {
+    background-size: contain;
+    margin-top: 0;
+    min-height: 700px;
+  }
+}
 header {
   padding: 0.5em 0;
   .logo {
     img {
-      width: 150px;
+      width: 120px;
       height: auto;
       display: block;
     }
@@ -84,6 +185,7 @@ nav {
   .harmburger-menu {
     cursor: pointer;
     display: inline-block;
+    padding-left: 0.25em;
     > div {
       width: 30px;
       height: 4px;
@@ -91,8 +193,7 @@ nav {
       margin: 4px 0;
     }
   }
-
-  ul.topnav-links {
+  .topnav-links {
     .sidebar-logo {
       margin-bottom: 2.5em;
       line-height: 0;
@@ -102,7 +203,7 @@ nav {
         padding: 0.5em 0 0.1em;
       }
       a {
-        font-size: 0.45em;
+        font-size: 0.4em;
         margin-top: 0;
       }
     }
@@ -111,7 +212,7 @@ nav {
     right: 0;
     background-color: $primary-color;
     height: 100%;
-    width: 250px;
+    width: 0;
     z-index: 1;
     overflow-x: hidden;
     display: block;
@@ -121,8 +222,12 @@ nav {
     /***please note this***/
     transition: width 0.5s ease-in;
   }
+  /**Add this with Js**/
+  .sidebarWidth {
+    width: 250px;
+  }
   li.dropdown {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     display: block;
     width: 100%;
   }
@@ -133,7 +238,7 @@ nav {
   a.dropdown-btn {
     text-align: center;
     color: $white-color;
-    padding: 0.25em 0;
+    padding: 0.25em 0 1.25em;
     font-size: 0.9rem;
     display: block;
     width: 100%;
@@ -142,25 +247,34 @@ nav {
   .dropdown-btn:hover {
     color: $secondary-color;
   }
-  .dropdown-btn::after {
-    content: "\203A";
+
+  .dropdown-btn span {
     color: $secondary-color;
-    font-size: 400;
+    font-size: 1em;
     margin-left: 1em;
     margin-right: 0.25em;
+    position: absolute;
+    transition: transform 0.5s ease;
   }
-  .active::after {
-    content: "\203A";
-    transform: rotate(90deg);
+
+  .active span {
+    transform: rotate(-90deg);
   }
   .dropdown-content {
-    display: none;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(40, 48, 70, 0.6);
-    width: 100%;
+    background-color: rgba(35, 47, 70, 0.6);
+    min-width: 100%;
     margin-inline: auto 0;
     text-align: left;
-    padding-bottom: 1em;
+    max-height: 0;
+    padding-left: 0.75em;
+    padding-bottom: 0.075em;
+    padding-top: 0.075em;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    li:last-child {
+      margin-bottom: 0.75em;
+    }
 
     a {
       color: $white-color;
@@ -171,4 +285,360 @@ nav {
 .main-wrapper {
   /***please note this***/
   transition: margin-right 0.5s ease-in;
+}
+.moveContentLeft {
+  margin-right: 250px;
+}
+
+@media (min-width: 600px) {
+  nav {
+    /**Add this with Js**/
+    .sidebarWidth {
+      width: 300px;
+    }
+  }
+  .moveContentLeft {
+    margin-right: 300px;
+  }
+}
+@media (min-width: 768px) {
+  /*****Header****/
+  header {
+    position: relative;
+    .flex {
+      @include flex(row, flex-start);
+    }
+    padding: 0.5em 0;
+    .logo {
+      width: 20%;
+      img {
+        width: 150px;
+        margin-inline: 0 auto;
+      }
+    }
+  }
+
+  nav {
+    width: 70%;
+    .harmburger-menu {
+      display: none;
+    }
+
+    .topnav-links {
+      width: 100%;
+      max-width: 650px;
+      margin-inline: auto 0;
+      background-color: transparent;
+      .sidebar-logo {
+        display: none;
+      }
+      position: static;
+      z-index: 999;
+      top: 0;
+      right: 0;
+      height: auto;
+      overflow-x: hidden;
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0;
+      text-align: right;
+    }
+    li.dropdown,
+    li.donate_BTN {
+      margin-bottom: 0;
+      display: inline-block;
+      width: 20%;
+      margin-left: 0.25em;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    a.dropdown-btn,
+    .donate_BTN a {
+      text: {
+        transform: capitalize;
+        align: center;
+      }
+      color: $primary-color;
+      padding: 1em 0.5em;
+      font: {
+        size: 0.65rem;
+        weight: 600;
+      }
+      display: block;
+      width: auto;
+      margin: 0;
+      background-color: inherit;
+    }
+    a.dropdown-btn.active {
+      color: $white-color;
+      background-color: $primary-color;
+    }
+    .dropdown-btn:hover {
+      color: $primary-color;
+    }
+
+    .dropdown-btn span {
+      color: $primary-color;
+      font-size: 1.2em;
+      margin-left: 0.5em;
+      margin-right: 0.25em;
+      transform: rotate(90deg);
+    }
+
+    .active span {
+      transform: rotate(-90deg);
+      color: $white-color;
+    }
+
+    .dropdown-content {
+      display: block;
+      background-color: rgb(35, 47, 70);
+      background-color: rgba(35, 47, 70, 0.6);
+      min-width: auto;
+      text-align: left;
+      max-height: 0;
+      position: absolute;
+      padding-inline: 1em 2em;
+      padding-bottom: 0;
+      padding-top: 0;
+      z-index: 1;
+      visibility: hidden;
+      transition: max-height 0.5s ease-in-out, visibility 1s ease;
+      a {
+        color: $white-color;
+        padding-left: 0;
+      }
+    }
+    .transformDropdown {
+      visibility: visible;
+      max-height: 200px;
+    }
+  }
+  .donate_BTN {
+    @extend .btn;
+    background-color: inherit;
+    padding: 0;
+    a {
+      color: $primary-color;
+      font-weight: 400;
+    }
+  }
+}
+@media (min-width: 992px) {
+  /*****Header****/
+  header {
+    padding: 1em 0;
+    .logo {
+      img {
+        width: 170px;
+      }
+    }
+  }
+
+  nav {
+    a.dropdown-btn,
+    .donate_BTN a {
+      padding: 1em 0.5em;
+      font: {
+        weight: 700;
+      }
+    }
+
+    .dropdown-content {
+      padding-inline: 1em 0.5em;
+      line-height: 1;
+
+      a {
+        font-size: 0.45em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    .topnav-links {
+      max-width: 750px;
+    }
+    li.dropdown,
+    li.donate_BTN {
+      margin-left: 0.5em;
+    }
+
+    a.dropdown-btn,
+    .donate_BTN a {
+      font: {
+        size: 0.7rem;
+        weight: 800;
+      }
+    }
+
+    .dropdown-btn span {
+      font-size: 1.2em;
+    }
+    .dropdown-content {
+      padding-inline: 1.4em 1.2em;
+      line-height: 1.4;
+
+      a {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+/**hide hero text on mobile**/
+.herotext {
+  display: none;
+}
+@media (min-width: 768px) {
+  .herotext {
+    display: block;
+  }
+  .hero-text-wrapper {
+    position: absolute;
+    bottom: 250px;
+    line-height: 0.5;
+    h1 {
+      font: {
+        size: 1.2rem;
+        weight: 900;
+      }
+      line-height: 0.8;
+      width: 100%;
+      max-width: 100px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    p {
+      margin-bottom: 1.5em;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .hero-text-wrapper {
+    bottom: 200px;
+    h1 {
+      font: {
+        size: 1.5rem;
+      }
+    }
+    p {
+      margin-bottom: 1.5em;
+      font-size: 0.7rem;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .hero-text-wrapper {
+    bottom: 120px;
+    h1 {
+      font: {
+        size: 2.2rem;
+      }
+    }
+    p {
+      margin-bottom: 1.5em;
+      font-size: 0.7rem;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .hero-text-wrapper {
+    bottom: 250px;
+    line-height: 0.75;
+    h1 {
+      font: {
+        size: 3rem;
+      }
+      line-height: 0.9;
+      max-width: 120px;
+    }
+    p {
+      margin-bottom: 1.5em;
+      font-size: 0.7em;
+    }
+  }
+}
+
+/**Header Slideshow container**/
+.slideshow-container {
+  display: none;
+}
+@media (min-width: 768px) {
+  .slideshow-container {
+    display: block;
+    position: absolute;
+    bottom: 90px;
+    width: 100%;
+    padding: 1em 0;
+    .slideone {
+      h6 {
+        margin-top: 0;
+      }
+      p {
+        max-width: 600px;
+      }
+      .circles {
+        width: 8px;
+        display: block;
+        > .dots {
+          width: 6px;
+          height: 6px;
+          margin: 5px auto;
+          background-color: $text-grey-color;
+          border-radius: 50%;
+        }
+        .activated {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .slideshow-container {
+    bottom: 10px;
+    .slideone {
+      p {
+        max-width: 700px;
+      }
+      .circles {
+        width: 8px;
+        > .dots {
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .slideshow-container {
+    padding: 1.25em 0;
+    bottom: -65px;
+    .slideone {
+      p {
+        max-width: 900px;
+      }
+      .circles {
+        width: 8px;
+        > .dots {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1300px) {
+  .slideshow-container {
+    bottom: -130px;
+  }
+}
+@media (min-width: 1400px) {
+  .slideshow-container {
+    bottom: -20px;
+  }
 }

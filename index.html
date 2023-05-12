@@ -23,7 +23,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
   </head>
-  <body>
+  <body id="websiteBody">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -33,7 +33,7 @@
     <div class="main-wrapper" id="contentWrapper">
       <div class="header-hero-wrapper">
         <header>
-          <div class="flex container">
+          <div class="flex container flex-space-between">
             <a href="index.html" class="logo">
               <img
                 src="assets/logo/menorah-foundation-logo-blue.png"
@@ -43,7 +43,7 @@
             <nav>
               <div class="harmburger-menu" id="navToggler">
                 <div class="bar1"></div>
-                <div class="bar2"></div>
+                <div class="bar2" id="barTwo"></div>
                 <div class="bar3"></div>
               </div>
               <ul id="navLinks" class="topnav-links">
@@ -61,8 +61,8 @@
                 </div>
                 <!--Who we Are-->
                 <li class="dropdown">
-                  <a href="javascript.void(0)" class="dropdown-btn"
-                    >Who We Are
+                  <a href="#/" class="dropdown-btn"
+                    >Who We Are <span>&rsaquo;</span>
                   </a>
                   <ul class="dropdown-content">
                     <li><a href="#/">Our Stories</a></li>
@@ -73,8 +73,8 @@
                 </li>
                 <!--What We Do-->
                 <li class="dropdown">
-                  <a href="javascript.void(0)" class="dropdown-btn active"
-                    >What We Do
+                  <a href="#/" class="dropdown-btn"
+                    >What We Do <span>&rsaquo;</span>
                   </a>
                   <ul class="dropdown-content">
                     <li><a href="#/">Our Projects</a></li>
@@ -85,8 +85,8 @@
                 </li>
                 <!--Get Involved-->
                 <li class="dropdown">
-                  <a href="javascript.void(0)" class="dropdown-btn"
-                    >Get Involved
+                  <a href="#/" class="dropdown-btn"
+                    >Get Involved <span>&rsaquo;</span>
                   </a>
                   <ul class="dropdown-content">
                     <li><a href="#/">Donate</a></li>
@@ -116,9 +116,93 @@
             ></a>
           </div>
         </div>
+        <!--vertical slideshow container-->
+        <div class="bg-grey slideshow-container">
+          <div class="container">
+            <!--#1-->
+            <div class="slideone">
+              <h6 class="primary-color-text text-left"><b>Mission</b></h5>
+              <div class="flex">
+                <p>
+                  Our work aims to break the vicious cycle of poverty and social
+                  isolation and to restore hope for a better future.
+                </p>
+                <div class="circles">
+                  <div class="dots activated"></div>
+                  <div class="dots"></div>
+                  <div class="dots"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <footer></footer>
+      <footer id="footer" class="bg-primary-color">
+          <section>
+            <div class="flex container">
+              <div class="colum-30">
+                <a href="index.html
+                " class="logo">
+                <img src="assets/logo/menorah-foundation-logo-white.png
+                " alt="menorah logo white">
+              </a>
+                <div>
+                  <address>Mrs Smith 813 Howard Street Oswego NY 13126 USA</address>
+                  <a href="mailto:admin@menorahfoundation.com" class="text-secondary">admin@menorahfoundation.com</a>
+                  <p>+234 (0) 807 420 2574, +234 (0) 807 420 2574</p>
+                </div>
+                <div class="social-icons">
+                  <a href="#/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="#/" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="#/" target="_blank"><i class="fa fa-linkedIn"></i></a>
+                  <a href="#/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="colum-23">
+                <h5 class="white-color-text">Who We Are</h5>
+                <ul>
+                  <li><a href="#/">Our Stories</a></li>
+                  <li><a href="#/">Our Team</a></li>
+                  <li><a href="#/">Mission, Vision & Values</a></li>
+                  <li><a href="#/">Contact</a></li>
+                </ul>
+              </div>
+              <div class="colum-23">
+                <h5 class="white-color-text">What We Do</h5>
+                <ul>
+                  <li><a href="#/">Our Projects</a></li>
+                  <li><a href="#/">Our Approach</a></li>
+                  <li><a href="#/">Ares we have worked</a></li>
+                  <li><a href="#/">Faq</a></li>
+                </ul>
+              </div>
+              <div class="colum-23">
+                <h5 class="white-color-text">Get Involved</h5>
+                <ul>
+                  <li><a href="#/">Donate</a></li>
+                  <li><a href="#/">Become a Volunteer</a></li>
+                  <li><a href="#/">Other Ways to Help</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </section>
+          <hr>
+          <div class="copyright-developerslink container">
+            <div class="flex">
+              <div><p>&copy;Copyright 2022, menoral foundation.com. All Rights Reserved</p>
+              <ul>
+                <li><a href="#/">Terms and condition</a></li>
+                <li><a href="#/">Privacy Policy</a></li>
+                <li><a href="#/">FAQ</a></li>
+              </ul></div>
+              <p>Designed and built by <a href="www.blackpopex.com" class="text-secondary
+                ">blackpopex</a></p>
+            </div>
+          </div>
+      </footer>
     </div>
+
 
     <script src="js/main.js"></script>
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
