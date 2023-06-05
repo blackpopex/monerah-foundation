@@ -1158,7 +1158,7 @@ footer .copyright-developerslink ul li {
     margin-bottom: 0;
   }
   footer .horizontal {
-    width: min(80%, 90rem);
+    width: min(90%, 90rem);
     margin-inline: auto;
     margin-bottom: 0.5em;
     background-color: #9da9f1;
@@ -1242,11 +1242,15 @@ footer .copyright-developerslink ul li {
   }
   footer .horizontal {
     height: 1px;
-    width: 90%;
   }
   footer .copyright-developerslink p,
   footer .copyright-developerslink a.copyright {
     font-size: 0.55rem;
+  }
+}
+@media (min-width: 1400px) {
+  footer .horizontal {
+    width: min(80%, 90rem);
   }
 }
 @media (min-width: 1600px) {

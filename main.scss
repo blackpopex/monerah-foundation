@@ -959,7 +959,7 @@ footer {
       margin-bottom: 0;
     }
     .horizontal {
-      width: min(80%, 90rem);
+      width: min(90%, 90rem);
       margin-inline: auto;
       margin-bottom: 0.5em;
       background-color: $secondary-color;
@@ -1054,13 +1054,19 @@ footer {
 
     .horizontal {
       height: 1px;
-      width: 90%;
     }
     .copyright-developerslink {
       p,
       a.copyright {
         font-size: 0.55rem;
       }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  footer {
+    .horizontal {
+      width: min(80%, 90rem);
     }
   }
 }
