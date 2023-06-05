@@ -22,7 +22,7 @@ body {
   transition: background-color 0.5s;
 }
 .backgroundcolor {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(31, 31, 31, 0.8);
 }
 h1,
 h2,
@@ -189,8 +189,14 @@ section {
 
 .container {
   margin-inline: auto;
-  width: min(90%, 90rem);
-  padding: 0.2em 0.2em;
+  width: min(80%, 90rem);
+  padding: 0.2em 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: min(90%, 90rem);
+  }
 }
 
 @media (min-width: 1400px) {

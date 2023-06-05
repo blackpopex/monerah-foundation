@@ -1,12 +1,18 @@
 //open the sidebar menu
 var openMenuBtn = document.getElementById("navToggler");
 var sideBar = document.getElementById("navLinks");
+var logo = document.getElementById("menorahLogo");
+var bar2 = document.getElementById("barTwo");
+/**
 var websiteContainer = document.getElementById("contentWrapper");
+ */
 var bgColor = document.getElementById("websiteBody");
 
 openMenuBtn.addEventListener("click", function () {
   sideBar.classList.toggle("sidebarWidth");
-  websiteContainer.classList.toggle("moveContentLeft");
+  openMenuBtn.classList.toggle("moveContentLeft");
+  logo.classList.toggle("hideLogo");
+  bar2.classList.toggle("changeX");
   bgColor.classList.toggle("backgroundcolor");
 });
 
