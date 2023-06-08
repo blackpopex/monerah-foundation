@@ -26,7 +26,8 @@
   background-color: $body-grey-color;
 }
 
-.text-secondary {
+.text-secondary,
+.sec-color {
   color: $secondary-color;
 }
 
@@ -180,7 +181,7 @@
 header {
   padding: 0.5em 0;
   .logo {
-    transition: visibility 0.2s ease;
+    transition: transform 0.5s ease;
     img {
       width: 120px;
       height: auto;
@@ -310,7 +311,7 @@ nav {
   transform: translateX(-250px);
 }
 .hideLogo {
-  visibility: hidden;
+  transform: translateX(-150%);
 }
 
 @media (min-width: 600px) {
@@ -321,7 +322,7 @@ nav {
     }
   }
   .moveContentLeft {
-    margin-right: 300px;
+    margin-right: 50px;
   }
 }
 @media (min-width: 768px) {
@@ -329,7 +330,7 @@ nav {
   header {
     position: relative;
     .flex {
-      @include flex(row, flex-start);
+      @include flex(row, center);
     }
     padding: 0.5em 0;
     .logo {
@@ -1128,6 +1129,190 @@ footer {
       p,
       a.copyright {
         font-size: 0.65rem;
+      }
+    }
+  }
+}
+
+/***********WHO WE ARE***************/
+.who-we-are {
+  position: relative;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("/assets/header-image/our-team.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 300px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .who-we-are {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+  }
+}
+@media (min-width: 768px) {
+  .who-we-are {
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .who-we-are {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .who-we-are {
+    margin-top: 0;
+    min-height: 500px;
+  }
+}
+
+/*******SECTION HEADER*******/
+.section-title-box {
+  position: relative;
+  bottom: -50px;
+  .title-box-wrapper {
+    width: 100%;
+  }
+  .mini-container {
+    padding: 0.65em 0;
+    width: min(80%, 80rem);
+    margin-inline: auto;
+    line-height: 0;
+    p {
+      display: none;
+    }
+    h6,
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $white-color;
+    }
+  }
+  .colum-40 {
+    background-color: rgb(26, 34, 56);
+    background-color: rgba(26, 34, 56, 0.8);
+    .sec-color-box {
+      width: 100%;
+      min-height: 50px;
+      background-color: $secondary-color;
+    }
+  }
+  .colum-60 {
+    background-color: $white-color;
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .section-title-box {
+    bottom: -55px;
+
+    .mini-container {
+      padding: 0.75em 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title-box {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 90%;
+    .title-box-wrapper {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+    }
+    .mini-container {
+      padding: 1.5em 0 0.5em;
+      width: min(80%, 80rem);
+      margin-inline: auto;
+      line-height: 0.5;
+      p {
+        display: block;
+        line-height: 1.25em;
+      }
+    }
+    .colum-40 {
+      .sec-color-box {
+        min-height: 50px;
+      }
+    }
+    .colum-60 {
+      display: block;
+      h1 {
+        line-height: 0.8;
+        text-transform: uppercase;
+        margin-top: 0.25em;
+        margin-bottom: 0;
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-title-box {
+    .mini-container {
+      padding: 1.5em 0 0.5em;
+    }
+    .colum-40 {
+      .sec-color-box {
+        min-height: 50px;
+      }
+    }
+    .colum-60 {
+      display: block;
+      h1 {
+        line-height: 0.8;
+        text-transform: uppercase;
+        margin-top: 0.25em;
+        margin-bottom: 0;
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .section-title-box {
+    width: 75%;
+    bottom: -70px;
+    .mini-container {
+      padding: 2em 0 0.5em;
+    }
+    .colum-40 {
+      .sec-color {
+        max-width: 300px;
+      }
+      .sec-color-box {
+        min-height: 70px;
+      }
+    }
+    .colum-60 {
+      h1 {
+        font-size: 3em;
+        margin-top: -0.05em;
       }
     }
   }
