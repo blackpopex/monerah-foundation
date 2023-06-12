@@ -23,6 +23,7 @@ body {
 
 .backgroundcolor {
   background-color: rgba(31, 31, 31, 0.8);
+  z-index: 9999;
 }
 
 h1,
@@ -130,7 +131,8 @@ ul {
     font-size: 2rem;
   }
   h3 {
-    font-size: 1.65rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
   h4 {
     font-size: 1.1rem;
@@ -151,9 +153,6 @@ ul {
   a {
     font-size: 0.75rem;
   }
-  a {
-    font-weight: 400;
-  }
 }
 @media screen and (min-width: 1200px) {
   h1 {
@@ -168,10 +167,10 @@ ul {
     margin-bottom: 1.25em;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
   h5 {
     font-size: 1.25rem;
@@ -182,6 +181,10 @@ ul {
 }
 section {
   padding: 3rem 0;
+}
+
+.padding-bottom-zero {
+  padding-bottom: 0;
 }
 
 .container {
@@ -287,6 +290,10 @@ img {
   background-color: #f1f1f1;
 }
 
+.bg-white {
+  background-color: #ffffff;
+}
+
 .text-secondary,
 .sec-color {
   color: #9eabf2;
@@ -300,7 +307,7 @@ img {
   text-transform: uppercase;
 }
 
-.btn, .donate_BTN, .navy-blue-btn {
+.btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
   padding: 10px 28px;
   font-size: 0.5em;
   text-align: center;
@@ -309,29 +316,41 @@ img {
   font-family: "Inter", sans-serif;
 }
 
+.text-right {
+  text-align: right;
+}
+
+button, #Make-a-donation .submit-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
 @media (min-width: 768px) {
-  .btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 7px 14px;
     font-size: 0.4em;
     font-weight: 300;
   }
 }
 @media (min-width: 992px) {
-  .btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 8px 16px;
     font-size: 0.45em;
     font-weight: 400;
   }
 }
 @media (min-width: 1200px) {
-  .btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 10px 20px;
     font-size: 0.5em;
     font-weight: 500;
   }
 }
 @media (min-width: 1600px) {
-  .btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 10px 28px;
     font-size: 0.55em;
     font-weight: 600;
@@ -353,6 +372,10 @@ img {
   text-align: center;
 }
 
+.readmore-grey-bg-btn {
+  background-color: #f1f1f1;
+}
+
 /***************OTHER STYLES**********/
 /*****Header****/
 .flex {
@@ -370,6 +393,15 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -400,7 +432,7 @@ img {
     flex-direction: row;
     align-items: flex-start;
   }
-  .column-reverse {
+  .flex-center {
     display: flex;
     display: -ms-flexbox;
     flex-wrap: wrap;
@@ -408,28 +440,43 @@ img {
     flex-direction: row;
     align-items: center;
   }
+  .column-reverse {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 .header-hero-wrapper {
   position: relative;
-  background-image: url("/assets/hero-image/ngo-hero-image.jpg");
+  background-image: url("/assets/hero-image/ngo-hero-image-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 500px;
+  background-size: cover;
+  min-height: 220px;
   width: 100%;
 }
 
 @media (max-width: 600px) {
   .header-hero-wrapper {
     background-position: 0 0;
-    background-size: contain;
-    min-height: 500px;
   }
 }
 @media (min-width: 768px) {
   .header-hero-wrapper {
-    background-size: contain;
+    background-image: url("/assets/hero-image/ngo-hero-image.jpg");
+    background-size: cover;
     background-position: 0 0;
+    min-height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .header-hero-wrapper {
+    background-size: cover;
+    background-position: center;
+    min-height: 425px;
   }
 }
 @media (min-width: 1200px) {
@@ -439,9 +486,10 @@ img {
 }
 @media (min-width: 1600px) {
   .header-hero-wrapper {
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     margin-top: 0;
-    min-height: 700px;
+    min-height: 600px;
   }
 }
 header {
@@ -757,6 +805,7 @@ nav .dropdown-content a {
   nav .dropdown-content {
     padding-inline: 1.4em 1.2em;
     line-height: 1.4;
+    min-width: 200px;
   }
   nav .dropdown-content a {
     font-size: 0.5em;
@@ -785,6 +834,7 @@ nav .dropdown-content a {
   nav .dropdown-content {
     padding-inline: 1.4em 1.2em;
     line-height: 1.4;
+    min-width: 220px;
   }
   nav .dropdown-content a {
     font-size: 0.5em;
@@ -800,8 +850,9 @@ nav .dropdown-content a {
     display: block;
   }
   .hero-text-wrapper {
+    display: none;
     position: absolute;
-    bottom: 250px;
+    bottom: 0;
     line-height: 0.5;
   }
   .hero-text-wrapper h1 {
@@ -843,6 +894,7 @@ nav .dropdown-content a {
 }
 @media (min-width: 1600px) {
   .hero-text-wrapper {
+    display: block;
     bottom: 200px;
     line-height: 0.75;
   }
@@ -858,12 +910,12 @@ nav .dropdown-content a {
 }
 @media (min-width: 1800px) {
   .hero-text-wrapper {
-    bottom: 140px;
+    bottom: 60px;
   }
   .hero-text-wrapper h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 0.9;
-    max-width: 120px;
+    max-width: 400px;
   }
   .hero-text-wrapper p {
     margin-bottom: 1.5em;
@@ -879,7 +931,7 @@ nav .dropdown-content a {
   .slideshow-container {
     display: block;
     position: absolute;
-    bottom: 90px;
+    bottom: -125px;
     width: 100%;
     padding: 1em 0;
   }
@@ -906,7 +958,7 @@ nav .dropdown-content a {
 }
 @media (min-width: 992px) {
   .slideshow-container {
-    bottom: 10px;
+    bottom: -120px;
   }
   .slideshow-container .slideone p {
     max-width: 700px;
@@ -922,7 +974,7 @@ nav .dropdown-content a {
 @media (min-width: 1200px) {
   .slideshow-container {
     padding: 1.25em 0;
-    bottom: -80px;
+    bottom: -120px;
   }
   .slideshow-container .slideone p {
     max-width: 900px;
@@ -947,12 +999,13 @@ nav .dropdown-content a {
 }
 @media (min-width: 1600px) {
   .slideshow-container {
-    bottom: -20px;
+    bottom: -120px;
   }
 }
 @media (min-width: 1800px) {
   .slideshow-container {
-    bottom: -100px;
+    bottom: -150px;
+    padding: 1.5em 0;
   }
 }
 /*****FOOTER*******/
@@ -1307,7 +1360,7 @@ footer .copyright-developerslink ul li {
 /***********WHO WE ARE***************/
 .who-we-are {
   position: relative;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/our-team.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/faq.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1459,5 +1512,627 @@ footer .copyright-developerslink ul li {
   .section-title-box .colum-60 h1 {
     font-size: 3em;
     margin-top: -0.05em;
+  }
+}
+/*************INDEX PAGE***************/
+/*******Intro About us******/
+#Caption-About {
+  padding-bottom: 0;
+}
+#Caption-About .colum-30 .width-80 {
+  display: none;
+}
+#Caption-About .colum-30 ul li {
+  padding: 0.65em 0;
+  text-align: center;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #9eabf2;
+}
+#Caption-About .colum-30 ul li .secondary-color {
+  font-size: 1.8em;
+  min-width: 40px;
+  vertical-align: middle;
+}
+#Caption-About .colum-30 ul li a {
+  font-size: 0.6em;
+  width: 100%;
+  text-align: right;
+  font-weight: 600;
+}
+#Caption-About .colum-30 ul li:last-child {
+  border-bottom: none;
+}
+#Caption-About .colum-70 {
+  padding: 2em 0;
+}
+
+@media (min-width: 768px) {
+  #Caption-About {
+    margin-top: 3.8em;
+    padding-bottom: 1em;
+  }
+  #Caption-About .colum-30 {
+    padding: 2em 1em 1.5em 0;
+  }
+  #Caption-About .colum-30 .width-80 {
+    display: block;
+    width: 100%;
+  }
+  #Caption-About .colum-30 .width-80 h4 {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    padding: 0.5em 0.75em;
+    font-size: 0.8rem;
+  }
+  #Caption-About .colum-30 ul li {
+    width: 100%;
+    display: flex;
+  }
+  #Caption-About .colum-30 ul li .secondary-color {
+    font-size: 1.2em;
+    width: 10%;
+    max-width: 25px;
+    display: block;
+  }
+  #Caption-About .colum-30 ul li a {
+    font-size: 0.6em;
+    width: 85%;
+    margin-inline: auto 0;
+    display: flex;
+    align-items: center;
+  }
+  #Caption-About .colum-30 ul li a span {
+    width: 80%;
+    vertical-align: middle;
+    text-align: left;
+  }
+  #Caption-About .colum-30 ul li:last-child {
+    border-bottom: 1px solid #9eabf2;
+  }
+}
+@media (min-width: 992px) {
+  #Caption-About {
+    margin-top: 4em;
+  }
+  #Caption-About .colum-30 {
+    padding: 2em 2em 2em 0;
+  }
+  #Caption-About .colum-30 .width-80 h4 {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    padding: 0.5em 0.75em;
+    font-size: 1rem;
+    max-width: 300px;
+    margin-left: auto;
+  }
+  #Caption-About .colum-30 ul li .secondary-color {
+    font-size: 1.2em;
+    width: 30%;
+    margin-inline: 0 auto;
+    max-width: 50px;
+    text-align: right;
+    display: block;
+    margin-left: 1.6em;
+  }
+  #Caption-About .colum-30 ul li a span {
+    width: 70%;
+    margin-inline: auto 0;
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  #Caption-About .colum-30 .width-80 {
+    display: block;
+    width: 100%;
+  }
+  #Caption-About .colum-30 .width-80 h4 {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+  #Caption-About .colum-30 ul li {
+    width: 100%;
+    display: flex;
+  }
+  #Caption-About .colum-30 ul li .secondary-color {
+    width: 10%;
+    max-width: 25px;
+  }
+  #Caption-About .colum-30 ul li a {
+    font-size: 0.6em;
+    width: 65%;
+    margin-inline: auto 0;
+  }
+  #Caption-About .colum-30 ul li a span {
+    width: 80%;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 1600px) {
+  #Caption-About .colum-30 {
+    padding-right: 4em;
+    padding-bottom: 4em;
+  }
+  #Caption-About .colum-30 .width-80 h4 {
+    font-size: 1.4rem;
+    max-width: 600px;
+    padding: 1em 1em 1em 2em;
+  }
+  #Caption-About .colum-30 ul li .secondary-color {
+    width: 10%;
+    max-width: 50px;
+    font-size: 1.5em;
+  }
+  #Caption-About .colum-30 ul li a {
+    font-size: 0.8em;
+    width: 85%;
+    max-width: 300px;
+  }
+  #Caption-About .colum-30 ul li a span {
+    width: 80%;
+  }
+}
+@media (min-width: 1800px) {
+  #Caption-About {
+    margin-top: 5.5em;
+  }
+  #Caption-About .colum-30 .width-80 h4 {
+    font-size: 1.6rem;
+    max-width: 600px;
+    padding: 1em 1em 1em 2em;
+  }
+  #Caption-About .colum-30 ul li .secondary-color {
+    width: 10%;
+    max-width: 50px;
+    font-size: 1.5em;
+  }
+  #Caption-About .colum-30 ul li a {
+    font-size: 0.8em;
+    width: 85%;
+    max-width: 300px;
+  }
+  #Caption-About .colum-30 ul li a span {
+    width: 80%;
+  }
+}
+/*******Area-We-Have-Impacted-lives******/
+#Area-We-Have-Impacted-lives h3 {
+  text-align: center;
+}
+#Area-We-Have-Impacted-lives .health-care .text-right,
+#Area-We-Have-Impacted-lives .basic-amenities .text-right {
+  text-align: left;
+}
+#Area-We-Have-Impacted-lives .colum-30 img {
+  display: none;
+}
+#Area-We-Have-Impacted-lives .colum-70 {
+  padding: 1em 0 2em;
+}
+
+@media (min-width: 768px) {
+  #Area-We-Have-Impacted-lives {
+    padding: 3em 0;
+  }
+  #Area-We-Have-Impacted-lives h3 {
+    text-align: left;
+  }
+  #Area-We-Have-Impacted-lives .health-care .text-right,
+  #Area-We-Have-Impacted-lives .basic-amenities .text-right {
+    text-align: right;
+  }
+  #Area-We-Have-Impacted-lives .colum-30 img {
+    display: block;
+    max-width: 200px;
+  }
+  #Area-We-Have-Impacted-lives .colum-30 img:nth-child(odd) {
+    padding-left: 1em;
+  }
+  #Area-We-Have-Impacted-lives .colum-70:nth-child(even) {
+    padding: 1em 0 2em 1em;
+  }
+}
+@media (min-width: 992px) {
+  #Area-We-Have-Impacted-lives .colum-30 img {
+    max-width: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  #Area-We-Have-Impacted-lives .intro-text {
+    margin-bottom: 2em;
+  }
+  #Area-We-Have-Impacted-lives .colum-30 img {
+    max-width: 350px;
+  }
+  #Area-We-Have-Impacted-lives .colum-70:nth-child(even) {
+    padding: 0 0 0 2.5em;
+  }
+  #Area-We-Have-Impacted-lives .colum-70 {
+    padding: 0 0 0 0;
+  }
+  #Area-We-Have-Impacted-lives .colum-70 h5 {
+    margin-top: 0;
+  }
+  #Area-We-Have-Impacted-lives .container {
+    padding: 0;
+  }
+}
+@media (min-width: 1600px) {
+  #Area-We-Have-Impacted-lives .colum-30 img {
+    max-width: 450px;
+  }
+  #Area-We-Have-Impacted-lives .colum-30 img:nth-child(odd) {
+    padding-left: 3em;
+  }
+  #Area-We-Have-Impacted-lives .colum-70:nth-child(even) {
+    padding: 0 0 0 5em;
+  }
+}
+@media (min-width: 1800px) {
+  #Area-We-Have-Impacted-lives .colum-70:nth-child(even) {
+    padding: 0 0 0 3em;
+  }
+}
+/*******What makes us different******/
+#What-Makes-Us-Different {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+#What-Makes-Us-Different .flex {
+  margin-top: 1.5em;
+}
+#What-Makes-Us-Different .colum-25 {
+  line-height: 0.5;
+  width: 100%;
+  display: block;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+#What-Makes-Us-Different .colum-25 iconify-icon {
+  font-size: 2em;
+}
+#What-Makes-Us-Different .colum-25 h5 {
+  font-weight: 600;
+  margin-top: 1em;
+}
+#What-Makes-Us-Different .colum-25 p {
+  width: 100%;
+  max-width: 200px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  #What-Makes-Us-Different {
+    padding-bottom: 3em;
+    text-align: center;
+  }
+  #What-Makes-Us-Different h3 {
+    text-align: left;
+  }
+  #What-Makes-Us-Different .colum-25 {
+    width: 50%;
+  }
+  #What-Makes-Us-Different .colum-25 h5 {
+    font-weight: 500;
+  }
+}
+@media (min-width: 1200px) {
+  #What-Makes-Us-Different .colum-25 {
+    width: 25%;
+    margin: 2em 0;
+  }
+  #What-Makes-Us-Different .colum-25 h5 {
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 1.5em;
+  }
+}
+@media (min-width: 1600px) {
+  #What-Makes-Us-Different .colum-25 iconify-icon {
+    font-size: 2.5em;
+  }
+  #What-Makes-Us-Different .colum-25 h5 {
+    font-size: 1rem;
+    margin-bottom: 1.25em;
+  }
+  #What-Makes-Us-Different .colum-25 p {
+    max-width: 250px;
+  }
+}
+/*******Make a donation******/
+#Make-a-donation {
+  padding-top: 0;
+}
+#Make-a-donation button, #Make-a-donation .submit-btn {
+  font-size: 0.425em;
+}
+#Make-a-donation .colum-60,
+#Make-a-donation .colum-40 {
+  display: none;
+}
+#Make-a-donation .donation-form {
+  margin-bottom: 2em;
+}
+#Make-a-donation .form-width {
+  width: 100%;
+  max-width: 325px;
+  margin-inline: auto;
+}
+#Make-a-donation .form-width h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+#Make-a-donation .form-width .donation-amount {
+  margin: 2em 0;
+}
+#Make-a-donation .form-width .group-btn {
+  display: flex;
+  display: -ms-flexbox;
+  margin-bottom: 0.5em;
+}
+#Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+  width: 50%;
+  padding: 1.5em 0.5em;
+}
+#Make-a-donation .form-width .bg-grey {
+  padding: 1.5em 0.5em 0.5em;
+}
+#Make-a-donation .form-width .bg-grey a {
+  margin-top: 1.5em;
+  text-align: right;
+  width: 100%;
+  font-weight: 600;
+}
+#Make-a-donation .select-amount-to-pay .flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#Make-a-donation .select-amount-to-pay .flex .col-33 {
+  width: 33%;
+  padding: 0.75em 0.25em;
+}
+#Make-a-donation .select-amount-to-pay .flex .col-66 {
+  width: 66%;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  padding: 0.18em 0;
+}
+#Make-a-donation .select-amount-to-pay .flex .col-66 .icon {
+  color: #1a2238;
+  min-width: 25px;
+  padding-left: 0.5em;
+  text-align: center;
+  font-size: 0.6em;
+}
+#Make-a-donation .select-amount-to-pay .flex .col-66 input[type=text] {
+  width: 75%;
+  margin-left: 0.5em;
+  border: none;
+  outline: none;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0.5em 0.5em;
+  box-shadow: inset 1px 1px 1px 1px rgba(26, 34, 56, 0.1);
+}
+#Make-a-donation .submit-btn {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  #Make-a-donation {
+    padding-top: 0;
+    position: relative;
+  }
+  #Make-a-donation button, #Make-a-donation .submit-btn {
+    font-size: 0.425em;
+  }
+  #Make-a-donation .colum-60,
+  #Make-a-donation .colum-40 {
+    display: block;
+    min-height: 485px;
+  }
+  #Make-a-donation .colum-60 {
+    background-image: linear-gradient(rgb(26, 34, 56), rgba(26, 34, 56, 0.9)), url("/assets/other-photos/africaaidsfree.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+  }
+  #Make-a-donation .colum-60 .content-wrapper {
+    width: 100%;
+    max-width: 310px;
+    margin-inline: 0 auto;
+  }
+  #Make-a-donation .colum-60 .content-wrapper h4 {
+    font-size: 1.2em;
+    line-height: 1.25;
+  }
+  #Make-a-donation .donation-form {
+    margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: 99;
+    width: 100%;
+    max-width: 400px;
+    padding: 1.25em 0;
+    box-shadow: 4px 2px 0px 2px rgba(0, 0, 0, 0.1);
+  }
+  #Make-a-donation .form-width {
+    width: 100%;
+  }
+  #Make-a-donation .form-width h3 {
+    text-align: left;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+  #Make-a-donation .form-width .donation-amount {
+    margin: 1em 0;
+  }
+  #Make-a-donation .form-width .group-btn {
+    display: flex;
+    display: -ms-flexbox;
+    margin-bottom: 0.5em;
+  }
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+    width: 50%;
+    padding: 0.75em 0.25em;
+  }
+  #Make-a-donation .form-width .bg-grey {
+    padding: 1em 0.5em 0.25em;
+  }
+  #Make-a-donation .form-width .bg-grey a {
+    margin-top: 1.5em;
+    text-align: right;
+    width: 100%;
+    font-weight: 600;
+  }
+  #Make-a-donation .select-amount-to-pay .flex {
+    margin-bottom: 0.5em;
+  }
+  #Make-a-donation .select-amount-to-pay .flex .col-33 {
+    padding: 0.75em 0.25em;
+  }
+  #Make-a-donation .select-amount-to-pay .flex .col-66 {
+    padding: 0.18em 0;
+  }
+  #Make-a-donation .select-amount-to-pay .flex .col-66 input[type=text] {
+    padding: 0.1em 0.5em;
+  }
+  #Make-a-donation .submit-btn {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 992px) {
+  #Make-a-donation .colum-60,
+  #Make-a-donation .colum-40 {
+    min-height: 550px;
+  }
+  #Make-a-donation .colum-60 {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+  }
+  #Make-a-donation .colum-60 .content-wrapper {
+    max-width: 400px;
+    margin-left: 2rem;
+  }
+  #Make-a-donation .colum-60 .content-wrapper h4 {
+    font-size: 1.4em;
+  }
+  #Make-a-donation .donation-form {
+    max-width: 500px;
+    padding: 1.5em 0;
+  }
+  #Make-a-donation .form-width {
+    width: 100%;
+    max-width: 400px;
+  }
+  #Make-a-donation .form-width h3 {
+    margin-bottom: 1em;
+    font-weight: 400;
+    font-size: 1.2em;
+    max-width: 300px;
+  }
+  #Make-a-donation .form-width .donation-amount {
+    margin: 1em 0;
+  }
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+    width: 40%;
+    padding: 1em 0.25em;
+  }
+}
+@media (min-width: 1200px) {
+  #Make-a-donation .colum-60,
+  #Make-a-donation .colum-40 {
+    min-height: 600px;
+  }
+  #Make-a-donation .colum-60 .content-wrapper {
+    max-width: 500px;
+  }
+  #Make-a-donation .colum-60 .content-wrapper h4 {
+    font-size: 1.6em;
+  }
+  #Make-a-donation .donation-form {
+    max-width: 600px;
+  }
+  #Make-a-donation .form-width {
+    max-width: 400px;
+  }
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+    width: 45%;
+  }
+}
+@media (min-width: 1600px) {
+  #Make-a-donation .colum-60,
+  #Make-a-donation .colum-40 {
+    min-height: 650px;
+  }
+  #Make-a-donation .colum-60 .content-wrapper {
+    max-width: 550px;
+  }
+  #Make-a-donation .colum-60 .content-wrapper h4 {
+    font-size: 1.8em;
+  }
+  #Make-a-donation .donation-form {
+    max-width: 800px;
+    padding: 2em 1em 2em 3em;
+  }
+  #Make-a-donation .form-width {
+    max-width: 600px;
+    margin-inline: 0 auto;
+  }
+  #Make-a-donation .form-width .bg-grey {
+    padding: 1em;
+  }
+  #Make-a-donation .form-width h3 {
+    font-size: 1.5em;
+    max-width: 400px;
+  }
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+    width: 50%;
+  }
+  #Make-a-donation .select-amount-to-pay .flex {
+    margin-bottom: 0.5em;
+  }
+  #Make-a-donation .select-amount-to-pay .flex .col-33 {
+    padding: 1em 0.5em;
+  }
+  #Make-a-donation .select-amount-to-pay .flex .col-66 {
+    padding: 0.5em 0;
+  }
+  #Make-a-donation .select-amount-to-pay .flex .col-66 input[type=text] {
+    padding: 0.5em 0.5em;
+  }
+}
+@media (min-width: 1800px) {
+  #Make-a-donation .colum-60,
+  #Make-a-donation .colum-40 {
+    min-height: 700px;
+  }
+  #Make-a-donation .colum-60 .content-wrapper {
+    max-width: 700px;
+  }
+  #Make-a-donation .colum-60 .content-wrapper h4 {
+    font-size: 2.2em;
+  }
+  #Make-a-donation .donation-form {
+    max-width: 900px;
+  }
+  #Make-a-donation .form-width {
+    max-width: 500px;
   }
 }/*# sourceMappingURL=main.css.map */
