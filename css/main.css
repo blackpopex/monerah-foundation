@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700;800&display=swap"); /**************GLOBAL STYLES*****************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700;800&display=swap");
 *,
@@ -1463,6 +1464,12 @@ footer .copyright-developerslink ul li {
     display: block;
     line-height: 1.25em;
   }
+  .section-title-box .mini-container h2 {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    font-size: 0.9em;
+    padding-right: 0.25em;
+  }
   .section-title-box .colum-40 .sec-color-box {
     min-height: 50px;
   }
@@ -1477,9 +1484,17 @@ footer .copyright-developerslink ul li {
     font-size: 2em;
   }
 }
+@media (min-width: 992px) {
+  .section-title-box .mini-container h2 {
+    font-size: 1.1em;
+  }
+}
 @media (min-width: 1200px) {
   .section-title-box .mini-container {
     padding: 1.5em 0 0.5em;
+  }
+  .section-title-box .mini-container h2 {
+    font-size: 1.35em;
   }
   .section-title-box .colum-40 .sec-color-box {
     min-height: 50px;
@@ -1503,6 +1518,9 @@ footer .copyright-developerslink ul li {
   .section-title-box .mini-container {
     padding: 2em 0 0.5em;
   }
+  .section-title-box .mini-container h2 {
+    font-size: 1.55em;
+  }
   .section-title-box .colum-40 .sec-color {
     max-width: 300px;
   }
@@ -1512,6 +1530,11 @@ footer .copyright-developerslink ul li {
   .section-title-box .colum-60 h1 {
     font-size: 3em;
     margin-top: -0.05em;
+  }
+}
+@media (min-width: 1600px) {
+  .section-title-box .mini-container h2 {
+    font-size: 1.7em;
   }
 }
 /*************INDEX PAGE***************/
@@ -2135,4 +2158,48 @@ footer .copyright-developerslink ul li {
   #Make-a-donation .form-width {
     max-width: 500px;
   }
+}
+/*******Other ways to give******/
+#accordion .accordion-wrapper {
+  width: 100%;
+}
+#accordion .accordion-dropdown-btn {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.5em;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #1a2238;
+  transition: background-color 0.3s ease-in, color 0.5s ease-in;
+}
+#accordion .add-activated {
+  background-color: #1a2238;
+  color: #ffffff;
+}
+#accordion .accordion-dropdown-btn::before {
+  content: "+";
+  color: #9eabf2;
+  font-size: 1em;
+  font-weight: 400;
+  margin-right: 1em;
+  width: 25px;
+  float: left;
+}
+#accordion .add-activated::before {
+  content: "−";
+}
+#accordion .accordion-dropdown-content {
+  padding: 0em 2em 0em 3em;
+  width: inherit;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+#accordion .add-activated .accordion-dropdown-content {
+  padding: 2em 2em 2em 3em;
+}
+#accordion .faint-horizontal {
+  border: 1px solid #f1f1f1;
+  margin: 0.5em 0;
 }/*# sourceMappingURL=main.css.map */

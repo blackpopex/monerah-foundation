@@ -1294,6 +1294,12 @@ footer {
         display: block;
         line-height: 1.25em;
       }
+      h2 {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        font-size: 0.9em;
+        padding-right: 0.25em;
+      }
     }
     .colum-40 {
       .sec-color-box {
@@ -1312,11 +1318,23 @@ footer {
     }
   }
 }
+@media (min-width: 992px) {
+  .section-title-box {
+    .mini-container {
+      h2 {
+        font-size: 1.1em;
+      }
+    }
+  }
+}
 
 @media (min-width: 1200px) {
   .section-title-box {
     .mini-container {
       padding: 1.5em 0 0.5em;
+      h2 {
+        font-size: 1.35em;
+      }
     }
     .colum-40 {
       .sec-color-box {
@@ -1341,6 +1359,9 @@ footer {
     bottom: -70px;
     .mini-container {
       padding: 2em 0 0.5em;
+      h2 {
+        font-size: 1.55em;
+      }
     }
     .colum-40 {
       .sec-color {
@@ -1354,6 +1375,15 @@ footer {
       h1 {
         font-size: 3em;
         margin-top: -0.05em;
+      }
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .section-title-box {
+    .mini-container {
+      h2 {
+        font-size: 1.7em;
       }
     }
   }
@@ -2063,5 +2093,57 @@ footer {
     .form-width {
       max-width: 500px;
     }
+  }
+}
+
+/*******Other ways to give******/
+#accordion {
+  .accordion-wrapper {
+    width: 100%;
+  }
+
+  .accordion-dropdown-btn {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: $primary-color;
+    transition: background-color 0.3s ease-in, color 0.5s ease-in;
+  }
+  .add-activated {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  .accordion-dropdown-btn::before {
+    content: "\002B";
+    color: $secondary-color;
+    font: {
+      size: 1em;
+      weight: 400;
+    }
+    margin-right: 1em;
+    width: 25px;
+    float: left;
+  }
+  .add-activated::before {
+    content: "\2212";
+  }
+
+  .accordion-dropdown-content {
+    padding: 0em 2em 0em 3em;
+    width: inherit;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+  }
+  .add-activated .accordion-dropdown-content {
+    padding: 2em 2em 2em 3em;
+  }
+
+  .faint-horizontal {
+    border: 1px solid $body-grey-color;
+    margin: 0.5em 0;
   }
 }
