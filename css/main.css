@@ -146,7 +146,7 @@ ul {
   }
   p,
   a {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -171,16 +171,21 @@ ul {
     font-size: 1.5rem;
   }
   h4 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
   h5 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   .accordion-dropdown h5 {
     font-size: 1rem;
   }
   h6 {
     font-size: 1rem;
+  }
+  p,
+  a {
+    font-size: 0.8rem;
   }
 }
 section {
@@ -266,6 +271,10 @@ img {
   }
 }
 /******GLOBAL STYLES*******/
+.margin-top {
+  margin-top: 2.5em;
+}
+
 .primary-color-text {
   color: #1a2238;
 }
@@ -332,7 +341,22 @@ button, #Make-a-donation .submit-btn {
   display: inline-block;
 }
 
+.padding-top {
+  padding-top: 1.5em;
+}
+
+.margin-bottom {
+  margin-bottom: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
+  .padding-top {
+    padding-top: 5em;
+  }
   .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 7px 14px;
     font-size: 0.4em;
@@ -2205,9 +2229,9 @@ footer .copyright-developerslink ul li {
   transition: max-height 0.5s ease-in-out;
   overflow: hidden;
 }
-#accordion .accordion-dropdown-content .margin-top-bottom {
-  margin-top: 1em;
-  margin-bottom: 1em;
+#accordion .accordion-dropdown-content .padding-top-bottom {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 @media (min-width: 600px) {
   #accordion .accordion-dropdown-content {
@@ -2225,4 +2249,63 @@ footer .copyright-developerslink ul li {
 #accordion .faint-horizontal {
   border: 1px solid #f1f1f1;
   margin: 0.5em 0;
+}
+
+/***********FREQUENTLY ASKED QUESTION***************/
+.frequently-asked-questions {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+@media (min-width: 768px) {
+  .frequently-asked-questions {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/faq.jpg");
+  }
+}
+/***********HAVE WORKED***************/
+.have-worked {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+@media (min-width: 768px) {
+  .have-worked {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/areas-we-have-worked.jpg");
+  }
+}
+#areas-we-have-worked {
+  text-align: center;
+  width: 100%;
+}
+#areas-we-have-worked .image-wrapper p {
+  max-width: 700px;
+  margin-inline: auto;
+}
+#areas-we-have-worked .image-wrapper img {
+  width: 600px;
+  margin-inline: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #areas-we-have-worked .image-wrapper p {
+    max-width: 600px;
+  }
+  #areas-we-have-worked .image-wrapper img {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  #areas-we-have-worked .image-wrapper p {
+    max-width: 700px;
+  }
+  #areas-we-have-worked .image-wrapper img {
+    width: 700px;
+  }
+}
+@media (min-width: 1600px) {
+  #areas-we-have-worked .image-wrapper p {
+    max-width: 1000px;
+  }
+  #areas-we-have-worked .image-wrapper img {
+    width: 1000px;
+  }
 }/*# sourceMappingURL=main.css.map */

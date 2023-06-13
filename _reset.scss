@@ -142,7 +142,7 @@ ul {
 
   p,
   a {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -170,17 +170,22 @@ ul {
     font-size: 1.5rem;
   }
   h4 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 
   h5 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   .accordion-dropdown h5 {
     font-size: 1rem;
   }
   h6 {
     font-size: 1rem;
+  }
+  p,
+  a {
+    font-size: 0.8rem;
   }
 }
 
