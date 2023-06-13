@@ -176,6 +176,9 @@ ul {
   h5 {
     font-size: 1.25rem;
   }
+  .accordion-dropdown h5 {
+    font-size: 1rem;
+  }
   h6 {
     font-size: 1rem;
   }
@@ -1358,10 +1361,14 @@ footer .copyright-developerslink ul li {
     font-size: 0.65rem;
   }
 }
-/***********WHO WE ARE***************/
-.who-we-are {
+/**************SECTION BACKGROUND-IMAGES**********************/
+/***********Other ways to give***************/
+.ways-to-give {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+.section-page-bg {
   position: relative;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/faq.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1370,29 +1377,31 @@ footer .copyright-developerslink ul li {
 }
 
 @media (max-width: 600px) {
-  .who-we-are {
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  .section-page-bg {
     background-position: center;
     background-size: cover;
     min-height: 250px;
   }
 }
 @media (min-width: 768px) {
-  .who-we-are {
+  .ways-to-give {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/other-ways-to-give.jpg");
+  }
+  .section-page-bg {
     background-size: cover;
     background-position: center;
     min-height: 300px;
   }
 }
 @media (min-width: 992px) {
-  .who-we-are {
+  .section-page-bg {
     background-size: cover;
     background-position: center;
     min-height: 400px;
   }
 }
 @media (min-width: 1600px) {
-  .who-we-are {
+  .section-page-bg {
     margin-top: 0;
     min-height: 500px;
   }
@@ -2190,11 +2199,25 @@ footer .copyright-developerslink ul li {
   content: "−";
 }
 #accordion .accordion-dropdown-content {
-  padding: 0em 2em 0em 3em;
+  padding: 0em 1em 0em 1em;
   width: inherit;
   max-height: 0;
   transition: max-height 0.5s ease-in-out;
   overflow: hidden;
+}
+#accordion .accordion-dropdown-content .margin-top-bottom {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@media (min-width: 600px) {
+  #accordion .accordion-dropdown-content {
+    padding: 0em 2em 0em 2.75em;
+  }
+}
+@media (min-width: 1600px) {
+  #accordion .accordion-dropdown-content {
+    padding: 0em 2em 0em 3em;
+  }
 }
 #accordion .add-activated .accordion-dropdown-content {
   padding: 2em 2em 2em 3em;
