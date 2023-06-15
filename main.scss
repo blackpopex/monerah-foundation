@@ -163,6 +163,9 @@ button {
   flex-direction: $direction;
   align-items: $align;
 }
+.split {
+  display: flex;
+}
 
 /***************OTHER STYLES**********/
 /*****Header****/
