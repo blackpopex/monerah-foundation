@@ -166,6 +166,9 @@ button {
 .split {
   display: flex;
 }
+.faint-horizontal {
+  border: 1px solid $body-grey-color;
+}
 
 /***************OTHER STYLES**********/
 /*****Header****/

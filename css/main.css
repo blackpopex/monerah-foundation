@@ -412,6 +412,10 @@ button, #Make-a-donation .submit-btn {
   display: flex;
 }
 
+.faint-horizontal {
+  border: 1px solid #f1f1f1;
+}
+
 /***************OTHER STYLES**********/
 /*****Header****/
 .flex {
