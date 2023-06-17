@@ -2477,4 +2477,7 @@ footer .copyright-developerslink ul li {
   .reach-us-wrapper-container .colum-30:last-child .email-contacts a {
     font-size: 0.7rem;
   }
+  .reach-us-wrapper-container .colum-30:nth-child(even) p:last-child {
+    max-width: 250px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -2473,4 +2473,11 @@ footer {
       }
     }
   }
+  .reach-us-wrapper-container {
+    .colum-30:nth-child(even) {
+      p:last-child {
+        max-width: 250px;
+      }
+    }
+  }
 }
