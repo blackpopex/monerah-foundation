@@ -2290,3 +2290,187 @@ footer {
     }
   }
 }
+
+/*****************CONTACT US********************/
+.contact-us {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+@media (min-width: 768px) {
+  .contact-us {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/assets/header-image/our-stories.jpg");
+  }
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin-inline: 0 auto;
+  padding: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  h5 {
+    font-weight: 500;
+    margin-bottom: 1.5em;
+    margin-top: 0;
+  }
+  .input-container {
+    margin-bottom: 0.75em;
+    label {
+      font-weight: 300;
+      width: 100%;
+      display: block;
+    }
+    input[type="text"],
+    textarea {
+      border: none;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      resize: none;
+      font-size: 0.6em;
+      padding: 0.35em 0.5em;
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+      border-radius: 4px;
+    }
+  }
+}
+.reach-us-wrapper-container {
+  margin-top: 1em;
+  .colum-30 {
+    max-width: 600px;
+    margin-bottom: 1em;
+    height: 250px;
+    line-height: 1.2;
+    overflow: hidden;
+    padding: 0.5em 1.5em;
+  }
+  .bg-grey {
+    ul li a {
+      color: $primary-color;
+    }
+  }
+  .bg-secondary-color {
+    div {
+      line-height: 0;
+      margin-bottom: 0;
+      h6 {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .reach-us-wrapper-container {
+    .colum-30:not(:last-child) {
+      width: 47.05%;
+      padding: 0.5em 1.5em;
+    }
+    .colum-30:last-child {
+      display: none;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .reach-us-wrapper-container {
+    .colum-30:not(:last-child) {
+      width: 30%;
+    }
+    .colum-30:last-child {
+      display: block;
+      .email-contacts {
+        margin-top: -0.5em;
+        div:last-child {
+          margin-top: -0.5em;
+        }
+        a {
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .contact-form {
+    width: 100%;
+    max-width: 850px;
+    padding: 2em;
+    form {
+      max-width: 600px;
+    }
+    h5 {
+      margin-bottom: 1.5em;
+    }
+
+    .input-container {
+      input[type="text"],
+      textarea {
+        font-size: 0.6em;
+        padding: 0.5em 0.5em;
+      }
+    }
+  }
+  .reach-us-wrapper-container {
+    .colum-30:last-child {
+      .email-contacts {
+        margin-top: -1em;
+        div:last-child {
+          margin-top: -0.5em;
+        }
+        h6 {
+          font-size: 0.9rem;
+        }
+        a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .contact-form {
+    max-width: 1000px;
+    padding: 2.5em;
+    form {
+      max-width: 650px;
+    }
+
+    .input-container {
+      input[type="text"],
+      textarea {
+        font-size: 0.65em;
+        padding: 0.5em 0.5em;
+      }
+    }
+  }
+  .reach-us-wrapper-container {
+    .colum-30:last-child {
+      .email-contacts {
+        margin-top: -1em;
+        div:last-child {
+          margin-top: -0.5em;
+        }
+        h6 {
+          font-size: 0.9rem;
+        }
+        a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

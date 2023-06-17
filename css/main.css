@@ -50,7 +50,8 @@ h6 {
 h1,
 h2,
 h6,
-p {
+p,
+label {
   font-family: "Inter", sans-serif;
 }
 
@@ -104,10 +105,15 @@ h6 {
 }
 
 p,
-a {
-  font-size: 0.65rem;
+a,
+label {
+  font-size: 0.7rem;
   font-weight: 300;
   font-family: "Inter", sans-serif;
+}
+
+label {
+  font-weight: 500;
 }
 
 p {
@@ -151,7 +157,8 @@ ul {
 }
 @media screen and (min-width: 992px) {
   p,
-  a {
+  a,
+  label {
     font-size: 0.75rem;
   }
 }
@@ -184,7 +191,8 @@ ul {
     font-size: 1rem;
   }
   p,
-  a {
+  a,
+  label {
     font-size: 0.8rem;
   }
 }
@@ -2319,5 +2327,154 @@ footer .copyright-developerslink ul li {
   }
   #areas-we-have-worked .image-wrapper img {
     width: 1000px;
+  }
+}
+/*****************CONTACT US********************/
+.contact-us {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+@media (min-width: 768px) {
+  .contact-us {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/our-stories.jpg");
+  }
+}
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin-inline: 0 auto;
+  padding: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.contact-form h5 {
+  font-weight: 500;
+  margin-bottom: 1.5em;
+  margin-top: 0;
+}
+.contact-form .input-container {
+  margin-bottom: 0.75em;
+}
+.contact-form .input-container label {
+  font-weight: 300;
+  width: 100%;
+  display: block;
+}
+.contact-form .input-container input[type=text],
+.contact-form .input-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 0.6em;
+  padding: 0.35em 0.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  border-radius: 4px;
+}
+
+.reach-us-wrapper-container {
+  margin-top: 1em;
+}
+.reach-us-wrapper-container .colum-30 {
+  max-width: 600px;
+  margin-bottom: 1em;
+  height: 250px;
+  line-height: 1.2;
+  overflow: hidden;
+  padding: 0.5em 1.5em;
+}
+.reach-us-wrapper-container .bg-grey ul li a {
+  color: #1a2238;
+}
+.reach-us-wrapper-container .bg-secondary-color div {
+  line-height: 0;
+  margin-bottom: 0;
+}
+.reach-us-wrapper-container .bg-secondary-color div h6 {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .reach-us-wrapper-container .colum-30:not(:last-child) {
+    width: 47.05%;
+    padding: 0.5em 1.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .reach-us-wrapper-container .colum-30:not(:last-child) {
+    width: 30%;
+  }
+  .reach-us-wrapper-container .colum-30:last-child {
+    display: block;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts {
+    margin-top: -0.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts div:last-child {
+    margin-top: -0.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts a {
+    font-size: 0.65rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-form {
+    width: 100%;
+    max-width: 850px;
+    padding: 2em;
+  }
+  .contact-form form {
+    max-width: 600px;
+  }
+  .contact-form h5 {
+    margin-bottom: 1.5em;
+  }
+  .contact-form .input-container input[type=text],
+  .contact-form .input-container textarea {
+    font-size: 0.6em;
+    padding: 0.5em 0.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts {
+    margin-top: -1em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts div:last-child {
+    margin-top: -0.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts h6 {
+    font-size: 0.9rem;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts a {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1600px) {
+  .contact-form {
+    max-width: 1000px;
+    padding: 2.5em;
+  }
+  .contact-form form {
+    max-width: 650px;
+  }
+  .contact-form .input-container input[type=text],
+  .contact-form .input-container textarea {
+    font-size: 0.65em;
+    padding: 0.5em 0.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts {
+    margin-top: -1em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts div:last-child {
+    margin-top: -0.5em;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts h6 {
+    font-size: 0.9rem;
+  }
+  .reach-us-wrapper-container .colum-30:last-child .email-contacts a {
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=main.css.map */

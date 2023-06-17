@@ -48,7 +48,8 @@ h6 {
 h1,
 h2,
 h6,
-p {
+p,
+label {
   font-family: "Inter", sans-serif;
 }
 
@@ -97,10 +98,14 @@ h6 {
 }
 
 p,
-a {
-  font-size: 0.65rem;
+a,
+label {
+  font-size: 0.7rem;
   font-weight: 300;
   font-family: "Inter", sans-serif;
+}
+label {
+  font-weight: 500;
 }
 
 p {
@@ -148,7 +153,8 @@ ul {
 
 @media screen and (min-width: 992px) {
   p,
-  a {
+  a,
+  label {
     font-size: 0.75rem;
   }
 }
@@ -184,7 +190,8 @@ ul {
     font-size: 1rem;
   }
   p,
-  a {
+  a,
+  label {
     font-size: 0.8rem;
   }
 }
