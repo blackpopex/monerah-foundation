@@ -3052,3 +3052,85 @@ footer {
     }
   }
 }
+
+/*****************ABOUT PROJECT********************/
+.Our-stories {
+  .project-overview {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  .project-details {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    h5 {
+      margin-bottom: 1.5em;
+    }
+    h6 {
+      margin-top: 0.75em;
+      font-weight: 500;
+    }
+    div {
+      margin-bottom: 1em;
+    }
+    div:last-child {
+      p {
+        max-width: 300px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .Our-stories {
+    margin-top: 1em;
+    h2.Overview {
+      margin-bottom: 0;
+    }
+    .project-overview {
+      margin-inline: 0 auto;
+      padding-right: 1em;
+    }
+    .project-details {
+      margin-inline: 0 auto;
+      padding-left: 1em;
+      border-left: 1px solid $secondary-color;
+
+      h5 {
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .Our-stories {
+    .project-overview {
+      max-width: 100%;
+    }
+    .project-details {
+      max-width: 100%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .Our-stories {
+    .project-overview {
+      padding-right: 2em;
+    }
+    .project-details {
+      padding-left: 2em;
+      max-width: 100%;
+      div:last-child {
+        p {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .Our-stories {
+    margin-top: 4em;
+  }
+}
