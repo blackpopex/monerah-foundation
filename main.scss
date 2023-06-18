@@ -199,6 +199,16 @@ button {
     @include flex(row, baseline);
   }
 }
+@media (min-width: 768px) {
+  .mar-2 {
+    margin-top: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .mar-2 {
+    margin-top: 0;
+  }
+}
 .header-hero-wrapper {
   position: relative;
   background-image: url("/assets/hero-image/ngo-hero-image-mobile.jpg");
@@ -2478,6 +2488,413 @@ footer {
       p:last-child {
         max-width: 250px;
       }
+    }
+  }
+}
+
+/*****************OUR STORIES********************/
+.stories {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+@media (min-width: 768px) {
+  .stories {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/assets/header-image/our-stories.jpg");
+  }
+}
+
+.Our-stories {
+  .quotes {
+    margin-top: 2em;
+    @include flex(row, start);
+    width: 100%;
+    max-width: 600px;
+    iconify-icon {
+      min-width: 25px;
+    }
+    .content {
+      width: 90%;
+      padding-left: 0.25em;
+      h5 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .key-statement-photo {
+    .wrapper {
+      width: 100%;
+      max-width: 600px;
+      margin-inline: 0 auto;
+      padding: 1em 0;
+      h5 {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .mission-vision-values {
+        width: 100%;
+        margin-top: 1.5em;
+        .content {
+          margin-bottom: 1.5em;
+          text-align: center;
+          iconify-icon {
+            font-size: 1.5em;
+            color: $white-color;
+          }
+          h6 {
+            font-size: 0.9rem;
+            margin-top: 0.75em;
+          }
+        }
+      }
+    }
+  }
+  .photo {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.milestones-overcome {
+  .colum-30 {
+    margin-bottom: 1.5em;
+    max-width: 300px;
+    margin-inline: auto;
+    .image-content-cotainer {
+      img {
+        width: 100%;
+      }
+      div {
+        h6 {
+          margin-top: 0;
+          font-weight: 600;
+        }
+        padding: 1em;
+      }
+      a {
+        width: 100%;
+        text-align: right;
+        display: block;
+        margin-top: 1em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+@media (min-width: 600px) {
+  .Our-stories {
+    .quotes {
+      @include flex(row, start);
+      max-width: 800px;
+      iconify-icon {
+        min-width: 30px;
+        font-size: 1.5em;
+      }
+      .content {
+        h5 {
+          font-size: 0.85em;
+        }
+      }
+    }
+
+    .key-statement-photo {
+      .wrapper {
+        max-width: 650px;
+        h5 {
+          font-size: 1.2em;
+        }
+        .mission-vision-values {
+          .content {
+            h6 {
+              font-size: 1rem;
+            }
+            p {
+              max-width: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .milestones-overcome {
+    h3 {
+      text-align: center;
+      max-width: 350px;
+      margin-inline: auto;
+    }
+    .colum-30 {
+      max-width: 350px;
+      .image-content-cotainer {
+        div {
+          padding: 1.5em 1em;
+        }
+        a {
+          margin-top: 2em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .Our-stories {
+    .quotes {
+      @include flex(row, start);
+      max-width: 700px;
+      iconify-icon {
+        min-width: 30px;
+        font-size: 1.75em;
+      }
+      .content {
+        h5 {
+          font-size: 1em;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .key-statement-photo {
+      .colum-50:first-child {
+        width: 100%;
+      }
+      .wrapper {
+        max-width: 500px;
+        margin-inline: auto;
+        h5 {
+          font-size: 1.2em;
+          margin-top: 0;
+        }
+        .mission-vision-values {
+          .content {
+            margin-bottom: 0.5em;
+            box-shadow: 1px 1px 1px 1px rgba(41, 41, 41, 0.1);
+            iconify-icon {
+              min-width: 10px;
+              padding: 0.5em 0 0.5em 0.5em;
+            }
+            div {
+              width: 85%;
+              max-width: 600px;
+              margin-inline: 0 auto;
+              text-align: left;
+              padding: 0.5em 0.5em 0.5em 0.75em;
+            }
+            h6 {
+              font-size: 1rem;
+              margin-top: 0;
+              margin-bottom: 0.25em;
+            }
+            p {
+              max-width: 350px;
+            }
+            background-color: rgba(33, 43, 68, 0.5);
+          }
+          .content:first-child {
+            border-left: 4px solid $secondary-color;
+          }
+          .content:not(:first-child) {
+            border-left: 4px solid $white-color;
+          }
+        }
+      }
+    }
+    .photo {
+      display: none;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .milestones-overcome {
+    h3 {
+      text-align: left;
+      max-width: 400px;
+      margin-inline: 0 auto;
+    }
+    .colum-30 {
+      margin-bottom: 0;
+      max-width: 400px;
+      .image-content-cotainer {
+        div {
+          padding: 1em;
+        }
+        a {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .Our-stories {
+    .quotes {
+      @include flex(row, start);
+      max-width: 800px;
+      iconify-icon {
+        min-width: 35px;
+        font-size: 2em;
+      }
+      .content {
+        h5 {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .Our-stories {
+    .quotes {
+      @include flex(row, start);
+      max-width: 800px;
+      iconify-icon {
+        min-width: 40px;
+        font-size: 2.5em;
+      }
+    }
+
+    .key-statement-photo {
+      height: 400px;
+      overflow: hidden;
+      .colum-50:first-child {
+        width: 50%;
+      }
+      .wrapper {
+        max-width: 500px;
+        margin-inline: auto 0;
+
+        h5 {
+          font-size: 1.2em;
+          margin-top: 0;
+          text-align: left;
+        }
+        .mission-vision-values {
+          margin-top: -0.25em;
+
+          .content {
+            margin-bottom: 0.25em;
+            max-width: 400px;
+
+            iconify-icon {
+              font-size: 1.5em;
+              min-width: 10px;
+              padding: 0.25em 0 0.25em 0.25em;
+            }
+            div {
+              width: 85%;
+              max-width: 400px;
+              margin-inline: 0 auto;
+              text-align: left;
+              padding: 0.25em 0.25em 0.25em 0.75em;
+            }
+            h6 {
+              font-size: 0.8rem;
+              margin-top: 0;
+              margin-bottom: 0.25em;
+            }
+            p {
+              max-width: 320px;
+              font-size: 0.65rem;
+            }
+          }
+        }
+      }
+    }
+
+    .photo {
+      display: block;
+      img {
+        max-width: 100%;
+        min-height: 350px;
+      }
+    }
+  }
+  .milestones-overcome {
+    h3 {
+      max-width: 500px;
+    }
+    .colum-30 {
+      margin-inline: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .Our-stories {
+    .quotes {
+      @include flex(row, start);
+      max-width: 1000px;
+      iconify-icon {
+        min-width: 40px;
+        font-size: 3em;
+      }
+      .content {
+        h5 {
+          font-size: 1.3em;
+        }
+      }
+    }
+
+    .key-statement-photo {
+      height: 430px;
+
+      .wrapper {
+        max-width: 500px;
+        margin-inline: auto 0;
+
+        h5 {
+          font-size: 1.2em;
+        }
+        .mission-vision-values {
+          .content {
+            margin-bottom: 0.5em;
+            max-width: 450px;
+
+            iconify-icon {
+              font-size: 1.5em;
+            }
+            div {
+              padding: 0.25em 0.25em 0.25em 0.75em;
+            }
+            h6 {
+              font-size: 0.85rem;
+            }
+            p {
+              max-width: 340px;
+              font-size: 0.65rem;
+            }
+          }
+        }
+      }
+    }
+
+    .photo {
+      img {
+        min-height: 430px;
+      }
+    }
+  }
+  .milestones-overcome {
+    h3 {
+      max-width: 500px;
+    }
+    .colum-30 {
+      margin-inline: 0 auto;
     }
   }
 }

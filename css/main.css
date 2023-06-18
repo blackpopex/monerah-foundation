@@ -91,23 +91,23 @@ h4 {
 }
 
 h5 {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 h5,
 h6 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
   font-weight: 400;
 }
 
 h6 {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 p,
 a,
 label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 300;
   font-family: "Inter", sans-serif;
 }
@@ -129,17 +129,22 @@ ul {
   list-style-type: none;
 }
 
+@media screen and (min-width: 600px) {
+  h6 {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 6rem;
     line-height: 1.8;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 500;
   }
   h4 {
     font-size: 1.1rem;
@@ -148,10 +153,11 @@ ul {
     font-size: 0.85rem;
   }
   h6 {
-    font-size: 0.75rem;
+    font-weight: 500;
   }
   p,
-  a {
+  a,
+  label {
     font-size: 0.7rem;
   }
 }
@@ -188,12 +194,12 @@ ul {
     font-size: 1rem;
   }
   h6 {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   p,
   a,
   label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 section {
@@ -495,6 +501,16 @@ button, #Make-a-donation .submit-btn {
     justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
+  }
+}
+@media (min-width: 768px) {
+  .mar-2 {
+    margin-top: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .mar-2 {
+    margin-top: 0;
   }
 }
 .header-hero-wrapper {
@@ -2479,5 +2495,359 @@ footer .copyright-developerslink ul li {
   }
   .reach-us-wrapper-container .colum-30:nth-child(even) p:last-child {
     max-width: 250px;
+  }
+}
+/*****************OUR STORIES********************/
+.stories {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+
+@media (min-width: 768px) {
+  .stories {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/our-stories.jpg");
+  }
+}
+.Our-stories .quotes {
+  margin-top: 2em;
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: start;
+  width: 100%;
+  max-width: 600px;
+}
+.Our-stories .quotes iconify-icon {
+  min-width: 25px;
+}
+.Our-stories .quotes .content {
+  width: 90%;
+  padding-left: 0.25em;
+}
+.Our-stories .quotes .content h5 {
+  margin-top: 0;
+}
+.Our-stories .key-statement-photo .wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-inline: 0 auto;
+  padding: 1em 0;
+}
+.Our-stories .key-statement-photo .wrapper h5 {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.Our-stories .key-statement-photo .wrapper .mission-vision-values {
+  width: 100%;
+  margin-top: 1.5em;
+}
+.Our-stories .key-statement-photo .wrapper .mission-vision-values .content {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+.Our-stories .key-statement-photo .wrapper .mission-vision-values .content iconify-icon {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+.Our-stories .key-statement-photo .wrapper .mission-vision-values .content h6 {
+  font-size: 0.9rem;
+  margin-top: 0.75em;
+}
+.Our-stories .photo img {
+  max-width: 100%;
+}
+
+.milestones-overcome .colum-30 {
+  margin-bottom: 1.5em;
+  max-width: 300px;
+  margin-inline: auto;
+}
+.milestones-overcome .colum-30 .image-content-cotainer img {
+  width: 100%;
+}
+.milestones-overcome .colum-30 .image-content-cotainer div {
+  padding: 1em;
+}
+.milestones-overcome .colum-30 .image-content-cotainer div h6 {
+  margin-top: 0;
+  font-weight: 600;
+}
+.milestones-overcome .colum-30 .image-content-cotainer a {
+  width: 100%;
+  text-align: right;
+  display: block;
+  margin-top: 1em;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .Our-stories .quotes {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    max-width: 800px;
+  }
+  .Our-stories .quotes iconify-icon {
+    min-width: 30px;
+    font-size: 1.5em;
+  }
+  .Our-stories .quotes .content h5 {
+    font-size: 0.85em;
+  }
+  .Our-stories .key-statement-photo .wrapper {
+    max-width: 650px;
+  }
+  .Our-stories .key-statement-photo .wrapper h5 {
+    font-size: 1.2em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content h6 {
+    font-size: 1rem;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content p {
+    max-width: 350px;
+  }
+  .milestones-overcome h3 {
+    text-align: center;
+    max-width: 350px;
+    margin-inline: auto;
+  }
+  .milestones-overcome .colum-30 {
+    max-width: 350px;
+  }
+  .milestones-overcome .colum-30 .image-content-cotainer div {
+    padding: 1.5em 1em;
+  }
+  .milestones-overcome .colum-30 .image-content-cotainer a {
+    margin-top: 2em;
+  }
+}
+@media (min-width: 768px) {
+  .Our-stories .quotes {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    max-width: 700px;
+  }
+  .Our-stories .quotes iconify-icon {
+    min-width: 30px;
+    font-size: 1.75em;
+  }
+  .Our-stories .quotes .content h5 {
+    font-size: 1em;
+    line-height: 1.2;
+  }
+  .Our-stories .key-statement-photo .colum-50:first-child {
+    width: 100%;
+  }
+  .Our-stories .key-statement-photo .wrapper {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .Our-stories .key-statement-photo .wrapper h5 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content {
+    margin-bottom: 0.5em;
+    box-shadow: 1px 1px 1px 1px rgba(41, 41, 41, 0.1);
+    background-color: rgba(33, 43, 68, 0.5);
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content iconify-icon {
+    min-width: 10px;
+    padding: 0.5em 0 0.5em 0.5em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content div {
+    width: 85%;
+    max-width: 600px;
+    margin-inline: 0 auto;
+    text-align: left;
+    padding: 0.5em 0.5em 0.5em 0.75em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content h6 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content p {
+    max-width: 350px;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content:first-child {
+    border-left: 4px solid #9eabf2;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content:not(:first-child) {
+    border-left: 4px solid #ffffff;
+  }
+  .Our-stories .photo {
+    display: none;
+  }
+  .Our-stories .photo img {
+    max-width: 100%;
+  }
+  .milestones-overcome h3 {
+    text-align: left;
+    max-width: 400px;
+    margin-inline: 0 auto;
+  }
+  .milestones-overcome .colum-30 {
+    margin-bottom: 0;
+    max-width: 400px;
+  }
+  .milestones-overcome .colum-30 .image-content-cotainer div {
+    padding: 1em;
+  }
+  .milestones-overcome .colum-30 .image-content-cotainer a {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .Our-stories .quotes {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    max-width: 800px;
+  }
+  .Our-stories .quotes iconify-icon {
+    min-width: 35px;
+    font-size: 2em;
+  }
+  .Our-stories .quotes .content h5 {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1200px) {
+  .Our-stories .quotes {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    max-width: 800px;
+  }
+  .Our-stories .quotes iconify-icon {
+    min-width: 40px;
+    font-size: 2.5em;
+  }
+  .Our-stories .key-statement-photo {
+    height: 400px;
+    overflow: hidden;
+  }
+  .Our-stories .key-statement-photo .colum-50:first-child {
+    width: 50%;
+  }
+  .Our-stories .key-statement-photo .wrapper {
+    max-width: 500px;
+    margin-inline: auto 0;
+  }
+  .Our-stories .key-statement-photo .wrapper h5 {
+    font-size: 1.2em;
+    margin-top: 0;
+    text-align: left;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values {
+    margin-top: -0.25em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content {
+    margin-bottom: 0.25em;
+    max-width: 400px;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content iconify-icon {
+    font-size: 1.5em;
+    min-width: 10px;
+    padding: 0.25em 0 0.25em 0.25em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content div {
+    width: 85%;
+    max-width: 400px;
+    margin-inline: 0 auto;
+    text-align: left;
+    padding: 0.25em 0.25em 0.25em 0.75em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content h6 {
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content p {
+    max-width: 320px;
+    font-size: 0.65rem;
+  }
+  .Our-stories .photo {
+    display: block;
+  }
+  .Our-stories .photo img {
+    max-width: 100%;
+    min-height: 350px;
+  }
+  .milestones-overcome h3 {
+    max-width: 500px;
+  }
+  .milestones-overcome .colum-30 {
+    margin-inline: 0 auto;
+  }
+}
+@media (min-width: 1600px) {
+  .Our-stories .quotes {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    max-width: 1000px;
+  }
+  .Our-stories .quotes iconify-icon {
+    min-width: 40px;
+    font-size: 3em;
+  }
+  .Our-stories .quotes .content h5 {
+    font-size: 1.3em;
+  }
+  .Our-stories .key-statement-photo {
+    height: 430px;
+  }
+  .Our-stories .key-statement-photo .wrapper {
+    max-width: 500px;
+    margin-inline: auto 0;
+  }
+  .Our-stories .key-statement-photo .wrapper h5 {
+    font-size: 1.2em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content {
+    margin-bottom: 0.5em;
+    max-width: 450px;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content iconify-icon {
+    font-size: 1.5em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content div {
+    padding: 0.25em 0.25em 0.25em 0.75em;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content h6 {
+    font-size: 0.85rem;
+  }
+  .Our-stories .key-statement-photo .wrapper .mission-vision-values .content p {
+    max-width: 340px;
+    font-size: 0.65rem;
+  }
+  .Our-stories .photo img {
+    min-height: 430px;
+  }
+  .milestones-overcome h3 {
+    max-width: 500px;
+  }
+  .milestones-overcome .colum-30 {
+    margin-inline: 0 auto;
   }
 }/*# sourceMappingURL=main.css.map */

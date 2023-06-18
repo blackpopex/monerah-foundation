@@ -85,22 +85,22 @@ h4 {
   font-size: 0.85rem;
 }
 h5 {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 h5,
 h6 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
   font-weight: 400;
 }
 h6 {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 p,
 a,
 label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 300;
   font-family: "Inter", sans-serif;
 }
@@ -120,6 +120,12 @@ ul {
   list-style-type: none;
 }
 
+@media screen and (min-width: 600px) {
+  h6 {
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 6rem;
@@ -127,12 +133,12 @@ ul {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 
   h4 {
@@ -142,11 +148,11 @@ ul {
     font-size: 0.85rem;
   }
   h6 {
-    font-size: 0.75rem;
+    font-weight: 500;
   }
-
   p,
-  a {
+  a,
+  label {
     font-size: 0.7rem;
   }
 }
@@ -187,12 +193,12 @@ ul {
     font-size: 1rem;
   }
   h6 {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   p,
   a,
   label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 
