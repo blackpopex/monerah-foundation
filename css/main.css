@@ -1245,7 +1245,11 @@ footer .copyright-developerslink ul li {
     font-size: 0.9rem;
     line-height: 0;
     cursor: default;
-    color: #9eabf2;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  footer a.dropdown-btn:hover {
+    color: #ffffff;
   }
   footer .dropdown-btn span {
     display: none;
