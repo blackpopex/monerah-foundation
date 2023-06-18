@@ -99,7 +99,8 @@ h6 {
 
 p,
 a,
-label {
+label,
+li.secondary-dot {
   font-size: 0.68rem;
   font-weight: 300;
   font-family: "Inter", sans-serif;
@@ -151,7 +152,8 @@ ul {
   }
   p,
   a,
-  label {
+  label,
+  li.secondary-dot {
     font-size: 0.7rem;
   }
 }
@@ -159,7 +161,8 @@ ul {
 @media screen and (min-width: 992px) {
   p,
   a,
-  label {
+  label,
+  li.secondary-dot {
     font-size: 0.75rem;
   }
 }
@@ -196,7 +199,8 @@ ul {
   }
   p,
   a,
-  label {
+  label,
+  li.secondary-dot {
     font-size: 0.75rem;
   }
 }
@@ -249,6 +253,9 @@ img {
 .colum-30 {
   width: 100%;
 }
+.colum-33 {
+  width: 100%;
+}
 .colum-40 {
   width: 100%;
 }
@@ -267,6 +274,9 @@ img {
   }
   .colum-30 {
     width: 30%;
+  }
+  .colum-33 {
+    width: 33%;
   }
   .colum-40 {
     width: 40%;
