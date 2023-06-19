@@ -3474,3 +3474,279 @@ footer {
     }
   }
 }
+
+/*************BECOME A VOLUNTEER*************/
+.become-a-volunteer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+@media (min-width: 768px) {
+  .become-a-volunteer {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/assets/header-image/other-ways-to-give.jpg");
+  }
+}
+.volunteer {
+  .quotes {
+    margin-top: 2em;
+    @include flex(row, start);
+    width: 100%;
+    max-width: 600px;
+    iconify-icon {
+      min-width: 25px;
+    }
+    .content {
+      width: 90%;
+      padding-left: 0.25em;
+      h5 {
+        margin-top: 0;
+      }
+    }
+  }
+  .volunteer-gallery {
+    max-width: 400px;
+    margin-inline: auto;
+    display: block;
+    .colum-30 {
+      margin-bottom: 1em;
+      img {
+        width: 100%;
+      }
+    }
+    .colum-30:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .testifiers-slideshow {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    .quotes {
+      h5 {
+        margin-bottom: 1.5em;
+        margin-top: 0;
+      }
+    }
+  }
+}
+.volunteer-form {
+  p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  .form-wrapper {
+    width: 100%;
+    margin-inline: auto;
+    .input-container {
+      width: 100%;
+    }
+    input[type="text"] {
+      background-color: $body-grey-color;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .volunteer {
+    .quotes {
+      @include flex(row, start);
+      max-width: 800px;
+      iconify-icon {
+        min-width: 30px;
+        font-size: 1.5em;
+      }
+      .content {
+        h5 {
+          font-size: 0.85em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title-box .mini-container h2 {
+    font-size: 0.85rem;
+  }
+
+  .volunteer {
+    margin-top: 2em;
+
+    .quotes {
+      @include flex(row, start);
+      max-width: 700px;
+      iconify-icon {
+        min-width: 30px;
+        font-size: 1.6em;
+      }
+      .content {
+        h5 {
+          font-size: 0.8em;
+          line-height: 1.2;
+        }
+      }
+    }
+    .volunteer-gallery {
+      max-width: 600px;
+    }
+
+    .testifiers-slideshow {
+      max-width: 550px;
+    }
+  }
+
+  .volunteer-form {
+    h3,
+    p {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      margin-inline: auto;
+    }
+    .form-wrapper {
+      .input-container {
+        width: 48.5%;
+      }
+      input[type="text"] {
+        padding: 0.5em;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .section-title-box .mini-container h2 {
+    font-size: 1.1em;
+  }
+  .volunteer {
+    .quotes {
+      @include flex(row, start);
+      max-width: 800px;
+      iconify-icon {
+        min-width: 35px;
+        font-size: 2em;
+      }
+      .content {
+        h5 {
+          font-size: 0.9em;
+        }
+      }
+    }
+    .volunteer-gallery {
+      max-width: 700px;
+    }
+
+    .testifiers-slideshow {
+      max-width: 650px;
+    }
+  }
+  .volunteer-form {
+    h3,
+    p {
+      max-width: 600px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .section-title-box .mini-container h2 {
+    font-size: 1.35em;
+  }
+  .volunteer {
+    .quotes {
+      @include flex(row, start);
+      max-width: 900px;
+      iconify-icon {
+        min-width: 20px;
+        font-size: 2em;
+      }
+      content {
+        h5 {
+          font-size: 0.8em;
+        }
+      }
+    }
+    margin-top: 2em;
+    .volunteer-gallery {
+      max-width: 800px;
+    }
+
+    .testifiers-slideshow {
+      max-width: 700px;
+    }
+  }
+  .volunteer-form {
+    h3,
+    p {
+      max-width: 650px;
+    }
+  }
+  .contact-form {
+    .flex {
+      .input-container {
+        input[type="text"] {
+          padding: 0.65em;
+        }
+      }
+    }
+    form {
+      margin-inline: auto;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .section-title-box .mini-container h2 {
+    font-size: 1.5em;
+  }
+  .volunteer {
+    .quotes {
+      @include flex(row, start);
+      max-width: 1200px;
+      iconify-icon {
+        min-width: 30px;
+        font-size: 2.5em;
+      }
+      .content {
+        h5 {
+          font-size: 1em;
+        }
+      }
+    }
+    margin-top: 2em;
+    .volunteer-gallery {
+      max-width: 1000px;
+    }
+
+    .testifiers-slideshow {
+      max-width: 750px;
+    }
+  }
+  .volunteer-form {
+    h3,
+    p {
+      max-width: 700px;
+    }
+  }
+  .contact-form {
+    .flex {
+      .input-container {
+        input[type="text"] {
+          padding: 0.75em;
+        }
+      }
+    }
+    form {
+      max-width: 750px;
+    }
+  }
+}
