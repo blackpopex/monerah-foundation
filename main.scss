@@ -3750,3 +3750,25 @@ footer {
     }
   }
 }
+
+/*****************OUR TEAM********************/
+.our-team {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+}
+@media (min-width: 768px) {
+  .our-team {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("/assets/header-image/our-team.jpg");
+  }
+}
