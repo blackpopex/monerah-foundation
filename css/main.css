@@ -78,7 +78,7 @@ h3 {
 h3,
 h4 {
   margin-bottom: 0.6em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h4,
@@ -183,11 +183,10 @@ ul {
     margin-bottom: 1em;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   h4 {
     font-size: 1.25rem;
-    font-weight: 500;
   }
   h5 {
     font-size: 1.1rem;
@@ -3542,7 +3541,7 @@ footer .copyright-developerslink ul li {
   .contact-form .flex .input-container input[type=text] {
     padding: 0.65em;
   }
-  .contact-form form {
+  .contact-form .Contact-Us-form {
     margin-inline: auto;
   }
 }
@@ -3582,7 +3581,7 @@ footer .copyright-developerslink ul li {
   .contact-form .flex .input-container input[type=text] {
     padding: 0.75em;
   }
-  .contact-form form {
+  .contact-form .Contact-Us-form {
     max-width: 750px;
   }
 }
