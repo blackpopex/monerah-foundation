@@ -246,6 +246,10 @@ img {
   width: 100%;
 }
 
+.colum-25 {
+  width: 100%;
+}
+
 .colum-30 {
   width: 100%;
 }
@@ -273,6 +277,9 @@ img {
 @media (min-width: 768px) {
   .colum-23 {
     width: 23.33%;
+  }
+  .colum-25 {
+    width: 25%;
   }
   .colum-30 {
     width: 30%;
@@ -3713,7 +3720,7 @@ footer .copyright-developerslink ul li {
 
 @media (min-width: 768px) {
   .donate {
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/pexels-anna-maxelante-3138323.jpg");
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/donate-img.jpg");
   }
   #Partner-Now .make-a-donation-form {
     max-width: 650px;
@@ -3730,7 +3737,7 @@ footer .copyright-developerslink ul li {
   #Partner-Now .bg-transparent-white {
     width: 60%;
     max-width: 500px;
-    margin-inline: 0 auto;
+    margin-inline: auto 0;
   }
   #Partner-Now .info .flex {
     display: flex;
