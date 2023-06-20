@@ -3594,4 +3594,186 @@ footer .copyright-developerslink ul li {
   .our-team {
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/our-team.jpg");
   }
+}
+/*****************DONATE NOW********************/
+.donate {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/pexels-joshua-hlschr-13346667.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+}
+
+#Partner-Now .bg-transparent-white {
+  background-color: rgba(26, 34, 56, 0.8);
+  padding: 1.5em 0.75em 0.5em;
+}
+#Partner-Now .make-a-donation-form {
+  margin-bottom: 2em;
+  max-width: 600px;
+  margin-inline: 0 auto;
+  padding: 1em 0;
+}
+#Partner-Now .make-a-donation-form .spx-width {
+  width: 100%;
+  max-width: 350px;
+  margin-inline: auto;
+  margin-bottom: 2em;
+}
+#Partner-Now .make-a-donation-form .spx-width:last-child {
+  margin-bottom: 0;
+}
+#Partner-Now .make-a-donation-form .intertial-text {
+  width: 100%;
+  text-align: center;
+}
+#Partner-Now .make-a-donation-form .intertial-text h2 {
+  margin-bottom: 0.25em;
+}
+#Partner-Now .make-a-donation-form h5 {
+  margin-bottom: 1.5em;
+}
+#Partner-Now .make-a-donation-form .group-btn {
+  display: flex;
+  display: -ms-flexbox;
+  margin-bottom: 1.5em;
+}
+#Partner-Now .make-a-donation-form .group-btn button, #Partner-Now .make-a-donation-form .group-btn #Make-a-donation .submit-btn, #Make-a-donation #Partner-Now .make-a-donation-form .group-btn .submit-btn {
+  width: 50%;
+  padding: 1em 0.5em;
+}
+#Partner-Now .make-a-donation-form a {
+  margin-top: 1.5em;
+  text-align: right;
+  width: 100%;
+  font-weight: 600;
+}
+#Partner-Now .make-a-donation-form .select-amount-to-pay .flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#Partner-Now .make-a-donation-form .select-amount-to-pay .flex .col-33 {
+  width: 33%;
+  padding: 0.75em 0.25em;
+}
+#Partner-Now .make-a-donation-form .select-amount-to-pay .flex .col-66 {
+  width: 66%;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  padding: 0.18em 0;
+}
+#Partner-Now .make-a-donation-form .select-amount-to-pay .flex .col-66 .icon {
+  color: #1a2238;
+  min-width: 25px;
+  padding-left: 0.5em;
+  text-align: center;
+  font-size: 0.6em;
+}
+#Partner-Now .make-a-donation-form .select-amount-to-pay .flex .col-66 input[type=text] {
+  width: 75%;
+  margin-left: 0.5em;
+  border: none;
+  outline: none;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0.5em 0.5em;
+  box-shadow: inset 1px 1px 1px 1px rgba(26, 34, 56, 0.1);
+}
+#Partner-Now .make-a-donation-form .info {
+  margin-bottom: 0;
+}
+#Partner-Now .make-a-donation-form .info .input-container {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+#Partner-Now .make-a-donation-form .info .input-container label {
+  font-weight: 300;
+  width: 100%;
+  display: block;
+}
+#Partner-Now .make-a-donation-form .info .input-container input[type=text],
+#Partner-Now .make-a-donation-form .info .input-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 0.6em;
+  padding: 0.35em 0.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .donate {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/pexels-anna-maxelante-3138323.jpg");
+  }
+  #Partner-Now .make-a-donation-form {
+    max-width: 650px;
+    margin-inline: auto;
+  }
+  #Partner-Now .make-a-donation-form .spx-width {
+    max-width: 450px;
+  }
+  #Partner-Now .make-a-donation-form .intertial-text {
+    max-width: 400px;
+  }
+}
+@media (min-width: 992px) {
+  #Partner-Now .bg-transparent-white {
+    width: 60%;
+    max-width: 500px;
+    margin-inline: 0 auto;
+  }
+  #Partner-Now .info .flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.75em;
+  }
+  #Partner-Now .info .flex .input-container {
+    margin-bottom: 0;
+    width: 48.5%;
+  }
+  #Partner-Now .info .flex .input-container input[type=text],
+  #Partner-Now .info .flex .input-container textarea {
+    border-radius: 0;
+  }
+}
+@media (min-width: 1200px) {
+  #Partner-Now .bg-transparent-white {
+    max-width: 550px;
+    padding-inline: 1em;
+  }
+  #Partner-Now .bg-transparent-white h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+  #Partner-Now .bg-transparent-white h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1600px) {
+  #Partner-Now .bg-transparent-white {
+    max-width: 600px;
+    padding-inline: 1.5em;
+  }
+  #Partner-Now .bg-transparent-white h2 {
+    font-size: 2rem;
+  }
+  #Partner-Now .bg-transparent-white h3 {
+    font-size: 1.6rem;
+  }
+  #Partner-Now .info input[type=text],
+  #Partner-Now .info textarea {
+    font-size: 0.65em;
+    padding: 0.5em 0.5em;
+  }
 }/*# sourceMappingURL=main.css.map */
