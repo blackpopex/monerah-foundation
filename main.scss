@@ -3578,7 +3578,7 @@ footer {
 
 @media (min-width: 768px) {
   .section-title-box .mini-container h2 {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .volunteer {
@@ -3761,6 +3761,99 @@ footer {
     ),
     url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
 }
+/*****COMPLICATED CSS****/
+.menorah-team-members {
+  h3,
+  h4,
+  h5,
+  .text-content p {
+    text-align: center;
+  }
+  .team-container {
+    margin-top: 1.5em;
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    .board-of-trustees {
+      .board-of-text-abs {
+        h4 {
+          margin-top: 0;
+        }
+      }
+    }
+    .profile-details {
+      width: 100%;
+      margin-top: 1.5em;
+      .w-90,
+      .brian {
+        margin-bottom: 5em;
+      }
+    }
+
+    .colum-25 {
+      margin-bottom: 5em;
+    }
+    .img-wrapper {
+      width: 50%;
+      max-width: 300px;
+      margin-inline: auto;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .content-abs {
+        width: 85%;
+        position: absolute;
+        bottom: -36.8px;
+        right: 0;
+        height: auto;
+
+        .name-tag {
+          padding: 0.25em 0.25em 0.25em 0.5em;
+          p {
+            margin-bottom: 0;
+          }
+        }
+        .job-title-transparent {
+          background-color: transparent;
+          line-height: 0.2;
+          padding: 0 0.25em 0.25em 0.5em;
+          p {
+            margin-bottom: 0;
+            font-weight: 600;
+          }
+          a {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .menorah-team-members {
+    .text-content p {
+      margin-bottom: 3em;
+    }
+    .team-container {
+      margin-top: 0.5em;
+      max-width: 600px;
+
+      .img-wrapper {
+        max-width: 400px;
+        .content-abs {
+          bottom: -36.5px;
+          .name-tag {
+            padding: 0.5em 0.25em 0.5em 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .our-team {
     background-image: linear-gradient(
@@ -3770,6 +3863,304 @@ footer {
         rgba(0, 0, 0, 0.1)
       ),
       url("/assets/header-image/our-team.jpg");
+  }
+
+  .menorah-team-members {
+    /*****FOR BOARD OF TRUSTEES******/
+    .team-container {
+      margin-top: 0.5em;
+      max-width: 600px;
+
+      .profile-details {
+        max-width: 480px;
+        margin-inline: auto;
+        margin-bottom: 3em;
+        .w-90,
+        .brian {
+          margin-bottom: 0;
+        }
+
+        .w-90 {
+          width: 90%;
+          margin-inline: auto;
+          .img-wrapper {
+            width: 33.5%;
+            margin-inline: 0;
+            position: none;
+            display: block;
+
+            .content-abs {
+              .name-tag {
+                padding: 0.25em 0.25em 0.25em 0.5em;
+                p {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+          /*******ARRANGING THE BOXES*********/
+          .w-30-right {
+            margin-inline: auto 0;
+          }
+          .w-30-middle {
+            margin-inline: auto;
+          }
+          .split-items {
+            display: flex;
+          }
+        }
+      }
+      /****PROFILE DETAILS ENDS****/
+    }
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+    .management-team {
+      max-width: 600px;
+      margin-inline: auto;
+    }
+    .staff-team {
+      .colum-25 {
+        width: 50%;
+      }
+
+      .img-wrapper {
+        width: 50%;
+        max-width: 300px;
+        margin-inline: auto;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .content-abs {
+          width: 80%;
+          position: absolute;
+          bottom: -36.8px;
+          right: 0;
+          height: auto;
+          .name-tag {
+            padding: 0.25em 0.25em 0.25em 0.5em;
+            p {
+              margin-bottom: 0;
+            }
+          }
+          .job-title-transparent {
+            background-color: transparent;
+            line-height: 0.2;
+            padding: 0 0.25em 0.25em 0.5em;
+            p {
+              margin-bottom: 0;
+              font-weight: 600;
+            }
+            a {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .menorah-team-members {
+    /*****FOR BOARD OF TRUSTEES******/
+    .team-container {
+      max-width: 600px;
+
+      .profile-details {
+        max-width: 600px;
+        .w-90,
+        .brian {
+          margin-bottom: 0;
+        }
+
+        .w-90 {
+          .img-wrapper {
+            width: 33.5%;
+
+            .content-abs {
+              bottom: -38px;
+            }
+          }
+
+          /*******ARRANGING THE BOXES*********/
+        }
+      }
+      /****PROFILE DETAILS ENDS****/
+    }
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+    .staff-team {
+      max-width: 900px;
+      .colum-25 {
+        width: 25%;
+        padding: 0.5em;
+      }
+
+      .img-wrapper {
+        width: 100%;
+        max-width: 250px;
+        .content-abs {
+          bottom: -39px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .bg-grey.menorah-team-members {
+    padding-bottom: 0;
+  }
+  .menorah-team-members {
+    .max-width {
+      max-width: 90%;
+      margin-inline: auto;
+    }
+    h3 {
+      text-align: right;
+      margin-bottom: 3em;
+    }
+    h4,
+    h5,
+    .text-content p {
+      text-align: left;
+    }
+
+    /*****FOR BOARD OF TRUSTEES******/
+    .board-of-text-abs {
+      width: 50%;
+      max-width: 450px;
+      position: relative;
+      left: 0;
+      top: 0;
+      h4 {
+        font: {
+          size: 1em;
+          weight: 300;
+        }
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    .main-team-members {
+      max-width: 90%;
+      margin-inline: auto;
+
+      .profile-details {
+        max-width: 500px;
+        width: 50%;
+        position: relative;
+        top: -240px;
+        right: -27.25%;
+        margin-bottom: 0;
+        .w-90 {
+          .img-wrapper {
+            width: 33.5%;
+
+            .content-abs {
+              bottom: -38.2px;
+            }
+          }
+
+          /*******ARRANGING THE BOXES*********/
+        }
+      }
+      /****PROFILE DETAILS ENDS****/
+    }
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+    .management-team {
+      margin-inline: 0 auto;
+      h3,
+      h5,
+      p {
+        text-align: left;
+      }
+      h3 {
+        margin-bottom: 0.25em;
+      }
+      h5 {
+        margin-top: 0;
+      }
+    }
+    .staff-team {
+      max-width: 100%;
+      .colum-25 {
+        width: 20%;
+        padding: 1em;
+      }
+      .img-wrapper {
+        max-width: 180px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .menorah-team-members {
+    h4,
+    h5,
+    .text-content p {
+      text-align: left;
+    }
+
+    /*****FOR BOARD OF TRUSTEES******/
+    .board-of-text-abs {
+      width: 50%;
+      max-width: 650px;
+      h4 {
+        font: {
+          size: 1.25em;
+        }
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    .main-team-members {
+      .profile-details {
+        max-width: 600px;
+        width: 50%;
+        position: relative;
+        top: -240px;
+        right: -27.25%;
+        margin-bottom: 0;
+        .w-90 {
+          .img-wrapper {
+            .content-abs {
+              bottom: -41px;
+            }
+          }
+
+          /*******ARRANGING THE BOXES*********/
+        }
+      }
+      /****PROFILE DETAILS ENDS****/
+    }
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+    .management-team {
+      margin-inline: 0 auto;
+      h3,
+      h5,
+      p {
+        text-align: left;
+      }
+      h3 {
+        margin-bottom: 0.25em;
+      }
+      h5 {
+        margin-top: 0;
+      }
+    }
+    .staff-team {
+      .img-wrapper {
+        max-width: 200px;
+        .content-abs {
+          bottom: -40px;
+        }
+      }
+    }
   }
 }
 
@@ -3792,7 +4183,7 @@ footer {
 
 #Partner-Now {
   .bg-transparent-white {
-    background-color: rgba(26, 34, 56, 0.8);
+    background-color: rgba(26, 34, 56, 0.75);
     padding: 1.5em 0.75em 0.5em;
   }
 
@@ -3905,7 +4296,8 @@ footer {
   .donate {
     background-image: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.1),
         rgba(0, 0, 0, 0.1)
       ),

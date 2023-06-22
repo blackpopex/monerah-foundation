@@ -3439,7 +3439,7 @@ footer .copyright-developerslink ul li {
 }
 @media (min-width: 768px) {
   .section-title-box .mini-container h2 {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .volunteer {
     margin-top: 2em;
@@ -3597,9 +3597,356 @@ footer .copyright-developerslink ul li {
   background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
 }
 
+/*****COMPLICATED CSS****/
+.menorah-team-members h3,
+.menorah-team-members h4,
+.menorah-team-members h5,
+.menorah-team-members .text-content p {
+  text-align: center;
+}
+.menorah-team-members .team-container {
+  margin-top: 1.5em;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.menorah-team-members .team-container .board-of-trustees .board-of-text-abs h4 {
+  margin-top: 0;
+}
+.menorah-team-members .team-container .profile-details {
+  width: 100%;
+  margin-top: 1.5em;
+}
+.menorah-team-members .team-container .profile-details .w-90,
+.menorah-team-members .team-container .profile-details .brian {
+  margin-bottom: 5em;
+}
+.menorah-team-members .team-container .colum-25 {
+  margin-bottom: 5em;
+}
+.menorah-team-members .team-container .img-wrapper {
+  width: 50%;
+  max-width: 300px;
+  margin-inline: auto;
+  position: relative;
+}
+.menorah-team-members .team-container .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.menorah-team-members .team-container .img-wrapper .content-abs {
+  width: 85%;
+  position: absolute;
+  bottom: -36.8px;
+  right: 0;
+  height: auto;
+}
+.menorah-team-members .team-container .img-wrapper .content-abs .name-tag {
+  padding: 0.25em 0.25em 0.25em 0.5em;
+}
+.menorah-team-members .team-container .img-wrapper .content-abs .name-tag p {
+  margin-bottom: 0;
+}
+.menorah-team-members .team-container .img-wrapper .content-abs .job-title-transparent {
+  background-color: transparent;
+  line-height: 0.2;
+  padding: 0 0.25em 0.25em 0.5em;
+}
+.menorah-team-members .team-container .img-wrapper .content-abs .job-title-transparent p {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.menorah-team-members .team-container .img-wrapper .content-abs .job-title-transparent a {
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .menorah-team-members .text-content p {
+    margin-bottom: 3em;
+  }
+  .menorah-team-members .team-container {
+    margin-top: 0.5em;
+    max-width: 600px;
+  }
+  .menorah-team-members .team-container .img-wrapper {
+    max-width: 400px;
+  }
+  .menorah-team-members .team-container .img-wrapper .content-abs {
+    bottom: -36.5px;
+  }
+  .menorah-team-members .team-container .img-wrapper .content-abs .name-tag {
+    padding: 0.5em 0.25em 0.5em 0.5em;
+  }
+}
 @media (min-width: 768px) {
   .our-team {
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/our-team.jpg");
+  }
+  .menorah-team-members {
+    /*****FOR BOARD OF TRUSTEES******/
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+  }
+  .menorah-team-members .team-container {
+    margin-top: 0.5em;
+    max-width: 600px;
+    /****PROFILE DETAILS ENDS****/
+  }
+  .menorah-team-members .team-container .profile-details {
+    max-width: 480px;
+    margin-inline: auto;
+    margin-bottom: 3em;
+  }
+  .menorah-team-members .team-container .profile-details .w-90,
+  .menorah-team-members .team-container .profile-details .brian {
+    margin-bottom: 0;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 {
+    width: 90%;
+    margin-inline: auto;
+    /*******ARRANGING THE BOXES*********/
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .img-wrapper {
+    width: 33.5%;
+    margin-inline: 0;
+    position: none;
+    display: block;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .img-wrapper .content-abs .name-tag {
+    padding: 0.25em 0.25em 0.25em 0.5em;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .img-wrapper .content-abs .name-tag p {
+    margin-bottom: 0;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .w-30-right {
+    margin-inline: auto 0;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .w-30-middle {
+    margin-inline: auto;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .split-items {
+    display: flex;
+  }
+  .menorah-team-members .management-team {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  .menorah-team-members .staff-team .colum-25 {
+    width: 50%;
+  }
+  .menorah-team-members .staff-team .img-wrapper {
+    width: 50%;
+    max-width: 300px;
+    margin-inline: auto;
+    position: relative;
+  }
+  .menorah-team-members .staff-team .img-wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs {
+    width: 80%;
+    position: absolute;
+    bottom: -36.8px;
+    right: 0;
+    height: auto;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs .name-tag {
+    padding: 0.25em 0.25em 0.25em 0.5em;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs .name-tag p {
+    margin-bottom: 0;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs .job-title-transparent {
+    background-color: transparent;
+    line-height: 0.2;
+    padding: 0 0.25em 0.25em 0.5em;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs .job-title-transparent p {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs .job-title-transparent a {
+    font-weight: 500;
+  }
+}
+@media (min-width: 992px) {
+  .menorah-team-members {
+    /*****FOR BOARD OF TRUSTEES******/
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+  }
+  .menorah-team-members .team-container {
+    max-width: 600px;
+    /****PROFILE DETAILS ENDS****/
+  }
+  .menorah-team-members .team-container .profile-details {
+    max-width: 600px;
+  }
+  .menorah-team-members .team-container .profile-details .w-90,
+  .menorah-team-members .team-container .profile-details .brian {
+    margin-bottom: 0;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 {
+    /*******ARRANGING THE BOXES*********/
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .img-wrapper {
+    width: 33.5%;
+  }
+  .menorah-team-members .team-container .profile-details .w-90 .img-wrapper .content-abs {
+    bottom: -38px;
+  }
+  .menorah-team-members .staff-team {
+    max-width: 900px;
+  }
+  .menorah-team-members .staff-team .colum-25 {
+    width: 25%;
+    padding: 0.5em;
+  }
+  .menorah-team-members .staff-team .img-wrapper {
+    width: 100%;
+    max-width: 250px;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs {
+    bottom: -39px;
+  }
+}
+@media (min-width: 1200px) {
+  .bg-grey.menorah-team-members {
+    padding-bottom: 0;
+  }
+  .menorah-team-members {
+    /*****FOR BOARD OF TRUSTEES******/
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+  }
+  .menorah-team-members .max-width {
+    max-width: 90%;
+    margin-inline: auto;
+  }
+  .menorah-team-members h3 {
+    text-align: right;
+    margin-bottom: 3em;
+  }
+  .menorah-team-members h4,
+  .menorah-team-members h5,
+  .menorah-team-members .text-content p {
+    text-align: left;
+  }
+  .menorah-team-members .board-of-text-abs {
+    width: 50%;
+    max-width: 450px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .menorah-team-members .board-of-text-abs h4 {
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .menorah-team-members .board-of-text-abs p {
+    font-size: 0.9rem;
+  }
+  .menorah-team-members .main-team-members {
+    max-width: 90%;
+    margin-inline: auto;
+    /****PROFILE DETAILS ENDS****/
+  }
+  .menorah-team-members .main-team-members .profile-details {
+    max-width: 500px;
+    width: 50%;
+    position: relative;
+    top: -240px;
+    right: -27.25%;
+    margin-bottom: 0;
+  }
+  .menorah-team-members .main-team-members .profile-details .w-90 {
+    /*******ARRANGING THE BOXES*********/
+  }
+  .menorah-team-members .main-team-members .profile-details .w-90 .img-wrapper {
+    width: 33.5%;
+  }
+  .menorah-team-members .main-team-members .profile-details .w-90 .img-wrapper .content-abs {
+    bottom: -38.2px;
+  }
+  .menorah-team-members .management-team {
+    margin-inline: 0 auto;
+  }
+  .menorah-team-members .management-team h3,
+  .menorah-team-members .management-team h5,
+  .menorah-team-members .management-team p {
+    text-align: left;
+  }
+  .menorah-team-members .management-team h3 {
+    margin-bottom: 0.25em;
+  }
+  .menorah-team-members .management-team h5 {
+    margin-top: 0;
+  }
+  .menorah-team-members .staff-team {
+    max-width: 100%;
+  }
+  .menorah-team-members .staff-team .colum-25 {
+    width: 20%;
+    padding: 1em;
+  }
+  .menorah-team-members .staff-team .img-wrapper {
+    max-width: 180px;
+  }
+}
+@media (min-width: 1600px) {
+  .menorah-team-members {
+    /*****FOR BOARD OF TRUSTEES******/
+    /*****FOR ADMINISTRATIVE TEAM MEMBERS******/
+  }
+  .menorah-team-members h4,
+  .menorah-team-members h5,
+  .menorah-team-members .text-content p {
+    text-align: left;
+  }
+  .menorah-team-members .board-of-text-abs {
+    width: 50%;
+    max-width: 650px;
+  }
+  .menorah-team-members .board-of-text-abs h4 {
+    font-size: 1.25em;
+  }
+  .menorah-team-members .board-of-text-abs p {
+    font-size: 1rem;
+  }
+  .menorah-team-members .main-team-members {
+    /****PROFILE DETAILS ENDS****/
+  }
+  .menorah-team-members .main-team-members .profile-details {
+    max-width: 600px;
+    width: 50%;
+    position: relative;
+    top: -240px;
+    right: -27.25%;
+    margin-bottom: 0;
+  }
+  .menorah-team-members .main-team-members .profile-details .w-90 {
+    /*******ARRANGING THE BOXES*********/
+  }
+  .menorah-team-members .main-team-members .profile-details .w-90 .img-wrapper .content-abs {
+    bottom: -41px;
+  }
+  .menorah-team-members .management-team {
+    margin-inline: 0 auto;
+  }
+  .menorah-team-members .management-team h3,
+  .menorah-team-members .management-team h5,
+  .menorah-team-members .management-team p {
+    text-align: left;
+  }
+  .menorah-team-members .management-team h3 {
+    margin-bottom: 0.25em;
+  }
+  .menorah-team-members .management-team h5 {
+    margin-top: 0;
+  }
+  .menorah-team-members .staff-team .img-wrapper {
+    max-width: 200px;
+  }
+  .menorah-team-members .staff-team .img-wrapper .content-abs {
+    bottom: -40px;
   }
 }
 /*****************DONATE NOW********************/
@@ -3613,7 +3960,7 @@ footer .copyright-developerslink ul li {
 }
 
 #Partner-Now .bg-transparent-white {
-  background-color: rgba(26, 34, 56, 0.8);
+  background-color: rgba(26, 34, 56, 0.75);
   padding: 1.5em 0.75em 0.5em;
 }
 #Partner-Now .make-a-donation-form {
@@ -3720,7 +4067,7 @@ footer .copyright-developerslink ul li {
 
 @media (min-width: 768px) {
   .donate {
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/donate-img.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/donate-img.jpg");
   }
   #Partner-Now .make-a-donation-form {
     max-width: 650px;
