@@ -2230,6 +2230,35 @@ footer {
       url("/assets/header-image/faq.jpg");
   }
 }
+.faq {
+  .accordion-dropdown {
+    width: 100%;
+    h5 {
+      width: 100%;
+    }
+  }
+  .accordion-dropdown-btn::before {
+    width: 10%;
+    min-width: 5px;
+    display: block;
+  }
+  .accordion-dropdown-btn span {
+    width: 80%;
+    min-width: 50px;
+    display: block;
+    text-align: left;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .faq {
+    .accordion-dropdown-btn span {
+      width: 90%;
+      min-width: 100px;
+    }
+  }
+}
 /***********HAVE WORKED***************/
 
 .have-worked {

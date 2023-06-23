@@ -2317,6 +2317,31 @@ footer .copyright-developerslink ul li {
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/faq.jpg");
   }
 }
+.faq .accordion-dropdown {
+  width: 100%;
+}
+.faq .accordion-dropdown h5 {
+  width: 100%;
+}
+.faq .accordion-dropdown-btn::before {
+  width: 10%;
+  min-width: 5px;
+  display: block;
+}
+.faq .accordion-dropdown-btn span {
+  width: 80%;
+  min-width: 50px;
+  display: block;
+  text-align: left;
+  margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+  .faq .accordion-dropdown-btn span {
+    width: 90%;
+    min-width: 100px;
+  }
+}
 /***********HAVE WORKED***************/
 .have-worked {
   background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/areas-we-have-worked.jpg");
