@@ -1444,7 +1444,7 @@ footer .copyright-developerslink ul li {
 /**************SECTION BACKGROUND-IMAGES**********************/
 /***********Other ways to give***************/
 .ways-to-give {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/other-ways-to-give.jpg");
 }
 
 .section-page-bg {
@@ -2309,7 +2309,7 @@ footer .copyright-developerslink ul li {
 
 /***********FREQUENTLY ASKED QUESTION***************/
 .frequently-asked-questions {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/faq.jpg");
 }
 
 @media (min-width: 768px) {
@@ -2319,7 +2319,7 @@ footer .copyright-developerslink ul li {
 }
 /***********HAVE WORKED***************/
 .have-worked {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/areas-we-have-worked.jpg");
 }
 
 @media (min-width: 768px) {
@@ -2367,12 +2367,12 @@ footer .copyright-developerslink ul li {
 }
 /*****************CONTACT US********************/
 .contact-us {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/contact-us.jpg");
 }
 
 @media (min-width: 768px) {
   .contact-us {
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/our-stories.jpg");
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/contact-us.jpg");
   }
 }
 .contact-form {
@@ -2519,7 +2519,7 @@ footer .copyright-developerslink ul li {
 }
 /*****************OUR STORIES********************/
 .stories {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/our-stories.jpg");
 }
 
 @media (min-width: 768px) {
@@ -2873,7 +2873,7 @@ footer .copyright-developerslink ul li {
 }
 /*****************OUR PROJECTS********************/
 .our-projects {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/our-projects.jpg");
 }
 
 @media (min-width: 768px) {
@@ -3082,7 +3082,7 @@ footer .copyright-developerslink ul li {
 }
 /*****************OUR APPROACH********************/
 .our-approach {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/our-approach.jpg");
 }
 
 @media (min-width: 768px) {
@@ -3121,7 +3121,7 @@ footer .copyright-developerslink ul li {
 }
 /*************CORPORATE PARTNERSHIP*************/
 .Corporate-Partnership {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/partnership.jpg");
 }
 
 @media (min-width: 768px) {
@@ -3350,12 +3350,12 @@ footer .copyright-developerslink ul li {
 }
 /*************BECOME A VOLUNTEER*************/
 .become-a-volunteer {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/volunteers.jpg");
 }
 
 @media (min-width: 768px) {
   .become-a-volunteer {
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/other-ways-to-give.jpg");
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/volunteers.jpg");
   }
 }
 .volunteer .quotes {
@@ -3594,7 +3594,7 @@ footer .copyright-developerslink ul li {
 }
 /*****************OUR TEAM********************/
 .our-team {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/Physician-team-close-1280x853-1-600x500.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header-image/mobile/our-team.jpg");
 }
 
 /*****COMPLICATED CSS****/
@@ -3951,7 +3951,7 @@ footer .copyright-developerslink ul li {
 }
 /*****************DONATE NOW********************/
 .donate {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/pexels-joshua-hlschr-13346667.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/donate-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
