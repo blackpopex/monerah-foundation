@@ -52,3 +52,18 @@ for (m = 0; m < acc.length; m++) {
     }
   });
 }
+
+//OPEN AND CLOSE THE ACCORDION ON EACH TEAM MEMBER
+var staffProfile = document.getElementsByClassName("img-wrapper"),
+  k = 0;
+for (k = 0; k < staffProfile.length; k++) {
+  staffProfile[k].addEventListener("click", function () {
+    this.classList.toggle("hi");
+    var profile = this.nextElementSibling;
+    if (profile.style.maxHeight) {
+      profile.style.maxHeight = null;
+    } else {
+      profile.style.maxHeight = profile.scrollHeight + "px";
+    }
+  });
+}
