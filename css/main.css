@@ -3659,6 +3659,7 @@ footer .copyright-developerslink ul li {
 }
 .menorah-team-members .team-container .colum-25 {
   margin-bottom: 5em;
+  overflow-y: hidden;
 }
 .menorah-team-members .team-container .img-wrapper {
   width: 50%;
@@ -3721,6 +3722,7 @@ footer .copyright-developerslink ul li {
 }
 .menorah-team-members .staff-profile div {
   padding: 2em 1em;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -3841,6 +3843,16 @@ footer .copyright-developerslink ul li {
   .menorah-team-members .staff-team .img-wrapper .content-abs .job-title-transparent a {
     font-weight: 500;
   }
+  .menorah-team-members .staff-profile {
+    padding: 0em;
+  }
+  .menorah-team-members .staff-profile div {
+    padding: 2em 0;
+    text-align: left;
+  }
+  .menorah-team-members .staff-team .staff-profile div {
+    text-align: center;
+  }
 }
 @media (min-width: 992px) {
   .menorah-team-members {
@@ -3881,7 +3893,7 @@ footer .copyright-developerslink ul li {
   }
   .menorah-team-members .staff-team .colum-25 {
     width: 25%;
-    padding: 0.5em;
+    padding-inline: 0.5em;
   }
   .menorah-team-members .staff-team .img-wrapper {
     width: 100%;
@@ -3967,7 +3979,7 @@ footer .copyright-developerslink ul li {
   }
   .menorah-team-members .staff-team .colum-25 {
     width: 20%;
-    padding: 1em;
+    padding-inline: 1em;
   }
   .menorah-team-members .staff-team .img-wrapper {
     max-width: 180px;
@@ -3991,7 +4003,8 @@ footer .copyright-developerslink ul li {
     font-size: 1.25em;
   }
   .menorah-team-members .board-of-text-abs p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    max-width: 500px;
   }
   .menorah-team-members .main-team-members {
     /****PROFILE DETAILS ENDS****/

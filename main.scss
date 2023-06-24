@@ -3834,6 +3834,7 @@ footer {
 
     .colum-25 {
       margin-bottom: 5em;
+      overflow-y: hidden;
     }
     .img-wrapper {
       width: 50%;
@@ -3898,6 +3899,7 @@ footer {
     width: 100%;
     div {
       padding: 2em 1em;
+      text-align: center;
     }
   }
 }
@@ -4044,6 +4046,20 @@ footer {
         }
       }
     }
+    .staff-profile {
+      padding: 0em;
+      div {
+        padding: 2em 0;
+        text-align: left;
+      }
+    }
+    .staff-team {
+      .staff-profile {
+        div {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
@@ -4094,7 +4110,7 @@ footer {
       max-width: 900px;
       .colum-25 {
         width: 25%;
-        padding: 0.5em;
+        padding-inline: 0.5em;
       }
 
       .img-wrapper {
@@ -4188,7 +4204,7 @@ footer {
       max-width: 100%;
       .colum-25 {
         width: 20%;
-        padding: 1em;
+        padding-inline: 1em;
       }
       .img-wrapper {
         max-width: 180px;
@@ -4215,7 +4231,8 @@ footer {
         }
       }
       p {
-        font-size: 1rem;
+        font-size: 0.8rem;
+        max-width: 500px;
       }
     }
     .main-team-members {
