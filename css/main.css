@@ -272,6 +272,10 @@ img {
   width: 100%;
 }
 
+.colum-100 {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .colum-23 {
     width: 23.33%;
@@ -296,6 +300,9 @@ img {
   }
   .colum-70 {
     width: 70%;
+  }
+  .colum-100 {
+    width: 100%;
   }
 }
 /******GLOBAL STYLES*******/
@@ -3499,6 +3506,9 @@ footer .copyright-developerslink ul li {
 .volunteer .testifiers-slideshow .quotes h5 {
   margin-bottom: 1.5em;
   margin-top: 0;
+}
+.volunteer .testifier-name-location {
+  width: 90%;
 }
 
 .volunteer-form p {
