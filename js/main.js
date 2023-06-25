@@ -67,3 +67,25 @@ for (k = 0; k < staffProfile.length; k++) {
     }
   });
 }
+
+//BACK TO TOP BUTTON
+window.onscroll = function () {
+  scrollFunction();
+};
+var btnWrapper = document.getElementById("Back_Top_BTN");
+
+function scrollFunction() {
+  if (
+    document.documentElement.scrollTop > 1000 ||
+    document.body.scrollTop > 1000
+  ) {
+    btnWrapper.classList.add("translate-btn");
+  } else {
+    btnWrapper.classList.remove("translate-btn");
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

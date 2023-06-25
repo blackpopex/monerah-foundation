@@ -14,11 +14,9 @@ body {
   font-size: 1.25rem;
   line-height: 1.625;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   overflow-y: auto;
   min-height: 100%;
   width: 100%;
-  height: 100%;
   transition: background-color 0.5s;
 }
 
@@ -1000,6 +998,81 @@ nav .dropdown-content a {
   .hero-text-wrapper p {
     margin-bottom: 1.5em;
     font-size: 0.7em;
+  }
+}
+.back-to-top-btn {
+  background: rgb(158, 171, 242);
+  background: linear-gradient(180deg, rgb(158, 171, 242) 21%, rgb(26, 34, 56) 82%);
+  position: fixed;
+  bottom: 150px;
+  right: 25px;
+  z-index: 99;
+  width: 45px;
+  height: 45px;
+  border-radius: 52% 49% 53% 47%/77% 77% 26% 27%;
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 1px 1px rgba(12, 12, 12, 0.3);
+  transform: translateY(250px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 1s ease-in;
+  text-align: center;
+}
+.back-to-top-btn button, .back-to-top-btn #Make-a-donation .submit-btn, #Make-a-donation .back-to-top-btn .submit-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: inherit;
+  font-size: 1em;
+}
+.back-to-top-btn .top-btn {
+  color: #ffffff;
+}
+
+.translate-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (min-width: 600px) {
+  .back-to-top-btn {
+    bottom: 190px;
+    right: 75px;
+    width: 50px;
+    height: 50px;
+  }
+  .back-to-top-btn button, .back-to-top-btn #Make-a-donation .submit-btn, #Make-a-donation .back-to-top-btn .submit-btn {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 768px) {
+  .back-to-top-btn {
+    bottom: 175px;
+    right: 50px;
+  }
+  .back-to-top-btn button, .back-to-top-btn #Make-a-donation .submit-btn, #Make-a-donation .back-to-top-btn .submit-btn {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 992px) {
+  .back-to-top-btn {
+    right: 75px;
+  }
+}
+@media (min-width: 992px) {
+  .back-to-top-btn {
+    right: 75px;
+  }
+}
+@media (min-width: 1600px) {
+  .back-to-top-btn {
+    right: 150px;
   }
 }
 /**Header Slideshow container**/
