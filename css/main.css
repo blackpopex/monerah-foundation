@@ -1018,7 +1018,7 @@ nav .dropdown-content a {
   align-items: center;
   justify-content: center;
   box-shadow: 1px 1px 1px 1px rgba(12, 12, 12, 0.3);
-  transform: translateY(250px);
+  transform: translateY(-250px);
   opacity: 0;
   transition: transform 0.5s ease-in-out, opacity 1s ease-in;
   text-align: center;
