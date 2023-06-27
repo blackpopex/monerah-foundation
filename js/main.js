@@ -89,3 +89,59 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+var donationAmount = document.getElementsByClassName("amount"), w, amountSelected;
+
+for (w = 0; w < donationAmount.length; w++){
+  donationAmount[w].addEventListener("click", function () {
+    var elems = document.querySelectorAll(".amount");
+    for (let i = 0; i < elems.length; i++) {
+      if (elems[i].classList.contains("clicked")) {
+        elems[i].classList.remove("clicked");
+      }
+    }
+    this.classList.add("clicked");
+    amountSelected = "";
+    if (this.classList.contains("clicked")) {
+        amountSelected = this.value;
+      console.log(amountSelected);
+    } 
+  })
+}
+                 
+   $(document).ready(function () {
+     //CONTROLS CHANGING FROM NAIRA TO DOLLARS
+     $(".payNaira").click(function () {
+       $("#payInNaira").addClass("pay-naira");
+       $("#payInDollar").addClass("pay-dollars");
+       $("#payInNaira").removeClass("hide-pay-naira");
+       $("#payInDollar").removeClass("show-pay-dollars");
+     });
+     $(".payDollars").click(function () {
+       $("#payInNaira").addClass("hide-pay-naira");
+       $("#payInDollar").addClass("show-pay-dollars");
+       $("#payInNaira").removeClass("pay-naira");
+       $("#payInDollar").removeClass("pay-dollars");
+     });
+
+     //Hide the previous btn by default
+     $("#Prev").css("display", "none");
+     //CONTROLS MULTISTEP FORM
+     $(".Prev").click(function () {
+         $(".Next").html("Next");  
+       $("#Prev").css("display", "none");
+       $(".form-width").addClass("previous_form");
+       $(".info").addClass("removeNext_form");
+       $(".form-width").removeClass("hidePrevious_form");
+       $(".info").removeClass("showNext_form");
+     });
+     $(".Next").click(function () {
+       $("#Prev").css("display", "block");
+       $(".Next").html("Submit");       
+       $(".form-width").addClass("hidePrevious_form");
+       $(".info").addClass("showNext_form");
+       $(".form-width").removeClass("previous_form");
+       $(".info").removeClass("removeNext_form");
+     });
+   });
+        

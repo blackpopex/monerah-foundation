@@ -1923,14 +1923,27 @@ footer {
   .donation-form {
     margin-bottom: 2em;
   }
+  .main-flex-row {
+    width: 100%;
+    min-width: 800px;
+    margin-inline: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+  h3.form-h3 {
+      text-align: center;
+      margin-bottom: 1.5em;
+      max-width: 300px;
+      margin-inline: auto;
+    }
   .form-width {
     width: 100%;
     max-width: 325px;
-    margin-inline: auto;
-    h3 {
-      text-align: center;
-      margin-bottom: 1.5em;
-    }
+    margin-inline: 0 auto;
+    overflow-x: hidden;
+    transition: transform 0.5s ease-in;
+    
     .donation-amount {
       margin: 2em 0;
     }
@@ -1953,6 +1966,65 @@ footer {
       }
     }
   }
+
+  .info {
+    width: 100%;
+    max-width: 325px;
+    margin-inline: 0 auto;
+    transition: transform 0.5s ease-in;
+  }
+  .flex-row {
+    display: inline-block;
+    width: 100%;
+    min-width: 1000px;
+  }
+  .select-amount-to-pay {
+    width: 100%;
+    float: left;
+    max-width: 325px;
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 2s ease-in;
+  }
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS******/
+  .pay-naira {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .pay-dollars {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  .hide-pay-naira {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  .show-pay-dollars {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS ENDS******/
+
+  /******ANIMATION FOR MULTISTEP FORM******/
+  .previous_form {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .removeNext_form {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  .hidePrevious_form {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  .showNext_form {
+    transform: translateX(-130%);
+    opacity: 1;
+  }
+  /******ANIMATION FOR MULTISTEP FORM ENDED******/
+
   .select-amount-to-pay .flex {
     display: flex;
     flex-direction: row;
@@ -1989,12 +2061,87 @@ footer {
       }
     }
   }
-  .submit-btn {
+  .previous-btn {
     @extend .btn;
     @extend button;
     margin-top: 2em;
     margin-bottom: 2em;
     font-weight: 600;
+  }
+  .next-btn {
+    @extend .btn;
+    @extend button;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: 600;
+  }
+
+  /****MAKE A DONATION FORM FOR INDEX PAGE*****/
+  .multi-step-donation-Form {
+    margin-bottom: 2em;
+    max-width: 325px;
+    margin-inline: auto;
+    padding: 1em 0;
+    overflow-x: hidden;
+    .spx-width {
+      width: 100%;
+      max-width: 325px;
+      padding: 0.5em 0.75em;
+      margin-inline: auto;
+      margin-bottom: 2em;
+    }
+    .spx-width:last-child {
+      margin-bottom: 0;
+    }
+    .info {
+      background-color: $body-grey-color;
+      margin-bottom: 0;
+      h5 {
+        margin-bottom: 1.5em;
+      }
+      .input-container {
+        margin-bottom: 0.75em;
+        width: 100%;
+        label {
+          font-weight: 300;
+          width: 100%;
+          display: block;
+        }
+        input[type="text"],
+        textarea {
+          border: none;
+          outline: none;
+          width: 100%;
+          box-sizing: border-box;
+          resize: none;
+          font-size: 0.6em;
+          padding: 0.35em 0.5em;
+          font-family: "Inter", sans-serif;
+          font-weight: 300;
+          border-radius: 4px;
+        }
+      }
+    }
+    .Donate_Button {
+      padding: 0 0 0 0 0;
+      width: auto;
+      margin-left: 5px;
+    }
+    .previous-btn {
+      width: auto;
+    }
+  }
+  .prev-next-submit {
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .select-amount-to-pay {
+    max-width: 600px;
   }
 }
 @media (min-width: 768px) {
@@ -2043,13 +2190,17 @@ footer {
       padding: 1.25em 0;
       box-shadow: 4px 2px 0px 2px rgba(0, 0, 0, 0.1);
     }
+    h3.form-h3 {
+   text-align: left;
+  margin-bottom: 0.75em;
+  font-weight: 400;
+  max-width: 400px;
+  margin-inline: 0 auto;
+  font-size: 1.05em;
+    }
     .form-width {
       width: 100%;
-      h3 {
-        text-align: left;
-        margin-bottom: 1em;
-        font-weight: 400;
-      }
+     
       .donation-amount {
         margin: 1em 0;
       }
@@ -2072,6 +2223,11 @@ footer {
         }
       }
     }
+
+         
+    .select-amount-to-pay {
+      max-width: 325px;
+    }
     .select-amount-to-pay .flex {
       margin-bottom: 0.5em;
       .col-33 {
@@ -2080,7 +2236,7 @@ footer {
       .col-66 {
         padding: 0.18em 0;
         input[type="text"] {
-          padding: 0.1em 0.5em;
+          padding: 0.5em 0.5em;
         }
       }
     }
@@ -2088,7 +2244,35 @@ footer {
       margin-top: 1em;
       margin-bottom: 1em;
     }
+    .multi-step-donation-Form {
+    margin-bottom: -25px;
+    max-width: 360px;
+    margin-inline: 0 auto;
+    padding: 0 0 0 0.75em;
+    overflow-x: hidden;
+    .spx-width {
+      width: 100%;
+      max-width: 325px;
+      margin-bottom: 0;
+    }
+    .info {
+        .flex {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 0.75em;
+          .input-container {
+            margin-bottom: 0;
+            width: 48.5%;
+            input[type="text"],
+            textarea {
+              border-radius: 0;
+            }
+          }
+        }
+      }
   }
+  }
+  
 }
 @media (min-width: 992px) {
   #Make-a-donation {
@@ -2111,17 +2295,15 @@ footer {
     }
     .donation-form {
       max-width: 500px;
-      padding: 1.5em 0;
+    }
+    h3.form-h3 {
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        max-width: 400px;
     }
     .form-width {
       width: 100%;
       max-width: 400px;
-      h3 {
-        margin-bottom: 1em;
-        font-weight: 400;
-        font-size: 1.2em;
-        max-width: 300px;
-      }
       .donation-amount {
         margin: 1em 0;
       }
@@ -2132,6 +2314,22 @@ footer {
         }
       }
     }
+    .select-amount-to-pay {
+      max-width: 400px;
+    }
+
+    .multi-step-donation-Form {
+    margin-bottom: -10px;
+    max-width: 425px;
+    padding: 0 0 0 1em;
+      .spx-width {
+        max-width: 400px;
+      }
+    }
+    /**CHANGE TRANSLATION ON X ON SCREEN SIZES FROM 992PX**/
+      .showNext_form {
+    transform: translateX(-100%);
+  }
   }
 }
 @media (min-width: 1200px) {
@@ -2151,12 +2349,23 @@ footer {
     .donation-form {
       max-width: 600px;
     }
+    h3.form-h3 {
+   font-size: 1.2em;
+   max-width: 300px;
+    }
     .form-width {
       max-width: 400px;
       .group-btn {
         button {
           width: 45%;
         }
+      }
+    }
+    .multi-step-donation-Form {
+      max-width: 475px;
+      padding: 0 0 0 3em;
+      .spx-width {
+        margin-inline: auto;
       }
     }
   }
@@ -2178,25 +2387,36 @@ footer {
     }
     .donation-form {
       max-width: 800px;
-      padding: 2em 1em 2em 3em;
+      padding: 1.25em 1em 2em 1em;
+    }
+
+    h3.form-h3 {
+      font-size: 1.3em;
+      max-width: 400px;
+      margin-bottom: 0.75em;
     }
     .form-width {
-      max-width: 600px;
+      max-width: 515px;
       margin-inline: 0 auto;
+      overflow-x: hidden;
 
       .bg-grey {
         padding: 1em;
       }
-      h3 {
-        font-size: 1.5em;
-        max-width: 400px;
-      }
+     
       .group-btn {
         button {
           width: 50%;
         }
       }
     }
+    .main-flex-row {
+    width: 200%;
+  }
+   .select-amount-to-pay {
+    max-width: 500px;
+    }
+
     .select-amount-to-pay .flex {
       margin-bottom: 0.5em;
       .col-33 {
@@ -2206,6 +2426,21 @@ footer {
         padding: 0.5em 0;
         input[type="text"] {
           padding: 0.5em 0.5em;
+        }
+      }
+    }
+
+    .multi-step-donation-Form {
+      max-width: 600px;
+      margin-bottom: -35px;
+      .spx-width {
+        max-width: 525px;
+        display: block;
+        margin-inline: 0 auto;
+      }
+      .multi-step-donation-Form {
+        .Donate_Button {
+          padding: 0.5em 0.5em 0.5em 0;
         }
       }
     }
@@ -2227,9 +2462,14 @@ footer {
     }
     .donation-form {
       max-width: 900px;
+    padding: 2em 1em 3em 1em;
+
     }
-    .form-width {
-      max-width: 500px;
+    
+    .multi-step-donation-Form {
+      .spx-width {
+        max-width: 525px;
+      }
     }
   }
 }

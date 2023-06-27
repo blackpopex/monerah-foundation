@@ -359,7 +359,7 @@ img {
   text-transform: uppercase;
 }
 
-.btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
+.btn, #Make-a-donation .next-btn, #Make-a-donation .previous-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
   padding: 10px 28px;
   font-size: 0.5em;
   text-align: center;
@@ -372,7 +372,7 @@ img {
   text-align: right;
 }
 
-button, #Make-a-donation .submit-btn {
+button, #Make-a-donation .next-btn, #Make-a-donation .previous-btn {
   cursor: pointer;
   border: none;
   outline: none;
@@ -396,28 +396,28 @@ button, #Make-a-donation .submit-btn {
   .padding-top {
     padding-top: 5em;
   }
-  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .next-btn, #Make-a-donation .previous-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 7px 14px;
     font-size: 0.4em;
     font-weight: 300;
   }
 }
 @media (min-width: 992px) {
-  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .next-btn, #Make-a-donation .previous-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 8px 16px;
     font-size: 0.45em;
     font-weight: 400;
   }
 }
 @media (min-width: 1200px) {
-  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .next-btn, #Make-a-donation .previous-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 10px 20px;
     font-size: 0.5em;
     font-weight: 500;
   }
 }
 @media (min-width: 1600px) {
-  .btn, #Make-a-donation .submit-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
+  .btn, #Make-a-donation .next-btn, #Make-a-donation .previous-btn, .readmore-primary-bg-btn, .readmore-grey-bg-btn, .donate_BTN, .navy-blue-btn {
     padding: 10px 28px;
     font-size: 0.55em;
     font-weight: 600;
@@ -1034,7 +1034,7 @@ nav .dropdown-content a {
   transition: transform 0.5s ease-in-out, opacity 1s ease-in;
   text-align: center;
 }
-.back-to-top-btn button, .back-to-top-btn #Make-a-donation .submit-btn, #Make-a-donation .back-to-top-btn .submit-btn {
+.back-to-top-btn button, .back-to-top-btn #Make-a-donation .next-btn, #Make-a-donation .back-to-top-btn .next-btn, .back-to-top-btn #Make-a-donation .previous-btn, #Make-a-donation .back-to-top-btn .previous-btn {
   border: none;
   outline: none;
   cursor: pointer;
@@ -1058,7 +1058,7 @@ nav .dropdown-content a {
     width: 50px;
     height: 50px;
   }
-  .back-to-top-btn button, .back-to-top-btn #Make-a-donation .submit-btn, #Make-a-donation .back-to-top-btn .submit-btn {
+  .back-to-top-btn button, .back-to-top-btn #Make-a-donation .next-btn, #Make-a-donation .back-to-top-btn .next-btn, .back-to-top-btn #Make-a-donation .previous-btn, #Make-a-donation .back-to-top-btn .previous-btn {
     font-size: 1.25em;
   }
 }
@@ -1067,7 +1067,7 @@ nav .dropdown-content a {
     bottom: 175px;
     right: 50px;
   }
-  .back-to-top-btn button, .back-to-top-btn #Make-a-donation .submit-btn, #Make-a-donation .back-to-top-btn .submit-btn {
+  .back-to-top-btn button, .back-to-top-btn #Make-a-donation .next-btn, #Make-a-donation .back-to-top-btn .next-btn, .back-to-top-btn #Make-a-donation .previous-btn, #Make-a-donation .back-to-top-btn .previous-btn {
     font-size: 1.25em;
   }
 }
@@ -2039,8 +2039,13 @@ footer .copyright-developerslink ul li {
 /*******Make a donation******/
 #Make-a-donation {
   padding-top: 0;
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS******/
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS ENDS******/
+  /******ANIMATION FOR MULTISTEP FORM******/
+  /******ANIMATION FOR MULTISTEP FORM ENDED******/
+  /****MAKE A DONATION FORM FOR INDEX PAGE*****/
 }
-#Make-a-donation button, #Make-a-donation .submit-btn {
+#Make-a-donation button, #Make-a-donation .next-btn, #Make-a-donation .previous-btn {
   font-size: 0.425em;
 }
 #Make-a-donation .colum-60,
@@ -2050,14 +2055,26 @@ footer .copyright-developerslink ul li {
 #Make-a-donation .donation-form {
   margin-bottom: 2em;
 }
+#Make-a-donation .main-flex-row {
+  width: 100%;
+  min-width: 800px;
+  margin-inline: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+#Make-a-donation h3.form-h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  max-width: 300px;
+  margin-inline: auto;
+}
 #Make-a-donation .form-width {
   width: 100%;
   max-width: 325px;
-  margin-inline: auto;
-}
-#Make-a-donation .form-width h3 {
-  text-align: center;
-  margin-bottom: 1.5em;
+  margin-inline: 0 auto;
+  overflow-x: hidden;
+  transition: transform 0.5s ease-in;
 }
 #Make-a-donation .form-width .donation-amount {
   margin: 2em 0;
@@ -2067,7 +2084,7 @@ footer .copyright-developerslink ul li {
   display: -ms-flexbox;
   margin-bottom: 0.5em;
 }
-#Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+#Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .next-btn, #Make-a-donation .form-width .group-btn .previous-btn {
   width: 50%;
   padding: 1.5em 0.5em;
 }
@@ -2079,6 +2096,56 @@ footer .copyright-developerslink ul li {
   text-align: right;
   width: 100%;
   font-weight: 600;
+}
+#Make-a-donation .info {
+  width: 100%;
+  max-width: 325px;
+  margin-inline: 0 auto;
+  transition: transform 0.5s ease-in;
+}
+#Make-a-donation .flex-row {
+  display: inline-block;
+  width: 100%;
+  min-width: 1000px;
+}
+#Make-a-donation .select-amount-to-pay {
+  width: 100%;
+  float: left;
+  max-width: 325px;
+  opacity: 1;
+  transition: transform 1s ease-in-out, opacity 2s ease-in;
+}
+#Make-a-donation .pay-naira {
+  transform: translateX(0%);
+  opacity: 1;
+}
+#Make-a-donation .pay-dollars {
+  transform: translateX(100%);
+  opacity: 1;
+}
+#Make-a-donation .hide-pay-naira {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+#Make-a-donation .show-pay-dollars {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+#Make-a-donation .previous_form {
+  transform: translateX(0%);
+  opacity: 1;
+}
+#Make-a-donation .removeNext_form {
+  transform: translateX(100%);
+  opacity: 1;
+}
+#Make-a-donation .hidePrevious_form {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+#Make-a-donation .showNext_form {
+  transform: translateX(-130%);
+  opacity: 1;
 }
 #Make-a-donation .select-amount-to-pay .flex {
   display: flex;
@@ -2116,18 +2183,88 @@ footer .copyright-developerslink ul li {
   padding: 0.5em 0.5em;
   box-shadow: inset 1px 1px 1px 1px rgba(26, 34, 56, 0.1);
 }
-#Make-a-donation .submit-btn {
+#Make-a-donation .previous-btn {
   margin-top: 2em;
   margin-bottom: 2em;
   font-weight: 600;
 }
+#Make-a-donation .next-btn {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 600;
+}
+#Make-a-donation .multi-step-donation-Form {
+  margin-bottom: 2em;
+  max-width: 325px;
+  margin-inline: auto;
+  padding: 1em 0;
+  overflow-x: hidden;
+}
+#Make-a-donation .multi-step-donation-Form .spx-width {
+  width: 100%;
+  max-width: 325px;
+  padding: 0.5em 0.75em;
+  margin-inline: auto;
+  margin-bottom: 2em;
+}
+#Make-a-donation .multi-step-donation-Form .spx-width:last-child {
+  margin-bottom: 0;
+}
+#Make-a-donation .multi-step-donation-Form .info {
+  background-color: #f1f1f1;
+  margin-bottom: 0;
+}
+#Make-a-donation .multi-step-donation-Form .info h5 {
+  margin-bottom: 1.5em;
+}
+#Make-a-donation .multi-step-donation-Form .info .input-container {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+#Make-a-donation .multi-step-donation-Form .info .input-container label {
+  font-weight: 300;
+  width: 100%;
+  display: block;
+}
+#Make-a-donation .multi-step-donation-Form .info .input-container input[type=text],
+#Make-a-donation .multi-step-donation-Form .info .input-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 0.6em;
+  padding: 0.35em 0.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  border-radius: 4px;
+}
+#Make-a-donation .multi-step-donation-Form .Donate_Button {
+  padding: 0 0 0 0 0;
+  width: auto;
+  margin-left: 5px;
+}
+#Make-a-donation .multi-step-donation-Form .previous-btn {
+  width: auto;
+}
+#Make-a-donation .prev-next-submit {
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+  width: 100%;
+}
 
+@media (min-width: 600px) {
+  .select-amount-to-pay {
+    max-width: 600px;
+  }
+}
 @media (min-width: 768px) {
   #Make-a-donation {
     padding-top: 0;
     position: relative;
   }
-  #Make-a-donation button, #Make-a-donation .submit-btn {
+  #Make-a-donation button, #Make-a-donation .previous-btn, #Make-a-donation .next-btn {
     font-size: 0.425em;
   }
   #Make-a-donation .colum-60,
@@ -2165,13 +2302,16 @@ footer .copyright-developerslink ul li {
     padding: 1.25em 0;
     box-shadow: 4px 2px 0px 2px rgba(0, 0, 0, 0.1);
   }
+  #Make-a-donation h3.form-h3 {
+    text-align: left;
+    margin-bottom: 0.75em;
+    font-weight: 400;
+    max-width: 400px;
+    margin-inline: 0 auto;
+    font-size: 1.05em;
+  }
   #Make-a-donation .form-width {
     width: 100%;
-  }
-  #Make-a-donation .form-width h3 {
-    text-align: left;
-    margin-bottom: 1em;
-    font-weight: 400;
   }
   #Make-a-donation .form-width .donation-amount {
     margin: 1em 0;
@@ -2181,7 +2321,7 @@ footer .copyright-developerslink ul li {
     display: -ms-flexbox;
     margin-bottom: 0.5em;
   }
-  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .previous-btn, #Make-a-donation .form-width .group-btn .next-btn {
     width: 50%;
     padding: 0.75em 0.25em;
   }
@@ -2194,6 +2334,9 @@ footer .copyright-developerslink ul li {
     width: 100%;
     font-weight: 600;
   }
+  #Make-a-donation .select-amount-to-pay {
+    max-width: 325px;
+  }
   #Make-a-donation .select-amount-to-pay .flex {
     margin-bottom: 0.5em;
   }
@@ -2204,14 +2347,42 @@ footer .copyright-developerslink ul li {
     padding: 0.18em 0;
   }
   #Make-a-donation .select-amount-to-pay .flex .col-66 input[type=text] {
-    padding: 0.1em 0.5em;
+    padding: 0.5em 0.5em;
   }
   #Make-a-donation .submit-btn {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+  #Make-a-donation .multi-step-donation-Form {
+    margin-bottom: -25px;
+    max-width: 360px;
+    margin-inline: 0 auto;
+    padding: 0 0 0 0.75em;
+    overflow-x: hidden;
+  }
+  #Make-a-donation .multi-step-donation-Form .spx-width {
+    width: 100%;
+    max-width: 325px;
+    margin-bottom: 0;
+  }
+  #Make-a-donation .multi-step-donation-Form .info .flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.75em;
+  }
+  #Make-a-donation .multi-step-donation-Form .info .flex .input-container {
+    margin-bottom: 0;
+    width: 48.5%;
+  }
+  #Make-a-donation .multi-step-donation-Form .info .flex .input-container input[type=text],
+  #Make-a-donation .multi-step-donation-Form .info .flex .input-container textarea {
+    border-radius: 0;
+  }
 }
 @media (min-width: 992px) {
+  #Make-a-donation {
+    /**CHANGE TRANSLATION ON X ON SCREEN SIZES FROM 992PX**/
+  }
   #Make-a-donation .colum-60,
   #Make-a-donation .colum-40 {
     min-height: 550px;
@@ -2231,24 +2402,36 @@ footer .copyright-developerslink ul li {
   }
   #Make-a-donation .donation-form {
     max-width: 500px;
-    padding: 1.5em 0;
+  }
+  #Make-a-donation h3.form-h3 {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    max-width: 400px;
   }
   #Make-a-donation .form-width {
     width: 100%;
     max-width: 400px;
   }
-  #Make-a-donation .form-width h3 {
-    margin-bottom: 1em;
-    font-weight: 400;
-    font-size: 1.2em;
-    max-width: 300px;
-  }
   #Make-a-donation .form-width .donation-amount {
     margin: 1em 0;
   }
-  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .previous-btn, #Make-a-donation .form-width .group-btn .next-btn {
     width: 40%;
     padding: 1em 0.25em;
+  }
+  #Make-a-donation .select-amount-to-pay {
+    max-width: 400px;
+  }
+  #Make-a-donation .multi-step-donation-Form {
+    margin-bottom: -10px;
+    max-width: 425px;
+    padding: 0 0 0 1em;
+  }
+  #Make-a-donation .multi-step-donation-Form .spx-width {
+    max-width: 400px;
+  }
+  #Make-a-donation .showNext_form {
+    transform: translateX(-100%);
   }
 }
 @media (min-width: 1200px) {
@@ -2265,11 +2448,22 @@ footer .copyright-developerslink ul li {
   #Make-a-donation .donation-form {
     max-width: 600px;
   }
+  #Make-a-donation h3.form-h3 {
+    font-size: 1.2em;
+    max-width: 300px;
+  }
   #Make-a-donation .form-width {
     max-width: 400px;
   }
-  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .previous-btn, #Make-a-donation .form-width .group-btn .next-btn {
     width: 45%;
+  }
+  #Make-a-donation .multi-step-donation-Form {
+    max-width: 475px;
+    padding: 0 0 0 3em;
+  }
+  #Make-a-donation .multi-step-donation-Form .spx-width {
+    margin-inline: auto;
   }
 }
 @media (min-width: 1600px) {
@@ -2285,21 +2479,29 @@ footer .copyright-developerslink ul li {
   }
   #Make-a-donation .donation-form {
     max-width: 800px;
-    padding: 2em 1em 2em 3em;
+    padding: 1.25em 1em 2em 1em;
+  }
+  #Make-a-donation h3.form-h3 {
+    font-size: 1.3em;
+    max-width: 400px;
+    margin-bottom: 0.75em;
   }
   #Make-a-donation .form-width {
-    max-width: 600px;
+    max-width: 515px;
     margin-inline: 0 auto;
+    overflow-x: hidden;
   }
   #Make-a-donation .form-width .bg-grey {
     padding: 1em;
   }
-  #Make-a-donation .form-width h3 {
-    font-size: 1.5em;
-    max-width: 400px;
-  }
-  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .submit-btn {
+  #Make-a-donation .form-width .group-btn button, #Make-a-donation .form-width .group-btn .previous-btn, #Make-a-donation .form-width .group-btn .next-btn {
     width: 50%;
+  }
+  #Make-a-donation .main-flex-row {
+    width: 200%;
+  }
+  #Make-a-donation .select-amount-to-pay {
+    max-width: 500px;
   }
   #Make-a-donation .select-amount-to-pay .flex {
     margin-bottom: 0.5em;
@@ -2312,6 +2514,18 @@ footer .copyright-developerslink ul li {
   }
   #Make-a-donation .select-amount-to-pay .flex .col-66 input[type=text] {
     padding: 0.5em 0.5em;
+  }
+  #Make-a-donation .multi-step-donation-Form {
+    max-width: 600px;
+    margin-bottom: -35px;
+  }
+  #Make-a-donation .multi-step-donation-Form .spx-width {
+    max-width: 525px;
+    display: block;
+    margin-inline: 0 auto;
+  }
+  #Make-a-donation .multi-step-donation-Form .multi-step-donation-Form .Donate_Button {
+    padding: 0.5em 0.5em 0.5em 0;
   }
 }
 @media (min-width: 1800px) {
@@ -2327,9 +2541,10 @@ footer .copyright-developerslink ul li {
   }
   #Make-a-donation .donation-form {
     max-width: 900px;
+    padding: 2em 1em 3em 1em;
   }
-  #Make-a-donation .form-width {
-    max-width: 500px;
+  #Make-a-donation .multi-step-donation-Form .spx-width {
+    max-width: 525px;
   }
 }
 /*******Other ways to give******/
@@ -4181,7 +4396,7 @@ footer .copyright-developerslink ul li {
   display: -ms-flexbox;
   margin-bottom: 1.5em;
 }
-#Partner-Now .make-a-donation-form .group-btn button, #Partner-Now .make-a-donation-form .group-btn #Make-a-donation .submit-btn, #Make-a-donation #Partner-Now .make-a-donation-form .group-btn .submit-btn {
+#Partner-Now .make-a-donation-form .group-btn button, #Partner-Now .make-a-donation-form .group-btn #Make-a-donation .previous-btn, #Make-a-donation #Partner-Now .make-a-donation-form .group-btn .previous-btn, #Partner-Now .make-a-donation-form .group-btn #Make-a-donation .next-btn, #Make-a-donation #Partner-Now .make-a-donation-form .group-btn .next-btn {
   width: 50%;
   padding: 1em 0.5em;
 }
