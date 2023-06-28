@@ -2187,6 +2187,7 @@ footer .copyright-developerslink ul li {
   margin-top: 2em;
   margin-bottom: 2em;
   font-weight: 600;
+  transition: 1s ease-in;
 }
 #Make-a-donation .next-btn {
   margin-top: 2em;
@@ -2252,6 +2253,15 @@ footer .copyright-developerslink ul li {
   flex-direction: row;
   margin-inline: auto;
   width: 100%;
+  align-items: center;
+}
+#Make-a-donation .prev-next-submit p {
+  margin-left: 10px;
+}
+#Make-a-donation .clicked {
+  color: #9eabf2;
+  background-color: #1a2238;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
 }
 
 @media (min-width: 600px) {

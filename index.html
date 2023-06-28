@@ -266,10 +266,10 @@
                   </h3>
               <div class="main-flex-row">
                 <!--SELECT AN AMOUNT TO DONATE-->
-                <div class="form-width">
+                <div class="form-width tab">
                   <div class="group-btn">
-                    <button class="btn bg-grey primary-color-text">ONE TIME GIFT</button>
-                    <button class="btn bg-primary-color text-secondary">MONTHLY GIFT</button>
+                    <button type="button"  class="btn frequency SelectDonationFrequency" value="One Time">ONE TIME GIFT</button>
+                    <button type="button" class="btn frequency SelectDonationFrequency clicked" value="Monthly">MONTHLY GIFT</button>
                   </div>
                   <p class="bold-text primary-color-text donation-amount">Donation Amount</p>
                   <div class="flex-row">
@@ -288,7 +288,7 @@
                         <div class="col-33 btn primary-color-text bg-white">Others</div>
                         <div class="col-66 input-container bg-white">
                           <span class="icon">₦</span>
-                          <input type="text" id="amount" name="amount" class="amount">
+                          <input type="text" id="amount" name="amount" class="amount" value="">
                         </div>
                           <a href="#/" class="primary-color-text payDollars">Donate in Dollars ($)</a>
                       </div>
@@ -308,24 +308,15 @@
                         <div class="col-33 btn primary-color-text bg-white">Others</div>
                         <div class="col-66 input-container bg-white">
                           <span class="icon">$</span>
-                          <input type="text" id="amount" name="amount" class="amount">
+                          <input type="text" id="amount" name="amount" class="amount" value="">
                         </div>
                           <a href="#/" class="primary-color-text payNaira">Donate in Naira (₦)</a>
                       </div>
                     </div>
                   </div>
-                </div>
-                <style>
-                  .clicked {
-                    color:#9eabf2;
-                    background-color:#1a2238;
-                    transition: color .5s ease-in;
-                  }
-                </style>
-                          
-
+                </div>     
                 <!--INPUT YOUR INFORMATION--> 
-                <div class="info spx-width">
+                <div class="info spx-width tab">
                 <h5 class="primary-color-text">Your Information</h5>
                 <div class="flex">
                   <div class="input-container">
@@ -358,10 +349,11 @@
                  <div class="prev-next-submit">
                   <button type="button" class="bg-primary-color btn white-color-text previous-btn Prev" id="Prev">Previous</button>
                     <div class="Donate_Button">
-                  <button type="button" class="btn bg-primary-color white-color-text next-btn Next" id="Next" disabled> 
+                  <button type="button" class="btn bg-primary-color white-color-text next-btn Next" id="Next" onclick="sayHello();changeType()"> 
                   Next
                     </button>
                   </div>
+                  <p id="showResult" class="primary-color-text"></p>
                 </div>
             </form>
           </div>

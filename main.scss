@@ -2067,6 +2067,8 @@ footer {
     margin-top: 2em;
     margin-bottom: 2em;
     font-weight: 600;
+    transition: 1s ease-in;
+
   }
   .next-btn {
     @extend .btn;
@@ -2136,8 +2138,18 @@ footer {
     flex-direction: row;
     margin-inline: auto;
     width: 100%;
+    align-items: center;
+    p {
+      margin-left: 10px;
+    }
+  }
+   .clicked {
+  color:#9eabf2;
+  background-color:#1a2238;
+  transition: color .2s ease-in, background-color .2s ease-in;
   }
 }
+
 
 @media (min-width: 600px) {
   .select-amount-to-pay {

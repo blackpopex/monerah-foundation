@@ -90,9 +90,11 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+//CODE TO CONTROL SLIDING FROM NAIRA TO DOLLARS AND BACK TO DOLLARS AGAIN, ALSO CONTROLS MOVING FROM ONE PAYMENT STAGE TO THE OTHER
 var donationAmount = document.getElementsByClassName("amount"), w, amountSelected;
 
 for (w = 0; w < donationAmount.length; w++){
+  //REMOVES ACTIVE CLASS FROM EACH BTN WHEN ANOTHER AMOUNT IS CLICKED
   donationAmount[w].addEventListener("click", function () {
     var elems = document.querySelectorAll(".amount");
     for (let i = 0; i < elems.length; i++) {
@@ -102,15 +104,30 @@ for (w = 0; w < donationAmount.length; w++){
     }
     this.classList.add("clicked");
     amountSelected = "";
+
     if (this.classList.contains("clicked")) {
-        amountSelected = this.value;
+      amountSelected = this.value;
       console.log(amountSelected);
-    } 
-  })
+      document.getElementById("showResult").innerHTML = "";
+
+      $(document).ready(function () {
+        $(".Next").click(function () {
+          $("#Prev").css("display", "block");
+          $(".Next").html("Submit");
+          $(".form-width").addClass("hidePrevious_form");
+          $(".info").addClass("showNext_form");
+          $(".form-width").removeClass("previous_form");
+          $(".info").removeClass("removeNext_form");
+        });
+      });
+    }
+   
+  });
 }
+
                  
    $(document).ready(function () {
-     //CONTROLS CHANGING FROM NAIRA TO DOLLARS
+     //JQUERY CONTROLS CHANGING FROM NAIRA TO DOLLARS
      $(".payNaira").click(function () {
        $("#payInNaira").addClass("pay-naira");
        $("#payInDollar").addClass("pay-dollars");
@@ -128,20 +145,81 @@ for (w = 0; w < donationAmount.length; w++){
      $("#Prev").css("display", "none");
      //CONTROLS MULTISTEP FORM
      $(".Prev").click(function () {
-         $(".Next").html("Next");  
+       $(".Next").html("Next");
        $("#Prev").css("display", "none");
        $(".form-width").addClass("previous_form");
        $(".info").addClass("removeNext_form");
        $(".form-width").removeClass("hidePrevious_form");
        $(".info").removeClass("showNext_form");
      });
-     $(".Next").click(function () {
-       $("#Prev").css("display", "block");
-       $(".Next").html("Submit");       
-       $(".form-width").addClass("hidePrevious_form");
-       $(".info").addClass("showNext_form");
-       $(".form-width").removeClass("previous_form");
-       $(".info").removeClass("removeNext_form");
-     });
    });
-        
+
+
+//CALL THIS FUNCTION TO CHECK IF AN DONATION AMOUNT HAS BEEN PICKED, IF TRUE, GET THE NEXT BUTTON AND ADD THE CLASS "NEXT", TO ENABLE JQUERY ASSESSS THE CLASS TO MOVE THE USER TO THE NEXT PAGE CONTAINING PAYMENT DETAILS.
+function changeType() {
+  document.getElementById("myBtn").type = "submit";
+}
+function sayHello() {
+  var displayResult; 
+  let clickedEvent = document.querySelectorAll(".amount");
+  var Result = document.getElementById("showResult"); 
+
+     
+  for (let i = 0; i < clickedEvent.length; i++) {
+    let m = "";
+    m += clickedEvent[i].className; 
+    if (m.includes("clicked")) {
+      document.getElementById("Next").classList.add("Next");
+      displayResult = "";
+      return false;
+    } else {
+      displayResult = "Select an Amount";
+        Result.innerHTML = displayResult; 
+         return;
+      } 
+       
+  }
+}
+//CHANGE BUTTON TYPE TO SUBMIT AFTER 5 SECONDS
+function changeType() {
+  submitBTN = document.getElementById("Next"); 
+  if (submitBTN.innerHTML == "Submit") {
+    setTimeout(function () {
+      document.getElementById("Next").type = "submit";
+    }, 1000);
+  }
+}
+
+
+//CODE TO CONTROL ADDING ACTIVE CLASS TO DONATION FREQUENCY OF MONTHLY OR ONETIME.
+
+var Frequency = document.getElementsByClassName("SelectDonationFrequency"), n,
+  frequencyValue; 
+for (n = 0; n < Frequency.length; n++) {
+  Frequency[n].addEventListener("click", function () {
+    var frequencyBTN = document.querySelectorAll(".frequency");
+    for (let k = 0; k < frequencyBTN.length; k++){
+      if (frequencyBTN[k].classList.contains("clicked")) {
+        frequencyBTN[k].classList.remove("clicked");
+      }
+    }
+    this.classList.add("clicked");
+    frequencyValue = this.value;
+    console.log(frequencyValue);
+  })
+}
+
+var currentTab = 0; 
+showTab(currentTab);
+var donationForm = document.getElementsByClassName("tab");
+for (n = 0; n < donationForm.length; n++) {
+  donationForm[n].style.display = "block";
+  if (n == donationForm.length - 1) {
+    document.getElementById("Prev").style.display = "none";
+  }
+}
+
+
+
+
+
