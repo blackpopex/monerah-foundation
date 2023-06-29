@@ -90,6 +90,41 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+/*****************************CONTROLS THE PAYMENT GATEWAY**************************************/
+
+//CALL THIS FUNCTION TO CHECK IF AN DONATION AMOUNT HAS BEEN PICKED, IF TRUE, GET THE NEXT BUTTON AND ADD THE CLASS "NEXT", TO ENABLE JQUERY ASSESSS THE CLASS TO MOVE THE USER TO THE NEXT PAGE CONTAINING PAYMENT DETAILS.
+var preBtn = document.getElementById("Prev");
+var nextBtn = document.getElementById("Next");
+
+function sayHello() {
+  var clickedEvent = document.querySelectorAll(".amount");
+  var Result = document.getElementById("showResult");
+  Result.innerHTML = "Select an Amount";
+
+  for (let v = 0; v < clickedEvent.length; v++) {
+    let m = "";
+    m += clickedEvent[v].className; 
+    if (m.includes("clicked")) {
+          console.log(m) + "<br/>";
+      nextBtn.classList.add("Next");
+      Result.innerHTML = ""; 
+        if (nextBtn.classList.contains("Next")) {
+          setTimeout(function () {
+            nextBtn.type = "submit";
+          }, 3000);
+        } else {
+          nextBtn.type = "button";
+      }
+    }
+  }
+}
+//Add Event LISTENER TO THIS BTN TO CHANGE THE BUTTON TYPE BACK TO BUTTON IF PREVIOUS BTN IS PRESSED
+preBtn.addEventListener("click", function () {
+    nextBtn.type = "button";
+})
+
+
+
 //CODE TO CONTROL SLIDING FROM NAIRA TO DOLLARS AND BACK TO DOLLARS AGAIN, ALSO CONTROLS MOVING FROM ONE PAYMENT STAGE TO THE OTHER
 var donationAmount = document.getElementsByClassName("amount"), w, amountSelected;
 
@@ -104,16 +139,17 @@ for (w = 0; w < donationAmount.length; w++){
     }
     this.classList.add("clicked");
     amountSelected = "";
-
     if (this.classList.contains("clicked")) {
       amountSelected = this.value;
       console.log(amountSelected);
-      document.getElementById("showResult").innerHTML = "";
-
+      console.log(this.className);
+      //IF CLASSLIST CONTAINS CLICKED, ADD A CLASS TO THE NEXT BUTTON
+      document.getElementById("Next").classList.add("Next");
+      //THEN ACTIVATE THIS JQUERY CODE
       $(document).ready(function () {
         $(".Next").click(function () {
           $("#Prev").css("display", "block");
-          $(".Next").html("Submit");
+          $(".Next").html("Donate");
           $(".form-width").addClass("hidePrevious_form");
           $(".info").addClass("showNext_form");
           $(".form-width").removeClass("previous_form");
@@ -121,7 +157,6 @@ for (w = 0; w < donationAmount.length; w++){
         });
       });
     }
-   
   });
 }
 
@@ -154,43 +189,6 @@ for (w = 0; w < donationAmount.length; w++){
      });
    });
 
-
-//CALL THIS FUNCTION TO CHECK IF AN DONATION AMOUNT HAS BEEN PICKED, IF TRUE, GET THE NEXT BUTTON AND ADD THE CLASS "NEXT", TO ENABLE JQUERY ASSESSS THE CLASS TO MOVE THE USER TO THE NEXT PAGE CONTAINING PAYMENT DETAILS.
-function changeType() {
-  document.getElementById("myBtn").type = "submit";
-}
-function sayHello() {
-  var displayResult; 
-  let clickedEvent = document.querySelectorAll(".amount");
-  var Result = document.getElementById("showResult"); 
-
-     
-  for (let i = 0; i < clickedEvent.length; i++) {
-    let m = "";
-    m += clickedEvent[i].className; 
-    if (m.includes("clicked")) {
-      document.getElementById("Next").classList.add("Next");
-      displayResult = "";
-      return false;
-    } else {
-      displayResult = "Select an Amount";
-        Result.innerHTML = displayResult; 
-         return;
-      } 
-       
-  }
-}
-//CHANGE BUTTON TYPE TO SUBMIT AFTER 5 SECONDS
-function changeType() {
-  submitBTN = document.getElementById("Next"); 
-  if (submitBTN.innerHTML == "Submit") {
-    setTimeout(function () {
-      document.getElementById("Next").type = "submit";
-    }, 1000);
-  }
-}
-
-
 //CODE TO CONTROL ADDING ACTIVE CLASS TO DONATION FREQUENCY OF MONTHLY OR ONETIME.
 
 var Frequency = document.getElementsByClassName("SelectDonationFrequency"), n,
@@ -209,16 +207,8 @@ for (n = 0; n < Frequency.length; n++) {
   })
 }
 
-var currentTab = 0; 
-showTab(currentTab);
-var donationForm = document.getElementsByClassName("tab");
-for (n = 0; n < donationForm.length; n++) {
-  donationForm[n].style.display = "block";
-  if (n == donationForm.length - 1) {
-    document.getElementById("Prev").style.display = "none";
-  }
-}
 
+/***********************CONTROLS THE PAYMENT GATEWAY END***************************/
 
 
 

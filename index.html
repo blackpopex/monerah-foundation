@@ -152,9 +152,9 @@
                 </h4>
               </div>
               <ul>
-                <li class="border-bottom-secondary-color"><a href="#/" class="text-secondary h4-text-size"><iconify-icon icon="fa:dollar" class="secondary-color"></iconify-icon> <span>Make A Donation</span></a></li>
+                <li class="border-bottom-secondary-color"><a href="get-involved/donate.html" class="text-secondary h4-text-size"><iconify-icon icon="fa:dollar" class="secondary-color"></iconify-icon> <span>Make A Donation</span></a></li>
 
-                <li class="border-bottom-secondary-color"><a href="#/" class="text-secondary h4-text-size"> <iconify-icon icon="emojione-monotone:handshake" class="secondary-color"></iconify-icon> <span>Become A Partner</span></a></li>
+                <li class="border-bottom-secondary-color"><a href="get-involved/corporate-partner.html" class="text-secondary h4-text-size"> <iconify-icon icon="emojione-monotone:handshake" class="secondary-color"></iconify-icon> <span>Become A Partner</span></a></li>
 
                 <li class="border-bottom-secondary-color"><a href="#/" class="text-secondary h4-text-size"><iconify-icon icon="fa:child" class="secondary-color"></iconify-icon> <span>Sponsor A Child</span></a></li>
               </ul>
@@ -266,7 +266,7 @@
                   </h3>
               <div class="main-flex-row">
                 <!--SELECT AN AMOUNT TO DONATE-->
-                <div class="form-width tab">
+                <div class="form-width" id="donationInformation">
                   <div class="group-btn">
                     <button type="button"  class="btn frequency SelectDonationFrequency" value="One Time">ONE TIME GIFT</button>
                     <button type="button" class="btn frequency SelectDonationFrequency clicked" value="Monthly">MONTHLY GIFT</button>
@@ -308,7 +308,7 @@
                         <div class="col-33 btn primary-color-text bg-white">Others</div>
                         <div class="col-66 input-container bg-white">
                           <span class="icon">$</span>
-                          <input type="text" id="amount" name="amount" class="amount" value="">
+                          <input type="text" id="amount" name="amount" class="amount" value="this.value">
                         </div>
                           <a href="#/" class="primary-color-text payNaira">Donate in Naira (₦)</a>
                       </div>
@@ -316,40 +316,40 @@
                   </div>
                 </div>     
                 <!--INPUT YOUR INFORMATION--> 
-                <div class="info spx-width tab">
+                <div class="info spx-width">
                 <h5 class="primary-color-text">Your Information</h5>
                 <div class="flex">
                   <div class="input-container">
                     <label for="firstName" class="primary-color-text"
                       >First Name:</label
                     >
-                    <input type="text" name="FirstName" id="firstName" />
+                    <input type="text" name="FirstName" id="firstName" required/>
                   </div>
                   <div class="input-container">
                     <label for="lastName" class="primary-color-text"
                       >Last Name:</label
                     >
-                    <input type="text" name="LastName" id="lastName" />
+                    <input type="text" name="LastName" id="lastName" required />
                   </div>
                 </div>
                 <div class="flex">
                   <div class="input-container">
                     <label for="Email" class="primary-color-text">Email:</label>
-                    <input type="text" name="E_mail" id="Email" />
+                    <input type="text" name="E_mail" id="Email" required/>
                   </div>
                   <div class="input-container">
                     <label for="PhoneNumber" class="primary-color-text"
                       >Phone Number:</label
                     >
-                    <input type="text" name="Phone_number" id="PhoneNumber" />
+                    <input type="text" name="Phone_number" id="PhoneNumber" required/>
                   </div>
                 </div>
                </div>   
               </div>
                  <div class="prev-next-submit">
-                  <button type="button" class="bg-primary-color btn white-color-text previous-btn Prev" id="Prev">Previous</button>
+                  <button type="button" class="bg-primary-color btn white-color-text previous-btn Prev" id="Prev" >Previous</button>
                     <div class="Donate_Button">
-                  <button type="button" class="btn bg-primary-color white-color-text next-btn Next" id="Next" onclick="sayHello();changeType()"> 
+                  <button type="button" class="btn bg-primary-color white-color-text next-btn" id="Next" onclick="sayHello()"> 
                   Next
                     </button>
                   </div>
