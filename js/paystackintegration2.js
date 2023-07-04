@@ -1,16 +1,17 @@
 
-////PLEASE USE THIS CODE ONLY FOR INDEX DONATION PAGE
-
+////PLEASE USE THIS CODE ONLY FOR DONATION PAGE
 
 /*****************************CONTROLS THE PAYMENT GATEWAY**************************************/
+
 //CALL THIS FUNCTION TO CHECK IF AN DONATION AMOUNT HAS BEEN PICKED, IF TRUE, GET THE NEXT BUTTON AND ADD THE CLASS "NEXT", TO ENABLE JQUERY ASSESSS THE CLASS TO MOVE THE USER TO THE NEXT PAGE CONTAINING PAYMENT DETAILS.
 var preBtn = document.getElementById("Prev");
 var nextBtn = document.getElementById("Next");
 var amountSelected;
-var myInputedAmount = (document.getElementById("myInputAmount").value = "");
+var myInputedAmount = document.getElementById("myInputAmount").value = "";
 
 function myFunction(val) {
-  amountSelected = val;
+    amountSelected = val;
+    document.getElementById("Next").type = "submit";
 }
 
 //RUN THIS FUNCTION ONLY IF AN AMOUNT HAS BEEN PICKED
@@ -27,15 +28,18 @@ function sayHello() {
       /**
           console.log(m) + "<br/>";
            */
-      nextBtn.classList.add("Next");
+      nextBtn.classList.add("Ok");
       Result.innerHTML = "";
-      if (nextBtn.classList.contains("Next")) {
+      nextBtn.type = "submit";
+      /**
+      if (nextBtn.classList.contains("Ok")) {
         setTimeout(function () {
           nextBtn.type = "submit";
-        }, 3000);
+        }, 500);
       } else {
         nextBtn.type = "button";
-      }
+        }
+         */
     }
   }
 }
@@ -57,10 +61,6 @@ if (nextBtn.type === "submit") {
   });
 }
 
-//Add Event LISTENER TO THIS BTN TO CHANGE THE BUTTON TYPE BACK TO BUTTON IF PREVIOUS BTN IS PRESSED
-preBtn.addEventListener("click", function () {
-  nextBtn.type = "button";
-});
 
 //CODE TO CONTROL SLIDING FROM NAIRA TO DOLLARS AND BACK TO DOLLARS AGAIN, ALSO CONTROLS MOVING FROM ONE PAYMENT STAGE TO THE OTHER
 var donationAmount = document.getElementsByClassName("amount"),
@@ -86,18 +86,7 @@ for (w = 0; w < donationAmount.length; w++) {
       console.log(this.className);
        */
       //IF CLASSLIST CONTAINS CLICKED, ADD A CLASS TO THE NEXT BUTTON
-      document.getElementById("Next").classList.add("Next");
-      //THEN ACTIVATE THIS JQUERY CODE
-      $(document).ready(function () {
-        $(".Next").click(function () {
-          $("#Prev").css("display", "block");
-          $(".Next").html("Donate");
-          $(".form-width").addClass("hidePrevious_form");
-          $(".info").addClass("showNext_form");
-          $(".form-width").removeClass("previous_form");
-          $(".info").removeClass("removeNext_form");
-        });
-      });
+      document.getElementById("Next").type = "submit"; 
     }
   });
 }
@@ -117,17 +106,6 @@ $(document).ready(function () {
     $("#payInDollar").removeClass("pay-dollars");
   });
 
-  //Hide the previous btn by default
-  $("#Prev").css("display", "none");
-  //CONTROLS MULTISTEP FORM
-  $(".Prev").click(function () {
-    $(".Next").html("Next");
-    $("#Prev").css("display", "none");
-    $(".form-width").addClass("previous_form");
-    $(".info").addClass("removeNext_form");
-    $(".form-width").removeClass("hidePrevious_form");
-    $(".info").removeClass("showNext_form");
-  });
 });
 
 //CODE TO CONTROL ADDING ACTIVE CLASS TO DONATION FREQUENCY OF MONTHLY OR ONETIME.
@@ -152,12 +130,12 @@ for (n = 0; n < Frequency.length; n++) {
   });
 }
 
-form.addEventListener("submit", payWithPaystack, false);
+form2.addEventListener("submit", payWithPaystack, false);
 
 function payWithPaystack(e) {
   e.preventDefault();
   //Get form data
-  const data = new FormData(form);
+  const data = new FormData(form2);
   for (const [name, value] of data) {
     console.log(name + ":" + value);
     console.log("Frequency:" + frequencyValue);
@@ -188,4 +166,5 @@ function payWithPaystack(e) {
     }
   }
 }
+
 /***********************CONTROLS THE PAYMENT GATEWAY END***************************/

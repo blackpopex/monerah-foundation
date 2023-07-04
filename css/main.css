@@ -451,6 +451,12 @@ button, #Make-a-donation .next-btn, #Make-a-donation .previous-btn {
   border: 1px solid #f1f1f1;
 }
 
+.clicked {
+  color: #9eabf2;
+  background-color: #1a2238;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
 /***************OTHER STYLES**********/
 /*****Header****/
 .flex {
@@ -827,16 +833,16 @@ nav .dropdown-content a {
     line-height: 1;
     padding-bottom: 0;
     padding-top: 0;
+    opacity: 0;
     z-index: 1;
-    visibility: hidden;
-    transition: max-height 0.5s ease-in-out, visibility 1s ease;
+    transition: max-height 0.75s ease-in-out, opacity 0.75s ease-in-out;
   }
   nav .dropdown-content a {
     color: #ffffff;
     padding-left: 0;
   }
   nav .transformDropdown {
-    visibility: visible;
+    opacity: 1;
     max-height: 200px;
   }
   .donate_BTN {
@@ -2257,11 +2263,6 @@ footer .copyright-developerslink ul li {
 }
 #Make-a-donation .prev-next-submit p {
   margin-left: 10px;
-}
-#Make-a-donation .clicked {
-  color: #9eabf2;
-  background-color: #1a2238;
-  transition: color 0.2s ease-in, background-color 0.2s ease-in;
 }
 
 @media (min-width: 600px) {
@@ -4381,12 +4382,15 @@ footer .copyright-developerslink ul li {
   max-width: 600px;
   margin-inline: 0 auto;
   padding: 1em 0;
+  /**New Code**/
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS******/
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS ENDS******/
 }
 #Partner-Now .make-a-donation-form .spx-width {
   width: 100%;
   max-width: 350px;
   margin-inline: auto;
-  margin-bottom: 2em;
+  overflow-x: hidden;
 }
 #Partner-Now .make-a-donation-form .spx-width:last-child {
   margin-bottom: 0;
@@ -4415,6 +4419,34 @@ footer .copyright-developerslink ul li {
   text-align: right;
   width: 100%;
   font-weight: 600;
+}
+#Partner-Now .make-a-donation-form .flex-row {
+  display: inline-block;
+  width: 100%;
+  min-width: 1000px;
+}
+#Partner-Now .make-a-donation-form .select-amount-to-pay {
+  width: 100%;
+  float: left;
+  max-width: 295px;
+  opacity: 1;
+  transition: transform 1s ease-in-out, opacity 2s ease-in;
+}
+#Partner-Now .make-a-donation-form .pay-naira {
+  transform: translateX(0%);
+  opacity: 1;
+}
+#Partner-Now .make-a-donation-form .pay-dollars {
+  transform: translateX(100%);
+  opacity: 1;
+}
+#Partner-Now .make-a-donation-form .hide-pay-naira {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+#Partner-Now .make-a-donation-form .show-pay-dollars {
+  transform: translateX(-100%);
+  opacity: 1;
 }
 #Partner-Now .make-a-donation-form .select-amount-to-pay .flex {
   display: flex;
@@ -4478,9 +4510,17 @@ footer .copyright-developerslink ul li {
   border-radius: 4px;
 }
 
+@media (min-width: 600px) {
+  #Partner-Now .make-a-donation-form .select-amount-to-pay {
+    max-width: 350px;
+  }
+}
 @media (min-width: 768px) {
   .donate {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/other-photos/donate-img.jpg");
+  }
+  #Partner-Now {
+    margin-top: 2em;
   }
   #Partner-Now .make-a-donation-form {
     max-width: 650px;

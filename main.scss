@@ -170,6 +170,12 @@ button {
   border: 1px solid $body-grey-color;
 }
 
+ .clicked {
+  color:#9eabf2;
+  background-color:#1a2238;
+  transition: color .2s ease-in, background-color .2s ease-in;
+  }
+
 /***************OTHER STYLES**********/
 /*****Header****/
 .flex {
@@ -518,17 +524,18 @@ nav {
       line-height: 1;
       padding-bottom: 0;
       padding-top: 0;
+      opacity: 0;
       z-index: 1;
-      visibility: hidden;
-      transition: max-height 0.5s ease-in-out, visibility 1s ease;
+      transition: max-height 0.75s ease-in-out, opacity 0.75s ease-in-out;
       a {
         color: $white-color;
         padding-left: 0;
       }
     }
     .transformDropdown {
-      visibility: visible;
+      opacity: 1;
       max-height: 200px;
+
     }
   }
   .donate_BTN {
@@ -2143,11 +2150,7 @@ footer {
       margin-left: 10px;
     }
   }
-   .clicked {
-  color:#9eabf2;
-  background-color:#1a2238;
-  transition: color .2s ease-in, background-color .2s ease-in;
-  }
+  
 }
 
 
@@ -4671,7 +4674,7 @@ footer {
       width: 100%;
       max-width: 350px;
       margin-inline: auto;
-      margin-bottom: 2em;
+      overflow-x: hidden;
     }
 
     .spx-width:last-child {
@@ -4703,6 +4706,40 @@ footer {
       width: 100%;
       font-weight: 600;
     }
+
+    /**New Code**/
+     .flex-row {
+    display: inline-block;
+    width: 100%;
+    min-width: 1000px;
+  }
+   .select-amount-to-pay {
+    width: 100%;
+    float: left;
+    max-width: 295px;
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 2s ease-in;
+  }
+    /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS******/
+  .pay-naira {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .pay-dollars {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  .hide-pay-naira {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  .show-pay-dollars {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  /******SHOW AND HIDE PAYMENT IN NAIRA OR DOLLARS ENDS******/
+
     .select-amount-to-pay .flex {
       display: flex;
       flex-direction: row;
@@ -4767,6 +4804,16 @@ footer {
   }
 }
 
+@media (min-width: 600px) {
+  #Partner-Now {
+     .make-a-donation-form {
+        .select-amount-to-pay {
+          max-width: 350px;
+        }
+     }
+  }
+}
+
 @media (min-width: 768px) {
   .donate {
     background-image: linear-gradient(
@@ -4780,6 +4827,7 @@ footer {
   }
 
   #Partner-Now {
+    margin-top: 2em;
     .make-a-donation-form {
       max-width: 650px;
       margin-inline: auto;

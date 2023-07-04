@@ -138,8 +138,8 @@
       <div class="container">
         <div class="bg-transparent-white">
           <form
-            action="action_page.php"
-            method="post"
+            
+            method="POST" id="form2"
             class="make-a-donation-form"
           >
             <!--INERTIAL TEXT FOR FORM-->
@@ -153,48 +153,84 @@
             </div>
 
             <!--SELECT AMOUNT TO PAY-->
-            <div class="select-amount form-width spx-width">
+            <div class="select-amount form-width spx-width" id="donationInformation">
               <div class="group-btn">
-                <button class="btn bg-grey">ONE TIME GIFT</button>
-                <button class="btn bg-primary-color text-secondary">
+                <button type="button" class="btn primary-color-text frequency SelectDonationFrequency" value="One Time">ONE TIME GIFT</button>
+                <button type="button" class="btn primary-color-text frequency SelectDonationFrequency clicked" value="Monthly">
                   MONTHLY GIFT
                 </button>
               </div>
               <h5 class="white-color-text donation-amount">Donation Amount</h5>
-              <div class="select-amount-to-pay spx-width">
-                <div class="flex">
-                  <button class="col-33 btn text-secondary bg-primary-color">
-                    ₦ 5,000
-                  </button>
-                  <button class="col-33 btn primary-color-text bg-white">
-                    ₦ 15,000
-                  </button>
-                  <button class="col-33 btn primary-color-text bg-white">
-                    ₦ 25,000
-                  </button>
-                </div>
-                <div class="flex">
-                  <button class="col-33 btn text-primary bg-white">
-                    ₦ 35,000
-                  </button>
-                  <button class="col-33 btn primary-color-text bg-white">
-                    ₦ 45,000
-                  </button>
-                  <button class="col-33 btn primary-color-text bg-white">
-                    ₦ 50,000
-                  </button>
-                </div>
-                <div class="flex">
-                  <div class="col-33 btn text-primary bg-white">Others</div>
-                  <div class="col-66 input-container bg-white">
-                    <span class="icon">₦</span>
-                    <input type="text" id="amount" name="amount" />
+
+
+              <div class="flex-row">
+                <!--DONATE IN NAIRA-->
+                <div class="select-amount-to-pay spx-width" id="payInNaira">
+                  <div class="flex">
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="5000">
+                      ₦ 5,000
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="15000">
+                      ₦ 15,000
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="25000">
+                      ₦ 25,000
+                    </button>
                   </div>
-                  <a href="javascript:void(0)" class="text-secondary"
-                    >Donate in Dollars ($)</a
-                  >
+                  <div class="flex">
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="35000">
+                      ₦ 35,000
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="45000">
+                      ₦ 45,000
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="50000">
+                      ₦ 50,000
+                    </button>
+                  </div>
+                  <div class="flex">
+                    <div class="col-33 btn primary-color-text bg-white">Others</div>
+                    <div class="col-66 input-container bg-white">
+                      <span class="icon">₦</span>
+                      <input type="text" id="myInputAmount" class="amount" name="amount" onchange="myFunction(this.value)" style="color: #1a2238; background-color: inherit;" />
+                    </div>
+                    <a href="#/" class="text-secondary payDollars"
+                      >Donate in Dollars ($)</a
+                    >
+                  </div>
+                </div>
+                   <!--DONATE IN DOLLARS-->
+                <div class="select-amount-to-pay spx-width" id="payInDollar">
+                  <div class="flex">
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="5">$ 5
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="10">$ 10
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="20">$ 20
+                    </button>
+                  </div>
+                  <div class="flex">
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="25">$ 25
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="30">$ 30
+                    </button>
+                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="35">$ 35
+                    </button>
+                  </div>
+                  <div class="flex">
+                    <div class="col-33 btn primary-color-text bg-white">Others</div>
+                    <div class="col-66 input-container bg-white">
+                      <span class="icon">$</span>
+                      <input type="text" id="myInputAmount" class="amount" name="amount" onchange="myFunction(this.value)" style="color: #1a2238; background-color: inherit;" />
+                    </div>
+                    <a href="#/" class="text-secondary payNaira">Donate in Naira (₦)</a
+                    >
+                  </div>
                 </div>
               </div>
+
+
+
             </div>
             <!--YOUR INFORMATION-->
             <div class="info spx-width">
@@ -204,32 +240,33 @@
                   <label for="firstName" class="white-color-text"
                     >First Name:</label
                   >
-                  <input type="text" name="FirstName" id="firstName" />
+                  <input type="text" name="FirstName" id="firstName" required/>
                 </div>
                 <div class="input-container">
                   <label for="lastName" class="white-color-text"
                     >Last Name:</label
                   >
-                  <input type="text" name="LastName" id="lastName" />
+                  <input type="text" name="LastName" id="lastName" required/>
                 </div>
               </div>
               <div class="flex">
                 <div class="input-container">
                   <label for="Email" class="white-color-text">Email:</label>
-                  <input type="text" name="E_mail" id="Email" />
+                  <input type="text" name="E_mail" id="e_mail" required/>
                 </div>
                 <div class="input-container">
                   <label for="PhoneNumber" class="white-color-text"
                     >Phone Number:</label
                   >
-                  <input type="text" name="Phone_number" id="PhoneNumber" />
+                  <input type="text" name="Phone_number" id="PhoneNumber" required />
                 </div>
               </div>
             </div>
-            <div class="spx-width">
-              <button type="submit" class="btn bg-primary-color text-secondary">
+            <div class="spx-width prev-next-submit">
+              <button type="button" class="btn bg-primary-color text-secondary" id="Next" onclick="sayHello();payWithPaystack()">
                 Donate
               </button>
+              <p id="showResult" class="primary-color-text" style="color: white; margin-top: 0.5em;"></p>
             </div>
           </form>
         </div>
@@ -365,5 +402,7 @@
     <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="../js/slick.min.js" type="text/javascript"></script>
     <script src="../js/slick.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="../js/paystackintegration2.js"></script>
   </body>
 </html>
