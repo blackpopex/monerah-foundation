@@ -6,14 +6,12 @@ var bar2 = document.getElementById("barTwo");
 /**
 var websiteContainer = document.getElementById("contentWrapper");
  */
-var bgColor = document.getElementById("websiteBody");
 
 openMenuBtn.addEventListener("click", function () {
   sideBar.classList.toggle("sidebarWidth");
   openMenuBtn.classList.toggle("moveContentLeft");
   logo.classList.toggle("hideLogo");
   bar2.classList.toggle("changeX");
-  bgColor.classList.toggle("backgroundcolor");
 });
 
 // Viewport is greater than 700 pixels wide
@@ -23,8 +21,43 @@ var i;
 
 for (i = 0; i < animatedDropdown.length; i++) {
   animatedDropdown[i].addEventListener("click", function () {
+//USE THIS CODE TO REMOVE ACTIVE CLASS AND TRANSFORMDROPDOWN FROM ALL DROPDOWN LIST WHEN ANOTHER ELEMENT IS CLICKED    
+    var current = document.getElementsByClassName("active");
+
+    if (current.length > 0) {
+      for (var x = 0; x < current.length; x++) {
+        if (current[x].classList.contains("active")) {
+          current[x].classList.remove("active");
+        }
+        var activeDropdown =
+          document.getElementsByClassName("transformDropdown");
+        if (activeDropdown.length > 0) {
+          for (var w = 0; w < activeDropdown.length; w++) {
+            if (activeDropdown[w].classList.contains("transformDropdown")) {
+              activeDropdown[w].classList.remove("transformDropdown");
+            }
+          }
+        }
+
+      }
+      current.classList.toggle("active");
+    } 
+/*
+      var currentDropDown =
+        document.getElementsByClassName("transformDropdown");
+    if (currentDropDown.length > 0) {
+       for (var p = 0; p < currentDropDown.length; p++) {
+         if (currentDropDown[p].classList.contains("transformDropdown")) {
+           currentDropDown[p].classList.remove("transformDropdown");
+         }
+       }  
+      }
+    */
+
     this.classList.toggle("active");
     var dropDown = this.nextElementSibling;
+
+
       if (window.matchMedia("(max-width: 600px)").matches) {
         if (dropDown.style.maxHeight) {
           dropDown.style.maxHeight = null;
@@ -32,12 +65,11 @@ for (i = 0; i < animatedDropdown.length; i++) {
           dropDown.style.maxHeight = dropDown.scrollHeight + "px";
         }
       } else {
-        dropDown.classList.toggle("transformDropdown");
+         dropDown.classList.toggle("transformDropdown");
       }
   });
-  
 }
-
+   
 
 //OPEN AND CLOSE THE ACCORDION ON EACH PAGE OTHER THAN THE MENU
 var acc = document.getElementsByClassName("accordion-dropdown-btn"),
@@ -90,7 +122,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-
-
 

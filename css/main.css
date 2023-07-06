@@ -825,7 +825,7 @@ nav .dropdown-content a {
     display: block;
     background-color: rgb(35, 47, 70);
     background-color: rgba(35, 47, 70, 0.6);
-    min-width: auto;
+    min-width: 150px;
     text-align: left;
     max-height: 0;
     position: absolute;
@@ -839,7 +839,8 @@ nav .dropdown-content a {
   }
   nav .dropdown-content a {
     color: #ffffff;
-    padding-left: 0;
+    padding-left: 1em;
+    font-size: 0.45em;
   }
   nav .transformDropdown {
     opacity: 1;
@@ -879,6 +880,7 @@ nav .dropdown-content a {
   }
   nav .dropdown-content a {
     font-size: 0.45em;
+    padding-left: 0.25em;
   }
 }
 @media (min-width: 1200px) {
