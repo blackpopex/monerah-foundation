@@ -834,6 +834,8 @@ nav {
     bottom: -125px;
     width: 100%;
     padding: 1em 0;
+    overflow-y: hidden;
+    
     .slideone {
       h6 {
         margin-top: 0;
@@ -912,6 +914,7 @@ nav {
   .slideshow-container {
     bottom: -150px;
     padding: 1.5em 0;
+    height: 150px;
   }
 }
 
