@@ -123,3 +123,20 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+//INDEX PAGE VERTICAL SLIDESHOW AND AOS ANIMATION INTEGRATED
+   $(document).ready(function () {
+     $(".slick-slider").slick({
+       vertical: true,
+       slidesToShow: 1,
+       slidesToScroll: 1,
+       speed: 2500,
+       autoplaySpeed: 5000,
+       pauseOnHover: false,
+       autoplay: true,
+       arrows: true,
+       prevArrow: false,
+       nextArrow: false,
+       dots: true,
+     });
+   });
+   AOS.init();

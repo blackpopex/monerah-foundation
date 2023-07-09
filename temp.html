@@ -1,0 +1,34 @@
+ <script type="text/javascript">
+        /**
+      $(document).ready(function () {
+        $(".vertical").slick({
+          vertical: false,
+          verticalSwiping: false,
+          dots: true,
+          infinite: true,
+          speed: 2500,
+          slidesToShow: 1,
+          centerMode: true,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          prevArrow: false,
+          nextArrow: false,
+          pauseOnHover: false,
+          variableWidth: true,
+          centerPadding: "25%"
+        });
+      });
+      **/
+         $(document).ready(function(){
+            $('.slick-slider').slick({
+                vertical: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                arrows: true,
+                  prevArrow: false,
+                nextArrow: false,
+                dots: true,
+            });
+        });
+    </script>
