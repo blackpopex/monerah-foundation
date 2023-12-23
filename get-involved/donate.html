@@ -74,7 +74,7 @@
                 </a>
                 <ul class="dropdown-content">
                   <li>
-                    <a href="../who-we-are/our-stories.html">Our Stories</a>
+                    <a href="../who-we-are/our-stories.html">Our Story</a>
                   </li>
                   <li><a href="../who-we-are/our-team.html">Our Team</a></li>
                   <li>
@@ -99,11 +99,6 @@
                   <li>
                     <a href="../what-we-do/our-approach.html">Our Approach</a>
                   </li>
-                  <li>
-                    <a href="../what-we-do/areas-we-have-worked.html"
-                      >Areas we have worked</a
-                    >
-                  </li>
                 </ul>
               </li>
               <!--Get Involved-->
@@ -118,9 +113,6 @@
                   </li>
                   <li>
                     <a href="corporate-partner.html">Corporate Partner</a>
-                  </li>
-                  <li>
-                    <a href="other-ways-to-give.html">Other Ways to Give</a>
                   </li>
                 </ul>
               </li>
@@ -137,15 +129,11 @@
     <section id="Partner-Now" class="partner-now">
       <div class="container">
         <div class="bg-transparent-white">
-          <form
-            
-            method="POST" id="form2"
-            class="make-a-donation-form"
-          >
+          <form method="POST" id="form2" class="make-a-donation-form">
             <!--INERTIAL TEXT FOR FORM-->
             <div class="intertial-text spx-width">
               <h2 class="white-color-text">PARTNER NOW</h2>
-              <h3 class="text-secondary">Changing lives one step at a time.</h3>
+              <h3 class="text-secondary">Changing lives one life at a time.</h3>
               <p class="white-color-text">
                 Your donation will help us save lives in disasters, tackle the
                 root causes of poverty, and hold the powerful accountable.
@@ -153,84 +141,166 @@
             </div>
 
             <!--SELECT AMOUNT TO PAY-->
-            <div class="select-amount form-width spx-width" id="donationInformation">
+            <div
+              class="select-amount form-width spx-width"
+              id="donationInformation"
+            >
               <div class="group-btn">
-                <button type="button" class="btn primary-color-text frequency SelectDonationFrequency" value="One Time">ONE TIME GIFT</button>
-                <button type="button" class="btn primary-color-text frequency SelectDonationFrequency clicked" value="Monthly">
+                <button
+                  type="button"
+                  class="btn primary-color-text frequency SelectDonationFrequency"
+                  value="One Time"
+                >
+                  ONE TIME GIFT
+                </button>
+                <button
+                  type="button"
+                  class="btn primary-color-text frequency SelectDonationFrequency clicked"
+                  value="Monthly"
+                >
                   MONTHLY GIFT
                 </button>
               </div>
               <h5 class="white-color-text donation-amount">Donation Amount</h5>
 
-
               <div class="flex-row">
                 <!--DONATE IN NAIRA-->
                 <div class="select-amount-to-pay spx-width" id="payInNaira">
                   <div class="flex">
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="5000">
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="5000"
+                    >
                       ₦ 5,000
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="15000">
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="15000"
+                    >
                       ₦ 15,000
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="25000">
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="25000"
+                    >
                       ₦ 25,000
                     </button>
                   </div>
                   <div class="flex">
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="35000">
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="35000"
+                    >
                       ₦ 35,000
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="45000">
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="45000"
+                    >
                       ₦ 45,000
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="50000">
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="50000"
+                    >
                       ₦ 50,000
                     </button>
                   </div>
                   <div class="flex">
-                    <div class="col-33 btn primary-color-text bg-white">Others</div>
+                    <div class="col-33 btn primary-color-text bg-white">
+                      Others
+                    </div>
                     <div class="col-66 input-container bg-white">
                       <span class="icon">₦</span>
-                      <input type="text" id="myInputAmount" class="amount" name="amount" onchange="myFunction(this.value)" style="color: #1a2238; background-color: inherit;" />
+                      <input
+                        type="text"
+                        id="myInputAmount"
+                        class="amount"
+                        name="amount"
+                        onchange="myFunction(this.value)"
+                        style="color: #1a2238; background-color: inherit"
+                      />
                     </div>
                     <a href="#/" class="text-secondary payDollars"
                       >Donate in Dollars ($)</a
                     >
                   </div>
                 </div>
-                   <!--DONATE IN DOLLARS-->
+                <!--DONATE IN DOLLARS-->
                 <div class="select-amount-to-pay spx-width" id="payInDollar">
                   <div class="flex">
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="5">$ 5
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="5"
+                    >
+                      $ 5
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="10">$ 10
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="10"
+                    >
+                      $ 10
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="20">$ 20
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="20"
+                    >
+                      $ 20
                     </button>
                   </div>
                   <div class="flex">
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="25">$ 25
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="25"
+                    >
+                      $ 25
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="30">$ 30
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="30"
+                    >
+                      $ 30
                     </button>
-                    <button type="button" class="col-33 btn primary-color-text bg-white amount" value="35">$ 35
+                    <button
+                      type="button"
+                      class="col-33 btn primary-color-text bg-white amount"
+                      value="35"
+                    >
+                      $ 35
                     </button>
                   </div>
                   <div class="flex">
-                    <div class="col-33 btn primary-color-text bg-white">Others</div>
+                    <div class="col-33 btn primary-color-text bg-white">
+                      Others
+                    </div>
                     <div class="col-66 input-container bg-white">
                       <span class="icon">$</span>
-                      <input type="text" id="myInputAmount" class="amount" name="amount" onchange="myFunction(this.value)" style="color: #1a2238; background-color: inherit;" />
+                      <input
+                        type="text"
+                        id="myInputAmount"
+                        class="amount"
+                        name="amount"
+                        onchange="myFunction(this.value)"
+                        style="color: #1a2238; background-color: inherit"
+                      />
                     </div>
-                    <a href="#/" class="text-secondary payNaira">Donate in Naira (₦)</a
+                    <a href="#/" class="text-secondary payNaira"
+                      >Donate in Naira (₦)</a
                     >
                   </div>
                 </div>
               </div>
-
-
-
             </div>
             <!--YOUR INFORMATION-->
             <div class="info spx-width">
@@ -240,33 +310,47 @@
                   <label for="firstName" class="white-color-text"
                     >First Name:</label
                   >
-                  <input type="text" name="FirstName" id="firstName" required/>
+                  <input type="text" name="FirstName" id="firstName" required />
                 </div>
                 <div class="input-container">
                   <label for="lastName" class="white-color-text"
                     >Last Name:</label
                   >
-                  <input type="text" name="LastName" id="lastName" required/>
+                  <input type="text" name="LastName" id="lastName" required />
                 </div>
               </div>
               <div class="flex">
                 <div class="input-container">
                   <label for="Email" class="white-color-text">Email:</label>
-                  <input type="text" name="E_mail" id="e_mail" required/>
+                  <input type="text" name="E_mail" id="e_mail" required />
                 </div>
                 <div class="input-container">
                   <label for="PhoneNumber" class="white-color-text"
                     >Phone Number:</label
                   >
-                  <input type="text" name="Phone_number" id="PhoneNumber" required />
+                  <input
+                    type="text"
+                    name="Phone_number"
+                    id="PhoneNumber"
+                    required
+                  />
                 </div>
               </div>
             </div>
             <div class="spx-width prev-next-submit">
-              <button type="button" class="btn bg-primary-color text-secondary" id="Next" onclick="sayHello();payWithPaystack()">
+              <button
+                type="button"
+                class="btn bg-primary-color text-secondary"
+                id="Next"
+                onclick="sayHello();payWithPaystack()"
+              >
                 Donate
               </button>
-              <p id="showResult" class="primary-color-text" style="color: white; margin-top: 0.5em;"></p>
+              <p
+                id="showResult"
+                class="primary-color-text"
+                style="color: white; margin-top: 0.5em"
+              ></p>
             </div>
           </form>
         </div>
@@ -315,7 +399,7 @@
               </a>
               <ul class="dropdown-content">
                 <li>
-                  <a href="../who-we-are/our-stories.html">Our Stories</a>
+                  <a href="../who-we-are/our-stories.html">Our Story</a>
                 </li>
                 <li><a href="../who-we-are/our-team.html">Our Team</a></li>
                 <li><a href="../who-we-are/contact-us.html">Contact Us</a></li>
@@ -340,11 +424,6 @@
                 <li>
                   <a href="../what-we-do/our-approach.html">Our Approach</a>
                 </li>
-                <li>
-                  <a href="../what-we-do/areas-we-have-worked.html"
-                    >Areas we have worked</a
-                  >
-                </li>
               </ul>
             </li>
           </div>
@@ -361,9 +440,6 @@
                 </li>
                 <li>
                   <a href="corporate-partner.html">Corporate Partner</a>
-                </li>
-                <li>
-                  <a href="other-ways-to-give.html">Other Ways to Give</a>
                 </li>
               </ul>
             </li>
